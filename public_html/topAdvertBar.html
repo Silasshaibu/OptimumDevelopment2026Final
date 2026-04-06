@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Advert Bar - Optimum Payments</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,400;0,500;0,600;0,700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Urbanist', sans-serif;
+        }
+
+        .top-info-bar {
+            width: 1440px;
+            height: 48px;
+            background: #0e0e0e;
+            background: #399CDB;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .top-info-bar__text {
+            font-size: 16px;
+            font-family: Urbanist;
+            line-height: 20px;
+            word-wrap: break-word;
+            text-decoration: none;
+            cursor: pointer;
+            transition: opacity 0.2s ease;
+        }
+
+        .top-info-bar__text:hover {
+            opacity: 0.8;
+        }
+
+        .top-info-bar__main-text {
+            color: #2B2B2B;
+            font-weight: 500;
+        }
+
+        .top-info-bar__cta-text {
+            color: white;
+            font-size: 16px;
+            font-family: Urbanist;
+            font-weight: 600;
+            line-height: 20px;
+            word-wrap: break-word;
+        }
+
+        .top-info-bar__cta-text:hover {
+            text-decoration: underline;
+        }
+
+        .top-info-bar__close {
+            position: absolute;
+            left: 120px;
+            top: 12px;
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            transition: opacity 0.2s ease;
+            border: none;
+            background-color: transparent;
+        }
+
+        .top-info-bar__close:hover {
+            opacity: 0.7;
+        }
+
+        .top-info-bar__close-icon {
+            width: 100%;
+            height: 100%;
+            fill: #2B2B2B;
+        }
+
+        .top-info-bar__arrow-right {
+            position: absolute;
+            right: 120px;
+            top: 12px;
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            transition: opacity 0.2s ease;
+            color: white;
+            background-color: transparent;
+            border: none;
+        }
+
+        .top-info-bar__arrow-right:hover {
+            opacity: 0.7;
+        }
+
+        .top-info-bar__arrow-icon {
+            width: 100%;
+            height: 100%;
+        }
+
+        @media (max-width: 1440px) {
+            .top-info-bar {
+                width: 100%;
+                max-width: 1440px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-info-bar">
+        <button class="top-info-bar__close" aria-label="Close">
+            <img src="assets/TopInfoBarSection-Icons/arrow-circle-left.svg" alt="Arrow Left"
+                class="top-info-bar__close-icon">
+        </button>
+        <a href="#" class="top-info-bar__text">
+            <span class="top-info-bar__main-text">Want to eliminate up to 100% of your processing fees? →</span>
+            <span class="top-info-bar__cta-text">Click Here!</span>
+        </a>
+        <button class="top-info-bar__arrow-right" aria-label="Arrow Right">
+            <img src="assets/TopInfoBarSection-Icons/arrow-circle-right.svg" alt="Arrow Right"
+                class="top-info-bar__arrow-icon">
+        </button>
+    </div>
+</body>
+
+</html>

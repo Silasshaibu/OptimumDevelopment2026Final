@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Navigation Bar - Optimum Payments</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,400;0,500;0,600;0,700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Urbanist', sans-serif;
+        }
+
+        .topnavbar {
+            display: flex;
+            width: 1440px;
+            height: 90px;
+            padding: 20px 120px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+            background: #fff;
+            border-bottom: 1px solid #efefef;
+        }
+
+        .topnavbar-inner {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            width: 100%;
+        }
+
+        .topnavbar-inner a {
+            color: #2B2B2B;
+            font-family: Urbanist;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 20px;
+            text-decoration: none;
+        }
+
+        .topnavbar-inner a svg {
+            margin-left: 5px;
+            width: 8px;
+            height: 8px;
+        }
+
+        .topnavbar-inner a.active {
+            font-weight: 700;
+        }
+
+        .topnavbar-inner button {
+            color: #FFF;
+            font-family: Urbanist;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 20px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topnavbar">
+        <div class="topnavbar-inner">
+            <div style="height: 50px; width: 158px;">
+                <img src="public_html/assets/Optimum-Logo.png" alt="Optimum Logo"
+                    style="width: 158px; height: 50px; aspect-ratio: 79/25; margin-right: 25px;">
+            </div>
+            <div
+                style="background: none; height: 50px; flex: 1; display: flex; justify-content: space-between; align-items: center;">
+                <div style="display: flex; gap: 25px; align-items: center;">
+                    <a href="#" class="active">Home</a>
+                    <a href="#">Promo</a>
+                    <a href="#">Processing Solutions <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6"
+                            viewBox="0 0 10 6" fill="none">
+                            <path d="M0.75 0.75L4.75 4.75L8.75 0.75" stroke="#2B2B2B" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></a>
+                    <a href="#">Digital Services <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6"
+                            viewBox="0 0 10 6" fill="none">
+                            <path d="M0.75 0.75L4.75 4.75L8.75 0.75" stroke="#2B2B2B" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></a>
+                    <a href="#">Business Financing</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Contact Us</a>
+                </div>
+                <!-- margin-left: 33px; -->
+                <div
+                    style="display: flex; align-items: center; gap: 10px; margin-left: 30px; color: #2B2B2B; font-family: Urbanist; font-size: 16px; font-style: normal; font-weight: 700; line-height: 20px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M9.37891 2.0753C10.732 1.89531 12.109 2.04342 13.3926 2.50792C14.6762 2.97244 15.8293 3.73998 16.7539 4.74425C17.6783 5.74845 18.3471 6.96105 18.7041 8.27843C19.061 9.59584 19.0957 10.9801 18.8047 12.3136C18.5299 13.5728 17.9714 14.7512 17.1748 15.7618L21.707 20.2931H21.7061C21.8015 20.3835 21.8791 20.4913 21.9326 20.6114C21.9873 20.7341 22.0162 20.8668 22.0186 21.0011C22.0209 21.1353 21.9966 21.2691 21.9463 21.3937C21.896 21.5181 21.8205 21.6308 21.7256 21.7257C21.6307 21.8206 21.518 21.8961 21.3936 21.9464C21.269 21.9967 21.1352 22.021 21.001 22.0187C20.8667 22.0163 20.734 21.9864 20.6113 21.9317C20.4913 21.8782 20.3833 21.8015 20.293 21.7062L15.7617 17.1749C14.5552 18.1261 13.1126 18.7341 11.5859 18.9308C9.98381 19.1372 8.3563 18.8828 6.89355 18.1974C5.43072 17.5119 4.19281 16.424 3.32617 15.0607C2.4597 13.6974 1.99985 12.1154 2 10.5001C2.00018 9.13514 2.32918 7.79019 2.95898 6.57921C3.58886 5.36817 4.50162 4.32601 5.61914 3.5421C6.73647 2.75843 8.02607 2.2553 9.37891 2.0753ZM10.5 4.00011C9.64641 4.00011 8.80131 4.16857 8.0127 4.49522C7.22409 4.82188 6.50689 5.29986 5.90332 5.90343C5.29977 6.507 4.82176 7.22421 4.49512 8.0128C4.16849 8.80139 4 9.64655 4 10.5001C4.00001 11.3537 4.16848 12.1988 4.49512 12.9874C4.82169 13.7758 5.29997 14.4923 5.90332 15.0958C6.5069 15.6994 7.22408 16.1783 8.0127 16.505C8.8013 16.8316 9.64642 17.0001 10.5 17.0001C12.2239 17.0001 13.8777 16.3148 15.0967 15.0958C16.3154 13.8769 17 12.2238 17 10.5001C17 8.77623 16.3156 7.12241 15.0967 5.90343C13.8777 4.68444 12.2239 4.00011 10.5 4.00011Z"
+                            fill="#AAAAAA" stroke="#AAAAAA" stroke-width="0.5" />
+                    </svg>
+                    <button
+                        style="display: flex; padding: 10px 15px; justify-content: center; align-items: center; gap: 10px; border-radius: 10px; background: #399CDB;">Shop
+                        For Supplies</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
