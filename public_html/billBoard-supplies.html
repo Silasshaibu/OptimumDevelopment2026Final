@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billboard Handheld Devices</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,400;0,500;0,600;0,700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Urbanist', sans-serif;
+            background: #f6f6f6;
+            padding: 80px;
+        }
+
+        .billboard {
+            width: 1320px;
+            height: 568px;
+            border-radius: 80px;
+            background-color: #fff;
+            padding: 40px;
+            padding-left: 60px;
+            display: flex;
+            align-items: center;
+        }
+
+        .billboard__eyebrow {
+            color: #399CDB;
+            font-family: 'Urbanist', sans-serif;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            margin-bottom: 10px;
+        }
+
+        .billboard__title {
+            margin-bottom: 15px;
+        }
+
+        .billboard__title-prefix {
+            color: #0E0E0E;
+            font-family: Urbanist;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+
+        .billboard__title-accent {
+            color: #399CDB;
+            font-family: Urbanist;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+
+        .billboard__description {
+            margin-bottom: 40px;
+            color: #454745;
+            font-family: Urbanist;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 34px;
+            margin-bottom: 40px;
+            /* 141.667% */
+        }
+
+        .billboard__cta {
+            display: inline-flex;
+            justify-content: center;
+            min-width: 86px;
+            height: 31px;
+            padding: 0 18px;
+            line-height: 1;
+            text-decoration: none;
+            height: 48px;
+            padding: 16px 40px;
+            justify-content: center;
+            align-items: center;
+            color: #FFF;
+            text-align: center;
+            font-family: Urbanist;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 16px;
+            border-radius: 100px;
+            background: #399CDB;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="billboard">
+        <div class="handheldProductImageDisplayBox">
+            <img src="../public_html/assets/billboard-hhd/billboard-supplies-starmicronics-and-paper.png"
+                alt="Valor VP 800" class="billboard__image">
+        </div>
+
+        <div style="width: 588px;">
+            <p class="billboard__eyebrow">Star Micronics Paper</p>
+            <h1 class="billboard__title"><span class="billboard__title-prefix">Simplify Your POS Setup</span></h1>
+            <p class="billboard__description">Experience the best with essential Supplies for a Smooth Checkout
+                Experience.</p>
+            <a href="#" class="billboard__cta">Buy Now</a>
+        </div>
+
+    </section>
+</body>
+
+<style>
+    .handheldProductImageDisplayBox {
+        width: 542px;
+        height: 607px;
+        aspect-ratio: 25/28;
+        position: absolute;
+        right: 40px;
+        width: 519px;
+        height: 488px;
+        overflow: hidden;
+        border-radius: 56.516px;
+        background: #399CDB;
+    }
+
+    .billboard__image {
+        position: relative;
+        z-index: 1;
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .billboard {
+        position: relative;
+
+    }
+</style>
+
+</html>

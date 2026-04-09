@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Partners - Optimum Payments</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,400;0,500;0,600;0,700;0,800&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Urbanist', sans-serif;
+            background: #f6f6f6;
+        }
+
+        .partners-section {
+            width: 1159px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .partners-section__header {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .partners-section__title {
+            color: #0E0E0E;
+            text-align: center;
+            font-family: 'Urbanist', sans-serif;
+            font-size: 60px;
+            font-weight: 700;
+            line-height: normal;
+            word-wrap: break-word;
+        }
+
+        .partners-section__title span {
+            color: #399CDB;
+            font-size: 60px;
+            font-family: 'Urbanist', sans-serif;
+            font-weight: 700;
+            word-wrap: break-word;
+        }
+
+        .partners-section__body {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* gap: 24px; */
+            gap: 37px;
+        }
+
+        .partners-section__row {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            width: fit-content;
+            max-width: 100%;
+        }
+
+        .partner-logo {
+            width: 112px;
+            height: 49px;
+            aspect-ratio: 16 / 7;
+            background: lightgray 50% / cover no-repeat;
+            background-color: transparent;
+            flex: 0 0 auto;
+        }
+
+        .partner-logo--amex {
+            background-image: url('assets/ourPartners-logo/AmericanExpress.png');
+        }
+
+        .partner-logo--apple {
+            background-image: url('assets/ourPartners-logo/ApplePay.png');
+        }
+
+        .partner-logo--verifone {
+            background-image: url('assets/ourPartners-logo/Verifone.png');
+        }
+
+        .partner-logo--authorize {
+            background-image: url('assets/ourPartners-logo/AuthorizeNet.png');
+        }
+
+        .partner-logo--clover {
+            background-image: url('assets/ourPartners-logo/Clover.png');
+        }
+
+        .partner-logo--discover {
+            background-image: url('assets/ourPartners-logo/Discover.png');
+        }
+
+        .partner-logo--firstdata {
+            background-image: url('assets/ourPartners-logo/FirstData.png');
+        }
+
+        .partner-logo--mastercard {
+            background-image: url('assets/ourPartners-logo/MasterCard.png');
+        }
+
+        .partner-logo--octopos {
+            background-image: url('assets/ourPartners-logo/Octopos.png');
+        }
+
+        .partner-logo--paypal {
+            background-image: url('assets/ourPartners-logo/PayPal.png');
+        }
+
+        .partner-logo--rok {
+            background-image: url('assets/ourPartners-logo/RokFinancial.png');
+        }
+
+        .partner-logo--tsys {
+            background-image: url('assets/ourPartners-logo/TSYS.png');
+        }
+
+        .partner-logo--union {
+            background-image: url('assets/ourPartners-logo/Union.png');
+        }
+
+        @media (max-width: 768px) {
+            .partners-section {
+                width: calc(100% - 24px);
+                padding: 16px;
+            }
+
+            .partners-section__row {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 24px;
+            }
+
+            .partner-logo {
+                width: 96px;
+                height: 42px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="partners-section">
+        <div class="partners-section__header">
+            <h2 class="partners-section__title">Our <span>Partners</span></h2>
+        </div>
+        <div class="partners-section__body">
+            <div class="partners-section__row">
+                <div class="partner-logo partner-logo--amex" role="img" aria-label="American Express"></div>
+                <div class="partner-logo partner-logo--apple" role="img" aria-label="Apple Pay"></div>
+                <div class="partner-logo partner-logo--verifone" role="img" aria-label="Verifone"></div>
+                <div class="partner-logo partner-logo--authorize" role="img" aria-label="Authorize.Net"></div>
+                <div class="partner-logo partner-logo--clover" role="img" aria-label="Clover"></div>
+                <div class="partner-logo partner-logo--discover" role="img" aria-label="Discover"></div>
+                <div class="partner-logo partner-logo--firstdata" role="img" aria-label="First Data"></div>
+            </div>
+            <div class="partners-section__row">
+                <div class="partner-logo partner-logo--mastercard" role="img" aria-label="Mastercard"></div>
+                <div class="partner-logo partner-logo--octopos" role="img" aria-label="Octopos"></div>
+                <div class="partner-logo partner-logo--paypal" role="img" aria-label="PayPal"></div>
+                <div class="partner-logo partner-logo--rok" role="img" aria-label="Rok Financial"></div>
+                <div class="partner-logo partner-logo--tsys" role="img" aria-label="TSYS"></div>
+                <div class="partner-logo partner-logo--union" role="img" aria-label="Union"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
