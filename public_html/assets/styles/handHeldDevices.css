@@ -1,0 +1,262 @@
+﻿* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Urbanist', sans-serif;
+            background-color: #f6f6f6;
+        }
+
+        .hhd-block {
+            position: relative;
+            display: flex;
+            width: 100%;
+            max-width: 1200px;
+            padding: 0 120px;
+            margin: 0 auto;
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 40px;
+        }
+
+        .hhd-nav {
+            position: absolute;
+            top: 53px;
+            right: 120px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .hhd-nav__icon {
+            width: 60px;
+            height: 60px;
+            aspect-ratio: 1 / 1;
+        }
+
+        .hhd-block--head span.hhd-title-dark {
+            color: #0E0E0E;
+            font-family: 'Urbanist', sans-serif;
+            font-size: 60px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        .hhd-block--head span.hhd-title-blue {
+            color: #399CDB;
+            font-family: 'Urbanist', sans-serif;
+            font-size: 60px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        .hhd-block--head .hhd-subtitle {
+            color: #696969;
+            font-family: 'Urbanist', sans-serif;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 34px;
+            margin-top: 16px;
+        }
+
+        .hhd-card {
+            display: flex;
+            width: 384px;
+            height: 420px;
+            padding: 40px;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            border-radius: 24px;
+            background: #FFF;
+        }
+
+        .hhd-card__img-wrap {
+            width: 100%;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px 24px 0 24px;
+        }
+
+        .hhd-card__img-wrap img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .hhd-card__info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+            align-self: stretch;
+        }
+
+        .hhd-card__text {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+
+        .hhd-card__title {
+            color: #0E0F0B;
+            font-family: 'Urbanist', sans-serif;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            align-self: stretch;
+        }
+
+        .hhd-card__desc {
+            color: #454745;
+            font-family: 'Urbanist', sans-serif;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            align-self: stretch;
+        }
+
+        .hhd-card__link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: #399CDB;
+            text-align: center;
+            font-family: 'Urbanist', sans-serif;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            text-decoration: none;
+        }
+
+        .hhd-block--body {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            width: 100%;
+        }
+
+        .hhd-block--foot {
+            display: flex;
+            width: 100%;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .hhd-view-all {
+            color: #399CDB;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: normal;
+        }
+
+        .hhd-view-all__icon {
+            width: 6px;
+            height: 10px;
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 1300px) {
+            .hhd-block {
+                padding: 0 40px;
+            }
+
+            .hhd-nav {
+                right: 40px;
+            }
+        }
+
+        @media (max-width: 430px) {
+            .hhd-block {
+                padding: 0 24px;
+                row-gap: 28px;
+            }
+
+            .hhd-nav {
+                position: static;
+                order: 3;
+                align-self: flex-start;
+            }
+
+            .hhd-nav__icon {
+                width: 44px;
+                height: 44px;
+            }
+
+            .hhd-block--head span.hhd-title-dark,
+            .hhd-block--head span.hhd-title-blue {
+                font-size: 36px;
+                line-height: 1.12;
+            }
+
+            .hhd-block--head .hhd-subtitle {
+                font-size: 16px;
+                line-height: 24px;
+                margin-top: 12px;
+            }
+
+            .hhd-block--head .hhd-subtitle br {
+                display: none;
+            }
+
+            .hhd-block--body {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .hhd-card {
+                width: 100%;
+                height: auto;
+                min-height: 340px;
+                padding: 24px;
+                border-radius: 18px;
+            }
+
+            .hhd-card__img-wrap {
+                height: 160px;
+                padding: 12px 12px 0;
+            }
+
+            .hhd-card__info {
+                gap: 16px;
+            }
+
+            .hhd-card__text {
+                gap: 6px;
+            }
+
+            .hhd-card__title {
+                font-size: 18px;
+            }
+
+            .hhd-card__desc {
+                font-size: 15px;
+                line-height: 22px;
+            }
+
+            .hhd-card__link {
+                font-size: 16px;
+                gap: 8px;
+            }
+
+            .hhd-block--foot {
+                justify-content: flex-start;
+                gap: 8px;
+            }
+
+            .hhd-view-all {
+                font-size: 16px;
+            }
+        }
