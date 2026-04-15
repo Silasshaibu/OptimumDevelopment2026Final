@@ -23,12 +23,14 @@
         }
 
         .billboard {
-            width: 1320px;
-            height: 568px;
+            width: 100%;
+            max-width: 1320px;
+            min-height: 568px;
             border-radius: 80px;
             background-color: #fff;
             padding: 87px 80px;
             padding-left: 692px;
+            margin: 0 auto;
         }
 
         .billboard__eyebrow {
@@ -97,6 +99,100 @@
             border-radius: 100px;
             background: #399CDB;
         }
+
+        .handheldProductImageDisplayBox {
+            width: 542px;
+            height: 607px;
+            aspect-ratio: 25/28;
+            background: transparent;
+            position: absolute;
+            left: 78px;
+            bottom: 0;
+            z-index: 2;
+        }
+
+        .billboard__image {
+            position: relative;
+            z-index: 1;
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .billboard {
+            position: relative;
+            background-image: url(../public_html/assets/billboard-hhd/Image-with-gradientSphere.png);
+        }
+
+        @media (max-width: 1440px) {
+            body {
+                padding: 40px;
+            }
+
+            .billboard {
+                padding-left: 50%;
+            }
+
+            .handheldProductImageDisplayBox {
+                left: 40px;
+                width: 40%;
+                height: auto;
+            }
+        }
+
+        @media (max-width: 430px) {
+            body {
+                padding: 24px;
+            }
+
+            .billboard {
+                min-height: 0;
+                border-radius: 32px;
+                padding: 28px 24px 32px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                background-size: cover;
+            }
+
+            .handheldProductImageDisplayBox {
+                position: relative;
+                left: auto;
+                bottom: auto;
+                width: 100%;
+                max-width: 260px;
+                align-self: center;
+            }
+
+            .billboard__eyebrow {
+                font-size: 16px;
+                margin-bottom: 8px;
+            }
+
+            .billboard__title {
+                margin-bottom: 12px;
+            }
+
+            .billboard__title-prefix,
+            .billboard__title-accent {
+                font-size: 32px;
+                line-height: 1.12;
+            }
+
+            .billboard__description {
+                font-size: 16px;
+                line-height: 24px;
+                margin-bottom: 24px;
+            }
+
+            .billboard__cta {
+                width: 100%;
+                max-width: 180px;
+                height: 44px;
+                padding: 14px 24px;
+                font-size: 15px;
+            }
+        }
     </style>
 </head>
 
@@ -115,31 +211,5 @@
         <a href="#" class="billboard__cta">Learn More</a>
     </section>
 </body>
-
-<style>
-    .handheldProductImageDisplayBox {
-        width: 542px;
-        height: 607px;
-        aspect-ratio: 25/28;
-        background: transparent;
-        position: absolute;
-        left: 78px;
-        bottom: 0;
-        z-index: 2;
-    }
-
-    .billboard__image {
-        position: relative;
-        z-index: 1;
-        display: block;
-        width: 100%;
-        height: auto;
-    }
-
-    .billboard {
-        position: relative;
-        background-image: url(../public_html/assets/billboard-hhd/Image-with-gradientSphere.png);
-    }
-</style>
 
 </html>

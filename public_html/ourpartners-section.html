@@ -22,7 +22,9 @@
         }
 
         .partners-section {
-            width: 1159px;
+            width: 100%;
+            max-width: 1159px;
+            padding: 0 24px;
             margin: 0 auto;
             display: flex;
             flex-direction: column;
@@ -133,21 +135,31 @@
             background-image: url('assets/ourPartners-logo/Union.png');
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 430px) {
             .partners-section {
-                width: calc(100% - 24px);
-                padding: 16px;
+                padding: 0 24px;
+                gap: 28px;
+            }
+
+            .partners-section__title,
+            .partners-section__title span {
+                font-size: 36px;
+                line-height: 1.12;
+            }
+
+            .partners-section__body {
+                gap: 20px;
             }
 
             .partners-section__row {
                 justify-content: center;
                 flex-wrap: wrap;
-                gap: 24px;
+                gap: 20px;
             }
 
             .partner-logo {
-                width: 96px;
-                height: 42px;
+                width: 88px;
+                height: 38px;
             }
         }
     </style>

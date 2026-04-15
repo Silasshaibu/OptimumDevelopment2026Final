@@ -23,7 +23,10 @@
 
         .footer {
             display: flex;
-            width: 1201px;
+            width: 100%;
+            max-width: 1201px;
+            padding: 0 120px;
+            margin: 0 auto;
             flex-direction: column;
             align-items: flex-start;
             gap: 40px;
@@ -183,6 +186,96 @@
             font-weight: 500;
             line-height: normal;
         }
+
+        .footer__bottom-center {
+            padding-top: 25px;
+            text-align: center;
+            margin-top: 25px;
+            border-top: 1px solid #C0C0C0;
+            padding-bottom: 25px;
+            color: #696969;
+        }
+
+        .footer__copyright {
+            color: #696969;
+            font-family: Urbanist, sans-serif;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        @media (max-width: 1300px) {
+            .footer {
+                padding: 0 40px;
+            }
+
+            .footer__top,
+            .footer__bottom {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
+
+            .footer__bottom-left {
+                width: auto;
+            }
+        }
+
+        @media (max-width: 430px) {
+            .footer {
+                padding: 0 24px;
+                gap: 28px;
+            }
+
+            .footer__top,
+            .footer__bottom {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .footer__bottom-left,
+            .footer__bottom-right,
+            .footer__bottom-center {
+                grid-column: auto;
+                width: 100%;
+                margin-top: 0;
+                padding-right: 0;
+            }
+
+            .footer__col-heading,
+            .footer__contact-heading {
+                font-size: 20px;
+                margin-bottom: 14px;
+            }
+
+            .footer__link-item {
+                font-size: 16px;
+            }
+
+            .footer__trademark,
+            .footer__contact-text,
+            .footer__email,
+            .footer__copyright {
+                font-size: 14px;
+                line-height: 22px;
+            }
+
+            .footer__socials {
+                gap: 10px;
+            }
+
+            .footer__contact-meta {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+
+            .footer__bottom-center {
+                padding-top: 20px;
+                padding-bottom: 0;
+                margin-top: 0;
+                text-align: left;
+            }
+        }
     </style>
 </head>
 
@@ -264,27 +357,6 @@
                 <p class="footer__copyright">© Copyright 2026 Optimum Payments LLC All Rights Reserved</p>
             </div>
         </div>
-
-        <style>
-            .footer__bottom-center {
-                padding-top: 25px;
-                text-align: center;
-                margin-top: 25px;
-                border-top: 1px solid #C0C0C0;
-                padding-bottom: 25px;
-                color: #696969;
-            }
-
-            .footer__copyright {
-                color: #696969;
-                font-family: Urbanist, sans-serif;
-                font-size: 18px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-            }
-        </style>
-
     </div>
 </body>
 

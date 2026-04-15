@@ -25,15 +25,106 @@
         .pc-block {
             position: relative;
             display: flex;
-            width: 1200px;
+            width: 100%;
+            max-width: 1200px;
+            padding: 0 0px;
+            margin: 0 auto;
+            margin-bottom: 120px;
             flex-direction: column;
             align-items: flex-start;
             gap: 40px;
         }
 
+        .pc-block--head {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .pc-block__title {
+            display: block;
+            font-size: 60px;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        .pc-block__title-main {
+            color: #0E0E0E;
+        }
+
+        .pc-block__title-accent {
+            color: #399CDB;
+        }
+
+        .pc-block__desc {
+            color: #696969;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 34px;
+            margin-top: 16px;
+            width: 774px;
+        }
+
+        .pc-block--body {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px 24px;
+            max-width: 1200px;
+            width: 100%;
+        }
+
         /* Card icon default: grey background, black icon */
         .pc-card {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+            width: 100%;
+            max-width: 384px;
             cursor: pointer;
+        }
+
+        .pc-card__content {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            align-self: stretch;
+            width: 100%;
+        }
+
+        .pc-card>div:last-child {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            align-self: stretch;
+            width: 100%;
+        }
+
+        .pc-card__title {
+            color: #0E0E0E;
+            font-size: 24px;
+            font-weight: 600;
+            line-height: normal;
+        }
+
+        .pc-card>div:last-child>div:first-child {
+            color: #0E0E0E;
+            font-size: 24px;
+            font-weight: 600;
+            line-height: normal;
+        }
+
+        .pc-card__desc {
+            color: #454745;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 24px;
+        }
+
+        .pc-card>div:last-child>div:last-child {
+            color: #454745;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 24px;
         }
 
         .pc-card svg rect[fill="#399CDB"] {
@@ -72,26 +163,103 @@
         .pc-card:hover svg path[stroke="white"] {
             stroke: white;
         }
+
+        .pc-globe {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: -1;
+        }
+
+
+
+        @media (max-width: 430px) {
+            .pc-block {
+                padding: 0 24px;
+                gap: 28px;
+
+            }
+
+            .pc-block__title {
+                font-size: 30px;
+                line-height: 1.12;
+            }
+
+            .pc-block__desc {
+                font-size: 16px;
+                line-height: 24px;
+                margin-top: 12px;
+                width: 100%;
+            }
+
+            .pc-block__desc br {
+                display: none;
+            }
+
+            .pc-block--body {
+                width: 100%;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px 12px;
+            }
+
+            .pc-card {
+                max-width: none !important;
+                gap: 10px !important;
+            }
+
+            .pc-card svg {
+                width: 44px;
+                height: 44px;
+            }
+
+            .pc-card__content {
+                gap: 10px;
+            }
+
+            .pc-card>div:last-child {
+                gap: 5px !important;
+            }
+
+            .pc-card__title {
+                font-size: 20px;
+            }
+
+            .pc-card>div:last-child>div:first-child {
+                font-size: 14px !important;
+            }
+
+            .pc-card__desc {
+                font-size: 12px;
+                line-height: 22px;
+            }
+
+            .pc-card>div:last-child>div:last-child {
+                font-size: 12px !important;
+                /* line-height: 22px !important; */
+                line-height: normal !important;
+            }
+
+            .pc-globe {
+                width: 220px;
+                height: auto;
+            }
+        }
     </style>
 </head>
 
 <body>
     <div class="pc-block">
         <div class="pc-block--head">
-            <span
-                style="font-family: Urbanist; font-size: 60px; font-style: normal; font-weight: 700; line-height: normal;"><span
-                    style="color: #0E0E0E;">Powerful </span><span style="color: #399CDB;">Capabilities</span></span>
-            <div
-                style="color: #696969; font-family: Urbanist; font-size: 24px; font-style: normal; font-weight: 400; line-height: 34px; margin-top: 16px;">
-                Our micro-services are designed to scale with your business, providing the<br>
+            <span class="pc-block__title"><span class="pc-block__title-main">Powerful </span><span
+                    class="pc-block__title-accent">Capabilities</span></span>
+            <div class="pc-block__desc">
+                Our micro-services are designed to scale with your business, providing the
                 flexibility and power you need to succeed in a digital-first world.
             </div>
         </div>
-        <div class="pc-block--body"
-            style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px 24px; width: 100%;">
+        <div class="pc-block--body">
             <!-- Complete FREE Processing -->
-            <div class="pc-card"
-                style="display: flex; flex-direction: column; align-items: flex-start; gap: 20px; width: 100%; max-width: 384px;">
+            <div class="pc-card">
                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
                     <rect width="48" height="48" rx="10" fill="#399CDB" />
                     <g transform="translate(10, 10)">
@@ -115,21 +283,18 @@
                             fill="white" />
                     </g>
                 </svg>
-                <div style="display: flex; flex-direction: column; gap: 12px; align-self: stretch; width: 100%;">
-                    <div
-                        style="color: #0E0E0E; font-family: Urbanist; font-size: 24px; font-style: normal; font-weight: 600; line-height: normal;">
+                <div class="pc-card__content">
+                    <div class="pc-card__title">
                         Complete FREE Processing
                     </div>
-                    <div
-                        style="color: #454745; font-family: Urbanist; font-size: 18px; font-style: normal; font-weight: 400; line-height: 24px;">
+                    <div class="pc-card__desc">
                         Accept payments online, in-store, and on-the-go with one unified platform.
                     </div>
                 </div>
             </div>
 
             <!-- Point of Sale Solution -->
-            <div class="pc-card"
-                style="display: flex; flex-direction: column; align-items: flex-start; gap: 20px; width: 100%; max-width: 384px;">
+            <div class="pc-card">
                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
                     <rect width="48" height="48" rx="10" fill="#399CDB" />
                     <g transform="translate(10, 10)">
@@ -138,27 +303,24 @@
                             fill="white" />
                     </g>
                 </svg>
-                <div style="display: flex; flex-direction: column; gap: 12px; align-self: stretch; width: 100%;">
-                    <div
-                        style="color: #0E0E0E; font-family: Urbanist; font-size: 24px; font-style: normal; font-weight: 600; line-height: normal;">
+                <div class="pc-card__content">
+                    <div class="pc-card__title">
                         Point of Sale Solution
                     </div>
-                    <div
-                        style="color: #454745; font-family: Urbanist; font-size: 18px; font-style: normal; font-weight: 400; line-height: 24px;">
+                    <div class="pc-card__desc">
                         Advanced AI-driven security to protect your business and customers from risk.
                     </div>
                 </div>
             </div>
 
             <!-- Invoicing -->
-            <div class="pc-card"
-                style="display: flex; flex-direction: column; align-items: flex-start; gap: 20px; width: 100%; max-width: 384px;">
+            <div class="pc-card">
                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
                     <rect width="48" height="48" rx="10" fill="#399CDB" />
                     <g transform="translate(10, 10)">
                         <g clip-path="url(#clip0_inv)">
-                            <mask id="mask0_inv" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0"
-                                width="28" height="28">
+                            <mask id="mask0_inv" mask-type="luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="28"
+                                height="28">
                                 <path d="M28 0H0V28H28V0Z" fill="white" />
                             </mask>
                             <g mask="url(#mask0_inv)">
@@ -180,28 +342,25 @@
                         </defs>
                     </g>
                 </svg>
-                <div style="display: flex; flex-direction: column; gap: 12px; align-self: stretch; width: 100%;">
-                    <div
-                        style="color: #0E0E0E; font-family: Urbanist; font-size: 24px; font-style: normal; font-weight: 600; line-height: normal;">
+                <div class="pc-card__content">
+                    <div class="pc-card__title">
                         Invoicing
                     </div>
-                    <div
-                        style="color: #454745; font-family: Urbanist; font-size: 18px; font-style: normal; font-weight: 400; line-height: 24px;">
+                    <div class="pc-card__desc">
                         Access your funds faster with our real-time settlement infrastructure.
                     </div>
                 </div>
             </div>
 
             <!-- QuickBooks Sync -->
-            <div class="pc-card"
-                style="display: flex; flex-direction: column; align-items: flex-start; gap: 20px; width: 100%; max-width: 384px;">
+            <div class="pc-card">
                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
                     <rect width="48" height="48" rx="10" fill="#399CDB" />
                     <g transform="translate(10, 10)">
                         <g clip-path="url(#clip0_qbs)">
                             <rect width="28" height="28" fill="#399CDB" />
-                            <mask id="mask0_qbs" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0"
-                                width="28" height="28">
+                            <mask id="mask0_qbs" mask-type="luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="28"
+                                height="28">
                                 <path d="M28 0H0V28H28V0Z" fill="white" />
                             </mask>
                             <g mask="url(#mask0_qbs)">
@@ -227,27 +386,24 @@
                         </defs>
                     </g>
                 </svg>
-                <div style="display: flex; flex-direction: column; gap: 12px; align-self: stretch; width: 100%;">
-                    <div
-                        style="color: #0E0E0E; font-family: Urbanist; font-size: 24px; font-style: normal; font-weight: 600; line-height: normal;">
+                <div class="pc-card__content">
+                    <div class="pc-card__title">
                         QuickBooks Sync
                     </div>
-                    <div
-                        style="color: #454745; font-family: Urbanist; font-size: 18px; font-style: normal; font-weight: 400; line-height: 24px;">
+                    <div class="pc-card__desc">
                         Deep insights into your sales performance and customer behavior.
                     </div>
                 </div>
             </div>
 
             <!-- Tap to Pay -->
-            <div class="pc-card"
-                style="display: flex; flex-direction: column; align-items: flex-start; gap: 20px; width: 100%; max-width: 384px;">
+            <div class="pc-card">
                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
                     <rect width="48" height="48" rx="10" fill="#399CDB" />
                     <g transform="translate(10, 10)">
                         <g clip-path="url(#clip0_ttp)">
-                            <mask id="mask0_ttp" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0"
-                                width="28" height="28">
+                            <mask id="mask0_ttp" mask-type="luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="28"
+                                height="28">
                                 <path d="M28 0H0V28H28V0Z" fill="white" />
                             </mask>
                             <g mask="url(#mask0_ttp)">
@@ -271,27 +427,24 @@
                         </defs>
                     </g>
                 </svg>
-                <div style="display: flex; flex-direction: column; gap: 12px; align-self: stretch; width: 100%;">
-                    <div
-                        style="color: #0E0E0E; font-family: Urbanist; font-size: 24px; font-style: normal; font-weight: 600; line-height: normal;">
+                <div class="pc-card__content">
+                    <div class="pc-card__title">
                         Tap to Pay
                     </div>
-                    <div
-                        style="color: #454745; font-family: Urbanist; font-size: 18px; font-style: normal; font-weight: 400; line-height: 24px;">
+                    <div class="pc-card__desc">
                         Expand your business globally with support for 135+ currencies.
                     </div>
                 </div>
             </div>
 
             <!-- Mobile Solutions -->
-            <div class="pc-card"
-                style="display: flex; flex-direction: column; align-items: flex-start; gap: 20px; width: 100%; max-width: 384px;">
+            <div class="pc-card">
                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
                     <rect width="48" height="48" rx="10" fill="#399CDB" />
                     <g transform="translate(10, 10)">
                         <g clip-path="url(#clip0_mob)">
-                            <mask id="mask0_mob" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0"
-                                width="28" height="28">
+                            <mask id="mask0_mob" mask-type="luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="28"
+                                height="28">
                                 <path d="M28 0H0V28H28V0Z" fill="white" />
                             </mask>
                             <g mask="url(#mask0_mob)">
@@ -312,27 +465,24 @@
                         </defs>
                     </g>
                 </svg>
-                <div style="display: flex; flex-direction: column; gap: 12px; align-self: stretch; width: 100%;">
-                    <div
-                        style="color: #0E0E0E; font-family: Urbanist; font-size: 24px; font-style: normal; font-weight: 600; line-height: normal;">
+                <div class="pc-card__content">
+                    <div class="pc-card__title">
                         Mobile Solutions
                     </div>
-                    <div
-                        style="color: #454745; font-family: Urbanist; font-size: 18px; font-style: normal; font-weight: 400; line-height: 24px;">
+                    <div class="pc-card__desc">
                         Turn any smartphone into a powerful point-of-sale terminal.
                     </div>
                 </div>
             </div>
 
             <!-- Ecommerce Integration -->
-            <div class="pc-card"
-                style="display: flex; flex-direction: column; align-items: flex-start; gap: 20px; width: 100%; max-width: 384px;">
+            <div class="pc-card">
                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
                     <rect width="48" height="48" rx="10" fill="#399CDB" />
                     <g transform="translate(10, 10)">
                         <g clip-path="url(#clip0_ei)">
-                            <mask id="mask0_ei" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0"
-                                width="28" height="28">
+                            <mask id="mask0_ei" mask-type="luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="28"
+                                height="28">
                                 <path d="M28 0H0V28H28V0Z" fill="white" />
                             </mask>
                             <g mask="url(#mask0_ei)">
@@ -359,27 +509,24 @@
                         </defs>
                     </g>
                 </svg>
-                <div style="display: flex; flex-direction: column; gap: 12px; align-self: stretch; width: 100%;">
-                    <div
-                        style="color: #0E0E0E; font-family: Urbanist; font-size: 24px; font-style: normal; font-weight: 600; line-height: normal;">
+                <div class="pc-card__content">
+                    <div class="pc-card__title">
                         Ecommerce Integration
                     </div>
-                    <div
-                        style="color: #454745; font-family: Urbanist; font-size: 18px; font-style: normal; font-weight: 400; line-height: 24px;">
+                    <div class="pc-card__desc">
                         Deep insights into your sales performance and customer behavior.
                     </div>
                 </div>
             </div>
 
             <!-- Gift + Loyalty -->
-            <div class="pc-card"
-                style="display: flex; flex-direction: column; align-items: flex-start; gap: 20px; width: 100%; max-width: 384px;">
+            <div class="pc-card">
                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
                     <rect width="48" height="48" rx="10" fill="#399CDB" />
                     <g transform="translate(10, 10)">
                         <g clip-path="url(#clip0_gl)">
-                            <mask id="mask0_gl" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0"
-                                width="28" height="28">
+                            <mask id="mask0_gl" mask-type="luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="28"
+                                height="28">
                                 <path d="M28 0H0V28H28V0Z" fill="white" />
                             </mask>
                             <g mask="url(#mask0_gl)">
@@ -412,21 +559,18 @@
                         </defs>
                     </g>
                 </svg>
-                <div style="display: flex; flex-direction: column; gap: 12px; align-self: stretch; width: 100%;">
-                    <div
-                        style="color: #0E0E0E; font-family: Urbanist; font-size: 24px; font-style: normal; font-weight: 600; line-height: normal;">
+                <div class="pc-card__content">
+                    <div class="pc-card__title">
                         Gift + Loyalty
                     </div>
-                    <div
-                        style="color: #454745; font-family: Urbanist; font-size: 18px; font-style: normal; font-weight: 400; line-height: 24px;">
+                    <div class="pc-card__desc">
                         Expand your business globally with support for 135+ currencies.
                     </div>
                 </div>
             </div>
 
             <!-- ACH & Check Processing -->
-            <div class="pc-card"
-                style="display: flex; width: 384px; flex-direction: column; align-items: flex-start; gap: 20px; grid-row: 1 / span 1; grid-column: 1 / span 1;">
+            <div class="pc-card">
                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
                     <rect width="48" height="48" rx="10" fill="#399CDB" />
                     <g transform="translate(10, 10)">
@@ -456,20 +600,18 @@
                             fill="white" />
                     </g>
                 </svg>
-                <div style="display: flex; flex-direction: column; gap: 12px; align-self: stretch; width: 100%;">
-                    <div
-                        style="color: #0E0E0E; font-family: Urbanist; font-size: 24px; font-style: normal; font-weight: 600; line-height: normal;">
+                <div class="pc-card__content">
+                    <div class="pc-card__title">
                         ACH & Check Processing
                     </div>
-                    <div
-                        style="color: #454745; font-family: Urbanist; font-size: 18px; font-style: normal; font-weight: 400; line-height: 24px;">
+                    <div class="pc-card__desc">
                         Turn any smartphone into a powerful point-of-sale terminal.
                     </div>
                 </div>
             </div>
         </div>
         <img src="assets/PowerfulCapabilites-Images/PowerfulCapabilities-Globe.png" alt="Powerful Capabilities Globe"
-            width="468" height="237" style="position: absolute; top: 0; right: 0; z-index: -1;">
+            width="468" height="237" class="pc-globe">
     </div>
 </body>
 

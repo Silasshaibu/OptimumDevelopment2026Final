@@ -32,7 +32,8 @@
             gap: 40px;
             border-radius: 40px;
             background: #FFF;
-            width: 1320px;
+            width: 100%;
+            max-width: 1320px;
         }
 
         .testimonial-form-card {
@@ -281,6 +282,117 @@
 
         .testimonial-form-submit:hover {
             background: #2d88c4;
+        }
+
+        @media (max-width: 1440px) {
+            body {
+                padding: 40px;
+                align-items: flex-start;
+            }
+
+            .testimonial-form-shell {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 430px) {
+            body {
+                padding: 24px;
+            }
+
+            .testimonial-form-shell {
+                padding: 24px;
+                gap: 24px;
+                border-radius: 24px;
+                flex-direction: column;
+            }
+
+            .testimonial-form-card {
+                width: 100%;
+                min-height: 260px;
+                border-radius: 20px;
+            }
+
+            .testimonial-form-image {
+                width: 100%;
+                height: 100%;
+                object-position: center top;
+            }
+
+            .testimonial-form-content,
+            .testimonial-form-fields,
+            .testimonial-form-header {
+                width: 100%;
+            }
+
+            .testimonial-form-content {
+                gap: 20px;
+            }
+
+            .testimonial-form-fields {
+                gap: 18px;
+            }
+
+            .testimonial-form-heading {
+                width: 100%;
+                font-size: 32px;
+                line-height: 1.12;
+            }
+
+            .testimonial-form-subheading,
+            .form-label,
+            .form-label .required {
+                font-size: 16px;
+                line-height: 24px;
+            }
+
+            .testimonial-form-rating {
+                width: 100%;
+            }
+
+            .rating-stars {
+                gap: 6px;
+            }
+
+            .rating-stars label {
+                width: 24px;
+                height: 24px;
+            }
+
+            .rating-stars label svg {
+                width: 22px;
+                height: 22px;
+            }
+
+            .testimonial-form-group textarea {
+                height: 120px;
+                border-radius: 16px;
+                padding: 14px 16px;
+            }
+
+            .testimonial-form-group input[type="text"],
+            .testimonial-form-group input[type="email"] {
+                height: 52px;
+                padding: 0 16px;
+            }
+
+            .testimonial-form-bottom {
+                gap: 20px;
+            }
+
+            .testimonial-form-privacy {
+                align-items: flex-start;
+            }
+
+            .testimonial-form-privacy label {
+                font-size: 14px;
+                line-height: 22px;
+            }
+
+            .testimonial-form-submit {
+                height: 52px;
+                font-size: 16px;
+            }
         }
     </style>
 </head>

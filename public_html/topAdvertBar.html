@@ -21,17 +21,25 @@
         }
 
         .top-info-bar {
-            width: 1440px;
-            height: 48px;
+            width: 100%;
+            max-width: 1440px;
+            min-height: 48px;
+            padding: 12px 120px;
             background: #0e0e0e;
             background: #399CDB;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
+            margin: 0 auto;
         }
 
         .top-info-bar__text {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 4px;
             font-size: 16px;
             font-family: Urbanist;
             line-height: 20px;
@@ -39,6 +47,7 @@
             text-decoration: none;
             cursor: pointer;
             transition: opacity 0.2s ease;
+            text-align: center;
         }
 
         .top-info-bar__text:hover {
@@ -63,10 +72,11 @@
             text-decoration: underline;
         }
 
-        .top-info-bar__close {
+        .top-info-bar__arrow-left {
             position: absolute;
             left: 120px;
-            top: 12px;
+            top: 50%;
+            transform: translateY(-50%);
             width: 24px;
             height: 24px;
             cursor: pointer;
@@ -75,11 +85,11 @@
             background-color: transparent;
         }
 
-        .top-info-bar__close:hover {
+        .top-info-bar__arrow-left:hover {
             opacity: 0.7;
         }
 
-        .top-info-bar__close-icon {
+        .top-info-bar__arrow-left-icon {
             width: 100%;
             height: 100%;
             fill: #2B2B2B;
@@ -88,7 +98,8 @@
         .top-info-bar__arrow-right {
             position: absolute;
             right: 120px;
-            top: 12px;
+            top: 50%;
+            transform: translateY(-50%);
             width: 24px;
             height: 24px;
             cursor: pointer;
@@ -109,8 +120,65 @@
 
         @media (max-width: 1440px) {
             .top-info-bar {
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+
+            .top-info-bar__arrow-left {
+                left: 40px;
+            }
+
+            .top-info-bar__arrow-right {
+                right: 40px;
+            }
+        }
+
+        @media (max-width: 430px) {
+            .top-info-bar {
+                min-height: 38px;
+                padding: 13px 0px;
+            }
+
+            .top-info-bar__text {
+                flex-direction: row;
+                gap: 2px;
+            }
+
+            .top-info-bar__arrow-left,
+            .top-info-bar__arrow-right {
+                width: 18px;
+                height: 18px;
+            }
+
+            .top-info-bar__arrow-left {
+                left: 24px;
+            }
+
+            .top-info-bar__arrow-right {
+                right: 24px;
+            }
+
+            .top-info-bar__main-text {
+                color: #2B2B2B;
+                font-family: Urbanist;
+                font-size: 10px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+            }
+
+            .top-info-bar__cta-text {
+                color: #FFF;
+                font-family: Urbanist;
+                font-size: 10px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+            }
+
+            .top-info-bar {
                 width: 100%;
-                max-width: 1440px;
+                position: relative;
             }
         }
     </style>
@@ -118,9 +186,9 @@
 
 <body>
     <div class="top-info-bar">
-        <button class="top-info-bar__close" aria-label="Close">
+        <button class="top-info-bar__arrow-left" aria-label="Arrow Left">
             <img src="assets/TopInfoBarSection-Icons/arrow-circle-left.svg" alt="Arrow Left"
-                class="top-info-bar__close-icon">
+                class="top-info-bar__arrow-left-icon">
         </button>
         <a href="#" class="top-info-bar__text">
             <span class="top-info-bar__main-text">Want to eliminate up to 100% of your processing fees? →</span>

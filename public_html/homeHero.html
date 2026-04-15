@@ -15,21 +15,23 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Urbanist', sans-serif;
         }
 
         body {
-            font-family: 'Urbanist', sans-serif;
+            background: #f6f6f6;
         }
 
         .home-hero {
             position: relative;
-            width: 1440px;
-            padding-left: 120px;
-            padding-top: 132px;
             margin-bottom: 120px;
-            height: 728px;
+            min-height: 728px;
             background: url('assets/AccelerateMerchantApplication.jpg') lightgray 50% / cover no-repeat;
             overflow: hidden;
+            margin-left: auto;
+            margin-right: auto;
+
+
         }
 
         .home-hero::before {
@@ -87,6 +89,189 @@
         .home-hero button:hover {
             cursor: pointer;
         }
+
+        .hero-info-left {
+            display: flex;
+            width: 1440px;
+            max-width: 1440px;
+            padding: 133px 120px 0px 120px;
+            margin: 0 auto;
+            max-width: 100%;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .hero-copy {
+            display: flex;
+            flex-direction: column;
+            row-gap: 15px;
+        }
+
+        .hero-eyebrow {
+            color: #399CDB;
+            font-size: 24px;
+            font-weight: 600;
+            line-height: normal;
+        }
+
+        .hero-title {
+            color: #FFF;
+            font-size: 72px;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        .hero-section-title {
+            margin: 0;
+            align-self: stretch;
+            font-family: 'Urbanist', sans-serif;
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        .hero-title--highlight {
+            color: #399CDB;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            row-gap: 40px;
+            width: 679px;
+        }
+
+        .hero-description {
+            color: rgba(255, 255, 255, 0.70);
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 34px;
+            width: 679px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 24px;
+        }
+
+        .hero-btn {
+            display: flex;
+            height: 48px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100px;
+            border: none;
+            padding: 16px 35px;
+        }
+
+        .hero-btn--primary {
+            background: #399CDB;
+        }
+
+        .hero-btn--secondary {
+            background: transparent;
+            border: 1px solid #399CDB;
+        }
+
+        .hero-btn__label {
+            text-align: center;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 16px;
+        }
+
+        .hero-btn--primary .hero-btn__label {
+            color: #FFF;
+        }
+
+        .hero-btn--secondary .hero-btn__label {
+            color: #399CDB;
+
+        }
+
+
+        @media (max-width: 430px) {
+            .home-hero {
+                min-height: 580px;
+                margin-bottom: 72px;
+                background-position: 58% center;
+                width: 100%;
+            }
+
+            .hero-info-left {
+                width: 100%;
+                padding: 40px 24px 0px 24px;
+                gap: 28px;
+            }
+
+            .hero-copy {
+                row-gap: 10px;
+            }
+
+            .hero-eyebrow {
+                font-size: 16px;
+            }
+
+            .hero-title {
+                font-size: 36px;
+                line-height: 1.1;
+            }
+
+            .hero-content {
+                row-gap: 24px;
+                width: 100%;
+            }
+
+            .hero-description {
+                font-size: 16px;
+                line-height: 24px;
+                width: 100%;
+            }
+
+            .hero-actions {
+                width: 100%;
+                gap: 5px;
+                margin-top: 0;
+            }
+
+            .hero-btn {
+                width: 129px;
+                height: 42px;
+                padding: 12px 30px;
+            }
+
+            .hero-btn__label {
+                color: #FFF;
+                text-align: center;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 18px;
+            }
+
+
+
+            .carouselSlideProgressBarContainer {
+                bottom: 20px;
+            }
+
+            .carouselSlideProgressBar {
+                width: 24px;
+                height: 6px;
+            }
+
+            .carouselSlideProgressBarInactive {
+                width: 6px;
+                height: 6px;
+            }
+
+            .hero-btn.hero-btn--secondary {
+                padding: 12px 25px;
+            }
+        }
     </style>
 </head>
 
@@ -97,34 +282,24 @@
             <div class="carouselSlideProgressBarInactive"></div>
             <div class="carouselSlideProgressBarInactive"></div>
         </div>
-        <div class="hero-info-left"
-            style="display: flex; width: 701px; flex-direction: column; align-items: flex-start; gap: 40px;">
-            <div style="display: flex; flex-direction: column; row-gap: 15px;">
-                <p
-                    style="color: #399CDB; font-family: Urbanist; font-size: 24px; font-style: normal; font-weight: 600; line-height: normal;">
-                    Optimum Payments</p>
-                <p><span
-                        style="color: #FFF; font-family: Urbanist; font-size: 72px; font-style: normal; font-weight: 700; line-height: normal;">Accelerate
-                        Your</span><br><span
-                        style="color: #399CDB; font-family: Urbanist; font-size: 72px; font-style: normal; font-weight: 700; line-height: normal;">Merchant
+        <div class="hero-info-left">
+            <div class="hero-copy">
+                <p class="hero-eyebrow">Optimum Payments</p>
+                <p class="hero-section-title"><span class="hero-title">Accelerate
+                        Your</span><br><span class="hero-title hero-title--highlight">Merchant
                         Application</span></p>
             </div>
-            <div style="display: flex; flex-direction: column; row-gap: 40px;">
-                <p
-                    style="color: rgba(255, 255, 255, 0.70); font-family: Urbanist; font-size: 24px; font-style: normal; font-weight: 500; line-height: 34px;">
+            <div class="hero-content">
+                <p class="hero-description">
                     Access the capital you need to grow with transparent terms and
                     quick approval cycles.</p>
-                <div style="display: flex; gap: 10px; margin-top: 24px;">
-                    <button
-                        style="display: flex; height: 48px; padding: 16px 36px 16px 35px; justify-content: center; align-items: center; border-radius: 100px; background: #399CDB; border: none;">
-                        <span
-                            style="color: #FFF; text-align: center; font-family: Urbanist; font-size: 16px; font-style: normal; font-weight: 600; line-height: 16px;">Apply
+                <div class="hero-actions">
+                    <button class="hero-btn hero-btn--primary">
+                        <span class="hero-btn__label">Apply
                             Now</span>
                     </button>
-                    <button
-                        style="display: flex; height: 48px; padding: 16px 35px 16px 33px; justify-content: center; align-items: center; border-radius: 100px; background: transparent; border: 1px solid #399CDB;">
-                        <span
-                            style="color: #399CDB; text-align: center; font-family: Urbanist; font-size: 16px; font-style: normal; font-weight: 600; line-height: 16px;">Learn
+                    <button class="hero-btn hero-btn--secondary">
+                        <span class="hero-btn__label">Learn
                             More</span>
                     </button>
                 </div>
