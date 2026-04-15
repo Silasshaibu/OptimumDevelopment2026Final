@@ -35,7 +35,7 @@ body {
    LEFT PANEL
    ========================================================= */
 .megamenu-left {
-    width: 480px;
+    width: clamp(360px, 33%, 480px);
     flex-shrink: 0;
     background: #1E2025;
     display: flex;
@@ -60,11 +60,11 @@ body {
      — Chevron: x=449, y=24 (6×12px, 25px from right)
    ========================================================= */
 .megamenu-item {
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
 
-    width: 480px;
+    width: 100%;
     height: 60px;
     padding: 0 25px;
 
@@ -87,7 +87,10 @@ body {
 }
 
 .megamenu-item-arrow {
-    flex-shrink: 0;
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
     opacity: 0.55;
     transition: opacity 0.2s ease, transform 0.2s ease;
 }
@@ -95,7 +98,7 @@ body {
 .megamenu-item:hover .megamenu-item-arrow,
 .megamenu-item.active .megamenu-item-arrow {
     opacity: 1;
-    transform: translateX(3px);
+    transform: translateY(-50%) translateX(3px);
 }
 
 
@@ -108,26 +111,67 @@ body {
     padding: 40px 50px;
     position: relative;
     min-width: 0;
+    overflow: hidden;
+}
+
+/* Inner scroll container */
+.megamenu-scroll {
+    height: 100%;
     overflow-y: auto;
     overflow-x: hidden;
 }
 
 /* Custom scrollbar */
-.megamenu-right::-webkit-scrollbar {
+.megamenu-scroll::-webkit-scrollbar {
     width: 5px;
 }
 
-.megamenu-right::-webkit-scrollbar-track {
+.megamenu-scroll::-webkit-scrollbar-track {
     background: transparent;
 }
 
-.megamenu-right::-webkit-scrollbar-thumb {
+.megamenu-scroll::-webkit-scrollbar-thumb {
     background: #D0D0D0;
     border-radius: 3px;
 }
 
-.megamenu-right::-webkit-scrollbar-thumb:hover {
+.megamenu-scroll::-webkit-scrollbar-thumb:hover {
     background: #AAAAAA;
+}
+
+/* Scroll fade overlays — white to transparent */
+.megamenu-right::before,
+.megamenu-right::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 48px;
+    pointer-events: none;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.megamenu-right::before {
+    top: 0;
+    /* background: linear-gradient(to bottom, white, transparent); */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.123), transparent);
+}
+
+.megamenu-right::after {
+    bottom: 0;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.123), transparent);
+}
+
+.megamenu-right.fade-top::before,
+.megamenu-right.fade-both::before {
+    opacity: .5;
+}
+
+.megamenu-right.fade-bottom::after,
+.megamenu-right.fade-both::after {
+    opacity: .5;
 }
 
 /* Hidden by default; revealed when .active is toggled */
@@ -208,6 +252,10 @@ body {
     font-family: Urbanist;
     font-weight: 400;
     word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 
@@ -242,8 +290,13 @@ body {
 
     .megamenu-right {
         padding: 28px 24px;
-        overflow-y: visible;
+        overflow: visible;
         /* no scroll cap when stacked */
+    }
+
+    .megamenu-scroll {
+        height: auto;
+        overflow: visible;
     }
 
     .megamenu-panel-cards {
