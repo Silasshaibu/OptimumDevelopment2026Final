@@ -1,233 +1,255 @@
 ﻿* {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            font-family: 'Urbanist', sans-serif;
-            background-color: #F6F6F6;
-        }
+body {
+    font-family: 'Urbanist', sans-serif;
+    background-color: #F6F6F6;
+}
 
-        .pc-block {
-            position: relative;
-            display: flex;
-            width: 100%;
-            max-width: 1200px;
-            padding: 0 0px;
-            margin: 0 auto;
-            margin-bottom: 120px;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 40px;
-        }
+.pc-block {
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 0px;
+    margin: 0 auto;
+    margin-bottom: 120px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+}
 
-        .pc-block--head {
-            max-width: 900px;
-            width: 100%;
-        }
+.pc-block--head {
+    max-width: 900px;
+    width: 100%;
+}
 
-        .pc-block__title {
-            display: block;
-            font-size: 60px;
-            font-weight: 700;
-            line-height: normal;
-        }
+.pc-block__title {
+    display: block;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: normal;
+}
 
-        .pc-block__title-main {
-            color: #0E0E0E;
-        }
+.pc-block__title-main {
+    color: #0E0E0E;
+}
 
-        .pc-block__title-accent {
-            color: #399CDB;
-        }
+.pc-block__title-accent {
+    color: #399CDB;
+}
 
-        .pc-block__desc {
-            color: #696969;
-            font-size: 24px;
-            font-weight: 400;
-            line-height: 34px;
-            margin-top: 16px;
-            width: 774px;
-        }
+.pc-block__desc {
+    color: #696969;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 34px;
+    margin-top: 16px;
+    width: 774px;
+}
 
-        .pc-block--body {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px 24px;
-            max-width: 1200px;
-            width: 100%;
-        }
+.pc-block--body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 24px;
+    max-width: 1200px;
+    width: 100%;
+}
 
-        /* Card icon default: grey background, black icon */
-        .pc-card {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 20px;
-            width: 100%;
-            max-width: 384px;
-            cursor: pointer;
-        }
+/* Card icon default: grey background, black icon */
+.pc-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+    max-width: 384px;
+    cursor: pointer;
+}
 
-        .pc-card__content {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            align-self: stretch;
-            width: 100%;
-        }
+.pc-card__content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-self: stretch;
+    width: 100%;
+}
 
-        .pc-card>div:last-child {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            align-self: stretch;
-            width: 100%;
-        }
+.pc-card>div:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-self: stretch;
+    width: 100%;
+}
 
-        .pc-card__title {
-            color: #0E0E0E;
-            font-size: 24px;
-            font-weight: 600;
-            line-height: normal;
-        }
+.pc-card__title {
+    color: #0E0E0E;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: normal;
+}
 
-        .pc-card>div:last-child>div:first-child {
-            color: #0E0E0E;
-            font-size: 24px;
-            font-weight: 600;
-            line-height: normal;
-        }
+.pc-card>div:last-child>div:first-child {
+    color: #0E0E0E;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: normal;
+}
 
-        .pc-card__desc {
-            color: #454745;
-            font-size: 18px;
-            font-weight: 400;
-            line-height: 24px;
-        }
+.pc-card__desc {
+    color: #454745;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+}
 
-        .pc-card>div:last-child>div:last-child {
-            color: #454745;
-            font-size: 18px;
-            font-weight: 400;
-            line-height: 24px;
-        }
+.pc-card>div:last-child>div:last-child {
+    color: #454745;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+}
 
-        .pc-card svg rect[fill="#399CDB"] {
-            fill: #fff;
-            transition: fill 0.3s ease;
-        }
+.pc-card svg rect[fill="#399CDB"] {
+    fill: #fff;
+    transition: fill 0.3s ease;
+}
 
-        .pc-card svg path[fill="white"] {
-            fill: #0E0E0E;
-            transition: fill 0.3s ease;
-        }
+.pc-card svg path[fill="white"] {
+    fill: #0E0E0E;
+    transition: fill 0.3s ease;
+}
 
-        .pc-card svg path[stroke="white"] {
-            stroke: #0E0E0E;
-            transition: stroke 0.3s ease;
-        }
+.pc-card svg path[stroke="white"] {
+    stroke: #0E0E0E;
+    transition: stroke 0.3s ease;
+}
 
-        /* Preserve mask and clipPath fills */
-        .pc-card svg mask path {
-            fill: white !important;
-        }
+/* Preserve mask and clipPath fills */
+.pc-card svg mask path {
+    fill: white !important;
+}
 
-        .pc-card svg defs clipPath rect {
-            fill: white !important;
-        }
+.pc-card svg defs clipPath rect {
+    fill: white !important;
+}
 
-        /* Card icon hover: blue background, white icon */
-        .pc-card:hover svg rect[fill="#399CDB"] {
-            fill: #399CDB;
-        }
+/* Card icon hover: blue background, white icon */
+.pc-card:hover svg rect[fill="#399CDB"] {
+    fill: #399CDB;
+}
 
-        .pc-card:hover svg path[fill="white"] {
-            fill: white;
-        }
+.pc-card:hover svg path[fill="white"] {
+    fill: white;
+}
 
-        .pc-card:hover svg path[stroke="white"] {
-            stroke: white;
-        }
+.pc-card:hover svg path[stroke="white"] {
+    stroke: white;
+}
 
-        .pc-globe {
-            position: absolute;
-            top: 0;
-            right: 0;
-            z-index: -1;
-        }
+.pc-globe {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
 
 
 
-        @media (max-width: 430px) {
-            .pc-block {
-                padding: 0 24px;
-                gap: 28px;
+@media (max-width: 968px) {
+    .pc-block {
+        padding: 0 24px;
+        gap: 32px;
+    }
 
-            }
+    .pc-block__title {
+        font-size: 48px;
+    }
 
-            .pc-block__title {
-                font-size: 30px;
-                line-height: 1.12;
-            }
+    .pc-block__desc {
+        font-size: 20px;
+        line-height: 30px;
+        width: 100%;
+    }
 
-            .pc-block__desc {
-                font-size: 16px;
-                line-height: 24px;
-                margin-top: 12px;
-                width: 100%;
-            }
+    .pc-block--body {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px 20px;
+    }
+}
 
-            .pc-block__desc br {
-                display: none;
-            }
+@media (max-width: 430px) {
+    .pc-block {
+        padding: 0 24px;
+        gap: 28px;
 
-            .pc-block--body {
-                width: 100%;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 20px 12px;
-            }
+    }
 
-            .pc-card {
-                max-width: none !important;
-                gap: 10px !important;
-            }
+    .pc-block__title {
+        font-size: 30px;
+        line-height: 1.12;
+    }
 
-            .pc-card svg {
-                width: 44px;
-                height: 44px;
-            }
+    .pc-block__desc {
+        font-size: 16px;
+        line-height: 24px;
+        margin-top: 12px;
+        width: 100%;
+    }
 
-            .pc-card__content {
-                gap: 10px;
-            }
+    .pc-block__desc br {
+        display: none;
+    }
 
-            .pc-card>div:last-child {
-                gap: 5px !important;
-            }
+    .pc-block--body {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 12px;
+    }
 
-            .pc-card__title {
-                font-size: 20px;
-            }
+    .pc-card {
+        max-width: none !important;
+        gap: 10px !important;
+    }
 
-            .pc-card>div:last-child>div:first-child {
-                font-size: 14px !important;
-            }
+    .pc-card svg {
+        width: 44px;
+        height: 44px;
+    }
 
-            .pc-card__desc {
-                font-size: 12px;
-                line-height: 22px;
-            }
+    .pc-card__content {
+        gap: 10px;
+    }
 
-            .pc-card>div:last-child>div:last-child {
-                font-size: 12px !important;
-                /* line-height: 22px !important; */
-                line-height: normal !important;
-            }
+    .pc-card>div:last-child {
+        gap: 5px !important;
+    }
 
-            .pc-globe {
-                width: 220px;
-                height: auto;
-            }
-        }
+    .pc-card__title {
+        font-size: 20px;
+    }
+
+    .pc-card>div:last-child>div:first-child {
+        font-size: 14px !important;
+    }
+
+    .pc-card__desc {
+        font-size: 12px;
+        line-height: 22px;
+    }
+
+    .pc-card>div:last-child>div:last-child {
+        font-size: 12px !important;
+        /* line-height: 22px !important; */
+        line-height: normal !important;
+    }
+
+    .pc-globe {
+        width: 220px;
+        height: auto;
+    }
+}

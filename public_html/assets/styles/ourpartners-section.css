@@ -1,152 +1,170 @@
 ﻿* {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            font-family: 'Urbanist', sans-serif;
-            background: #f6f6f6;
-        }
+body {
+    font-family: 'Urbanist', sans-serif;
+    background: #f6f6f6;
+}
 
-        .partners-section {
-            width: 100%;
-            max-width: 1159px;
-            padding: 0 24px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 40px;
-        }
+.partners-section {
+    width: 100%;
+    max-width: 1159px;
+    padding: 0 24px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
 
-        .partners-section__header {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+.partners-section__header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-        .partners-section__title {
-            color: #0E0E0E;
-            text-align: center;
-            font-family: 'Urbanist', sans-serif;
-            font-size: 60px;
-            font-weight: 700;
-            line-height: normal;
-            word-wrap: break-word;
-        }
+.partners-section__title {
+    color: #0E0E0E;
+    text-align: center;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: normal;
+    word-wrap: break-word;
+}
 
-        .partners-section__title span {
-            color: #399CDB;
-            font-size: 60px;
-            font-family: 'Urbanist', sans-serif;
-            font-weight: 700;
-            word-wrap: break-word;
-        }
+.partners-section__title span {
+    color: #399CDB;
+    font-size: 60px;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 700;
+    word-wrap: break-word;
+}
 
-        .partners-section__body {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            /* gap: 24px; */
-            gap: 37px;
-        }
+.partners-section__body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* gap: 24px; */
+    gap: 37px;
+}
 
-        .partners-section__row {
-            display: flex;
-            align-items: center;
-            gap: 60px;
-            width: fit-content;
-            max-width: 100%;
-        }
+.partners-section__row {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    width: fit-content;
+    max-width: 100%;
+}
 
-        .partner-logo {
-            width: 112px;
-            height: 49px;
-            aspect-ratio: 16 / 7;
-            background: lightgray 50% / cover no-repeat;
-            background-color: transparent;
-            flex: 0 0 auto;
-        }
+.partner-logo {
+    width: 112px;
+    height: 49px;
+    aspect-ratio: 16 / 7;
+    background: lightgray 50% / cover no-repeat;
+    background-color: transparent;
+    flex: 0 0 auto;
+}
 
-        .partner-logo--amex {
-            background-image: url('assets/ourPartners-logo/AmericanExpress.png');
-        }
+.partner-logo--amex {
+    background-image: url('assets/ourPartners-logo/AmericanExpress.png');
+}
 
-        .partner-logo--apple {
-            background-image: url('assets/ourPartners-logo/ApplePay.png');
-        }
+.partner-logo--apple {
+    background-image: url('assets/ourPartners-logo/ApplePay.png');
+}
 
-        .partner-logo--verifone {
-            background-image: url('assets/ourPartners-logo/Verifone.png');
-        }
+.partner-logo--verifone {
+    background-image: url('assets/ourPartners-logo/Verifone.png');
+}
 
-        .partner-logo--authorize {
-            background-image: url('assets/ourPartners-logo/AuthorizeNet.png');
-        }
+.partner-logo--authorize {
+    background-image: url('assets/ourPartners-logo/AuthorizeNet.png');
+}
 
-        .partner-logo--clover {
-            background-image: url('assets/ourPartners-logo/Clover.png');
-        }
+.partner-logo--clover {
+    background-image: url('assets/ourPartners-logo/Clover.png');
+}
 
-        .partner-logo--discover {
-            background-image: url('assets/ourPartners-logo/Discover.png');
-        }
+.partner-logo--discover {
+    background-image: url('assets/ourPartners-logo/Discover.png');
+}
 
-        .partner-logo--firstdata {
-            background-image: url('assets/ourPartners-logo/FirstData.png');
-        }
+.partner-logo--firstdata {
+    background-image: url('assets/ourPartners-logo/FirstData.png');
+}
 
-        .partner-logo--mastercard {
-            background-image: url('assets/ourPartners-logo/MasterCard.png');
-        }
+.partner-logo--mastercard {
+    background-image: url('assets/ourPartners-logo/MasterCard.png');
+}
 
-        .partner-logo--octopos {
-            background-image: url('assets/ourPartners-logo/Octopos.png');
-        }
+.partner-logo--octopos {
+    background-image: url('assets/ourPartners-logo/Octopos.png');
+}
 
-        .partner-logo--paypal {
-            background-image: url('assets/ourPartners-logo/PayPal.png');
-        }
+.partner-logo--paypal {
+    background-image: url('assets/ourPartners-logo/PayPal.png');
+}
 
-        .partner-logo--rok {
-            background-image: url('assets/ourPartners-logo/RokFinancial.png');
-        }
+.partner-logo--rok {
+    background-image: url('assets/ourPartners-logo/RokFinancial.png');
+}
 
-        .partner-logo--tsys {
-            background-image: url('assets/ourPartners-logo/TSYS.png');
-        }
+.partner-logo--tsys {
+    background-image: url('assets/ourPartners-logo/TSYS.png');
+}
 
-        .partner-logo--union {
-            background-image: url('assets/ourPartners-logo/Union.png');
-        }
+.partner-logo--union {
+    background-image: url('assets/ourPartners-logo/Union.png');
+}
 
-        @media (max-width: 430px) {
-            .partners-section {
-                padding: 0 24px;
-                gap: 28px;
-            }
+@media (max-width: 968px) {
+    .partners-section {
+        padding: 0 24px;
+        gap: 32px;
+    }
 
-            .partners-section__title,
-            .partners-section__title span {
-                font-size: 36px;
-                line-height: 1.12;
-            }
+    .partners-section__title,
+    .partners-section__title span {
+        font-size: 48px;
+    }
 
-            .partners-section__body {
-                gap: 20px;
-            }
+    .partners-section__row {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 32px;
+    }
+}
 
-            .partners-section__row {
-                justify-content: center;
-                flex-wrap: wrap;
-                gap: 20px;
-            }
+@media (max-width: 430px) {
+    .partners-section {
+        padding: 0 24px;
+        gap: 28px;
+    }
 
-            .partner-logo {
-                width: 88px;
-                height: 38px;
-            }
-        }
+    .partners-section__title,
+    .partners-section__title span {
+        font-size: 36px;
+        line-height: 1.12;
+    }
+
+    .partners-section__body {
+        gap: 20px;
+    }
+
+    .partners-section__row {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .partner-logo {
+        width: 88px;
+        height: 38px;
+    }
+}

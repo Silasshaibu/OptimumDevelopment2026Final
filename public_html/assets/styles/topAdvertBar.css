@@ -135,6 +135,26 @@
      }
  }
 
+ @media (max-width: 968px) {
+     .top-info-bar {
+         padding-left: 24px;
+         padding-right: 24px;
+     }
+
+     .top-info-bar__arrow-left {
+         left: 24px;
+     }
+
+     .top-info-bar__arrow-right {
+         right: 24px;
+     }
+
+     .top-info-bar__main-text,
+     .top-info-bar__cta-text {
+         font-size: 14px;
+     }
+ }
+
  @media (max-width: 430px) {
      .top-info-bar {
          min-height: 38px;

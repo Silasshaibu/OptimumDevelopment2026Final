@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Urbanist', sans-serif;
+}
+
+/* =========================================================
+   MEGA MENU OUTER WRAPPER
+   ========================================================= */
+.megamenu-outer {
+    width: 100%;
+    background: #1E2025;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+    overflow: hidden;
+}
+
+/* =========================================================
+   MEGA MENU INNER
+   ========================================================= */
+.megamenu {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    align-items: stretch;
+    height: 420px;
+    /* 7 items × 60px — caps right panel to left panel height */
+}
+
+
+/* =========================================================
+   LEFT PANEL
+   ========================================================= */
+.megamenu-left {
+    width: 480px;
+    flex-shrink: 0;
+    background: #1E2025;
+    display: flex;
+    flex-direction: column;
+}
+
+.megamenu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+
+/* =========================================================
+   LIST NAV MENU ITEM
+   Matches Figma node 34610-6686:
+     — Frame:   480 × 60 px
+     — Label:   x=25, y=18 (16px Urbanist 500)
+     — Chevron: x=449, y=24 (6×12px, 25px from right)
+   ========================================================= */
+.megamenu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 480px;
+    height: 60px;
+    padding: 0 25px;
+
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.megamenu-item:hover,
+.megamenu-item.active {
+    background: #333333;
+}
+
+.megamenu-item-label {
+    color: #FFFFFF;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.megamenu-item-arrow {
+    flex-shrink: 0;
+    opacity: 0.55;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.megamenu-item:hover .megamenu-item-arrow,
+.megamenu-item.active .megamenu-item-arrow {
+    opacity: 1;
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+   RIGHT PANEL
+   ========================================================= */
+.megamenu-right {
+    flex: 1;
+    background: #FFFFFF;
+    padding: 40px 50px;
+    position: relative;
+    min-width: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+.megamenu-right::-webkit-scrollbar {
+    width: 5px;
+}
+
+.megamenu-right::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.megamenu-right::-webkit-scrollbar-thumb {
+    background: #D0D0D0;
+    border-radius: 3px;
+}
+
+.megamenu-right::-webkit-scrollbar-thumb:hover {
+    background: #AAAAAA;
+}
+
+/* Hidden by default; revealed when .active is toggled */
+.megamenu-panel {
+    display: none;
+}
+
+.megamenu-panel.active {
+    display: flex;
+    flex-direction: column;
+    animation: mm-fadeIn 0.2s ease forwards;
+}
+
+@keyframes mm-fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ---- Product cards ---- */
+.megamenu-panel-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 35px;
+}
+
+.megamenu-card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+    text-decoration: none;
+}
+
+/* Image thumbnail */
+.megamenu-card-img {
+    width: 100px;
+    height: 80px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: #F0F0F0;
+    overflow: hidden;
+}
+
+.megamenu-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Card text */
+.megamenu-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.megamenu-card-name {
+
+    color: #0E0E0E;
+    font-size: 24px;
+    font-family: Urbanist;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+
+.megamenu-card-desc {
+    color: #454745;
+    font-size: 14px;
+    font-family: Urbanist;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+
+/* =========================================================
+   RESPONSIVE — 1440px
+   ========================================================= */
+@media (max-width: 1440px) {
+    .megamenu-right {
+        padding: 40px 40px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — 968px
+   Stack panels vertically; list items go full-width.
+   ========================================================= */
+@media (max-width: 968px) {
+    .megamenu {
+        flex-direction: column;
+        height: auto;
+        /* remove fixed height when stacked */
+    }
+
+    .megamenu-left {
+        width: 100%;
+    }
+
+    .megamenu-item {
+        width: 100%;
+    }
+
+    .megamenu-right {
+        padding: 28px 24px;
+        overflow-y: visible;
+        /* no scroll cap when stacked */
+    }
+
+    .megamenu-panel-cards {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .megamenu-card {
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .megamenu-card-img {
+        width: 72px;
+        height: 72px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — 430px
+   ========================================================= */
+@media (max-width: 430px) {
+    .megamenu-item {
+        height: 56px;
+        padding: 0 16px;
+    }
+
+    .megamenu-item-label {
+        font-size: 14px;
+    }
+
+    .megamenu-right {
+        padding: 20px 16px;
+    }
+
+    .megamenu-card {
+        flex-direction: column;
+    }
+
+    .megamenu-card-img {
+        width: 100%;
+        height: 80px;
+    }
+}
