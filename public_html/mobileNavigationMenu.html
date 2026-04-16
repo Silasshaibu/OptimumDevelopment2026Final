@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mobile Navigation Menu</title>
+  <link rel="stylesheet" href="assets/styles/mobileNavigationMenu.css">
+</head>
+
+<body>
+  <div class="nav-wrapper">
+
+    <!-- Header -->
+    <div class="nav-header">
+      <button id="hamburger-btn" aria-label="Open menu">
+        <!-- hamburger icon (default) -->
+        <svg id="icon-hamburger" fill="none" viewBox="0 0 24 24">
+          <path d="M3 12H21M3 6H21M3 18H21" stroke="#AAAAAA" stroke-linecap="round" stroke-linejoin="round"
+            stroke-width="2.5" />
+        </svg>
+        <!-- close icon (hidden by default) -->
+        <svg id="icon-close" fill="none" viewBox="0 0 24 24">
+          <path d="M6 18L18 6M6 6L18 18" stroke="#AAAAAA" stroke-linecap="round" stroke-linejoin="round"
+            stroke-width="2.5" />
+        </svg>
+      </button>
+
+      <!-- Search -->
+      <div class="header-search">
+        <svg fill="none" viewBox="0 0 24 24" width="24" height="24">
+          <g>
+            <path
+              d="M9.37891 2.07531C10.732 1.89532 12.109 2.04343 13.3926 2.50792C14.6762 2.97244 15.8293 3.73998 16.7539 4.74425C17.6783 5.74845 18.3471 6.96105 18.7041 8.27843C19.061 9.59584 19.0957 10.9801 18.8047 12.3136C18.5299 13.5728 17.9714 14.7512 17.1748 15.7618L21.707 20.2931H21.7061C21.8015 20.3835 21.8791 20.4913 21.9326 20.6114C21.9873 20.7341 22.0162 20.8668 22.0186 21.0011C22.0209 21.1354 21.9966 21.2692 21.9463 21.3937C21.896 21.5181 21.8205 21.6308 21.7256 21.7257C21.6307 21.8206 21.518 21.8961 21.3936 21.9464C21.269 21.9967 21.1352 22.021 21.001 22.0187C20.8667 22.0163 20.734 21.9864 20.6113 21.9318C20.4913 21.8782 20.3833 21.8015 20.293 21.7062L15.7617 17.1749C14.5552 18.1261 13.1126 18.7341 11.5859 18.9308C9.98381 19.1372 8.3563 18.8828 6.89355 18.1974C5.43072 17.5119 4.19281 16.424 3.32617 15.0607C2.4597 13.6974 1.99985 12.1154 2 10.5001C2.00018 9.13514 2.32918 7.7902 2.95898 6.57921C3.58886 5.36817 4.50162 4.32602 5.61914 3.5421C6.73647 2.75844 8.02607 2.25531 9.37891 2.07531ZM10.5 4.00011C9.64641 4.00011 8.80131 4.16857 8.0127 4.49523C7.22409 4.82188 6.50689 5.29986 5.90332 5.90343C5.29977 6.507 4.82176 7.22421 4.49512 8.01281C4.16849 8.8014 4 9.64655 4 10.5001C4.00001 11.3537 4.16848 12.1988 4.49512 12.9874C4.82169 13.7758 5.29997 14.4923 5.90332 15.0958C6.5069 15.6994 7.22408 16.1783 8.0127 16.505C8.8013 16.8316 9.64642 17.0001 10.5 17.0001C12.2239 17.0001 13.8777 16.3148 15.0967 15.0958C16.3154 13.8769 17 12.2238 17 10.5001C17 8.77623 16.3156 7.12241 15.0967 5.90343C13.8777 4.68444 12.2239 4.00011 10.5 4.00011Z"
+              fill="#AAAAAA" stroke="#AAAAAA" stroke-width="0.5" />
+          </g>
+        </svg>
+      </div>
+
+      <!-- Logo -->
+      <div class="header-logo">
+        <img
+          src="src/imports/MobileNavigationProcessingSolutionsDropDownOpenNestedChild/805b11dba87562ac5cdb2822a7000569612fb0c7.png"
+          alt="Optimum Payment Solutions" />
+      </div>
+
+      <!-- Store button -->
+      <button class="header-store">Store</button>
+    </div>
+
+    <!-- Menu panel (hidden until hamburger clicked) -->
+    <div id="menu-panel">
+      <div class="menu-items">
+
+        <!-- Home -->
+        <div class="menu-row" data-id="home">
+          <button><span>Home</span></button>
+        </div>
+
+        <!-- Promo -->
+        <div class="menu-row" data-id="promo">
+          <button><span>Promo</span></button>
+        </div>
+
+        <!-- Processing Solutions -->
+        <div class="menu-row" data-id="processing">
+          <button>
+            <span>Processing Solutions</span>
+            <span class="chevron">
+              <svg fill="none" viewBox="0 0 8.5 14.5">
+                <path d="M1.25 13.25L7.25 7.25L1.25 1.25" stroke="#0E0E0E" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-width="2.5" />
+              </svg>
+            </span>
+          </button>
+        </div>
+        <div class="submenu" id="sub-processing">
+          <!-- sub-items rendered by JS -->
+        </div>
+
+        <!-- Digital Services -->
+        <div class="menu-row" data-id="digital">
+          <button>
+            <span>Digital Services</span>
+            <span class="chevron">
+              <svg fill="none" viewBox="0 0 8.5 14.5">
+                <path d="M1.25 13.25L7.25 7.25L1.25 1.25" stroke="#0E0E0E" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-width="2.5" />
+              </svg>
+            </span>
+          </button>
+        </div>
+        <div class="submenu" id="sub-digital">
+          <div class="digital-inner">
+            <div class="digital-card">
+              <div class="digital-card-img">
+                <img src="src/imports/Group1707480139/1f7725b9754cdd8cf9df1e49f09b32e707239075.png"
+                  alt="Website Design" />
+              </div>
+              <p class="digital-card-title">Website Design</p>
+              <p class="digital-card-desc">Premium designs at your finger tips</p>
+              <div class="digital-card-btns">
+                <button class="btn-primary">Post Your Brief</button>
+                <button class="btn-outline">View Packages</button>
+              </div>
+            </div>
+            <div class="digital-card">
+              <div class="digital-card-img">
+                <img src="src/imports/Group1707480139/c362ef191fdc8baa021748fe3b880d1e51c3a375.png" alt="3D Printing" />
+              </div>
+              <p class="digital-card-title">3D Printing</p>
+              <p class="digital-card-desc">1-stop shopping for all your 3d-printed needs</p>
+              <div class="digital-card-btns">
+                <button class="btn-primary">Post Your Brief</button>
+                <button class="btn-outline">View Packages</button>
+              </div>
+            </div>
+            <div class="digital-card">
+              <div class="digital-card-img">
+                <img src="src/imports/Group1707480139/eb5dd15bb41251fff1ffa0131cb667ad784ff421.png" alt="Branding" />
+              </div>
+              <p class="digital-card-title">Branding</p>
+              <p class="digital-card-desc">We can handle all form of your branding needs</p>
+              <div class="digital-card-btns">
+                <button class="btn-primary">Post Your Brief</button>
+                <button class="btn-outline">View Packages</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Business Financing -->
+        <div class="menu-row" data-id="financing">
+          <button>
+            <span>Business Financing</span>
+            <span class="chevron">
+              <svg fill="none" viewBox="0 0 8.5 14.5">
+                <path d="M1.25 13.25L7.25 7.25L1.25 1.25" stroke="#0E0E0E" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-width="2.5" />
+              </svg>
+            </span>
+          </button>
+        </div>
+        <div class="submenu" id="sub-financing">
+          <div class="financing-inner">
+            <div class="financing-img">
+              <img src="src/imports/Group1707480135/ccc71c74f10b64596d0557572bab660b83cb8548.png" alt="ROK Financial" />
+            </div>
+            <p class="financing-title">Get Funding Today</p>
+            <p class="financing-desc">Premium designs at your finger tips</p>
+            <a href="#" class="financing-link">
+              Explore
+              <svg width="3" height="5" fill="none" viewBox="0 0 3 5">
+                <path d="M0.5 4.5L2.5 2.5L0.5 0.5" stroke="#529DF3" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- About Us -->
+        <div class="menu-row" data-id="about">
+          <button>
+            <span>About Us</span>
+            <span class="chevron">
+              <svg fill="none" viewBox="0 0 8.5 14.5">
+                <path d="M1.25 13.25L7.25 7.25L1.25 1.25" stroke="#0E0E0E" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-width="2.5" />
+              </svg>
+            </span>
+          </button>
+        </div>
+        <div class="submenu" id="sub-about">
+          <div class="about-inner">
+            <p class="about-desc">
+              We are here to help your business accept credit cards in the most secure efficient and economical way
+              possible.<br /><br />
+              Optimum Payment Solution is a premium provider of electronic transaction processing and ATM Placement.
+            </p>
+            <a href="#" class="about-link">
+              Get To Know Us More
+              <svg width="3" height="5" fill="none" viewBox="0 0 3 5">
+                <path d="M0.5 4.5L2.5 2.5L0.5 0.5" stroke="#529DF3" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div><!-- /.menu-items -->
+
+      <!-- Footer -->
+      <div class="nav-footer">
+        <div class="social-row">
+          <!-- Facebook -->
+          <div class="social-icon">
+            <svg width="12" height="12" fill="none" viewBox="0 0 24 24">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="#121212"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <!-- TikTok -->
+          <div class="social-icon">
+            <svg width="12" height="12" fill="none" viewBox="0 0 30 30">
+              <path
+                d="M20.37 11.2798C19.6711 11.1303 19.0381 10.7614 18.5635 10.2269C18.0888 9.69249 17.7973 9.0204 17.7314 8.30866V8H15.3202V17.5691C15.3187 17.9928 15.1845 18.4053 14.9365 18.7487C14.6885 19.0922 14.339 19.3493 13.9374 19.4839C13.5357 19.6185 13.1019 19.6239 12.697 19.4993C12.2921 19.3746 11.9364 19.1263 11.68 18.7891C11.4195 18.4463 11.2751 18.0294 11.2675 17.5989C11.2599 17.1684 11.3897 16.7467 11.638 16.395C11.8862 16.0432 12.2401 15.7797 12.6482 15.6426C13.0563 15.5055 13.4975 15.502 13.9078 15.6325V13.1828C12.9929 13.0563 12.0614 13.219 11.2435 13.648C10.4256 14.0771 9.76226 14.751 9.34626 15.5756C8.93026 16.4002 8.78241 17.3342 8.92338 18.2469C9.06435 19.1597 9.48709 20.0056 10.1325 20.6662C10.748 21.296 11.5371 21.728 12.3992 21.9073C13.2614 22.0865 14.1573 22.0047 14.9728 21.6725C15.7883 21.3402 16.4862 20.7724 16.9775 20.0417C17.4689 19.311 17.7313 18.4504 17.7314 17.5698V12.6803C18.7058 13.3769 19.8742 13.7505 21.0721 13.7483V11.3526C20.8361 11.3529 20.6009 11.3285 20.37 11.2798Z"
+                fill="#121212" />
+            </svg>
+          </div>
+          <!-- Email/Message -->
+          <div class="social-icon">
+            <svg width="14" height="14" fill="none" viewBox="0 0 14 14">
+              <path
+                d="M12.8333 6.12435V9.04102C12.8333 11.0827 11.6666 11.9577 9.91663 11.9577H4.08329C2.33329 11.9577 1.16663 11.0827 1.16663 9.04102V4.95768C1.16663 2.91602 2.33329 2.04102 4.08329 2.04102H8.16663"
+                stroke="#121212" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
+                stroke-width="1.5" />
+              <path d="M4.08335 5.25L5.90919 6.70833C6.51002 7.18667 7.49585 7.18667 8.09669 6.70833L8.78502 6.16"
+                stroke="#121212" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
+                stroke-width="1.5" />
+              <path
+                d="M11.375 4.66667C12.1804 4.66667 12.8333 4.01375 12.8333 3.20833C12.8333 2.40292 12.1804 1.75 11.375 1.75C10.5696 1.75 9.91665 2.40292 9.91665 3.20833C9.91665 4.01375 10.5696 4.66667 11.375 4.66667Z"
+                stroke="#121212" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
+                stroke-width="1.5" />
+            </svg>
+          </div>
+        </div>
+        <p class="copyright">© Copyright 2026 Optimum Payments LLC All Rights Reserved</p>
+      </div>
+
+    </div><!-- /#menu-panel -->
+
+  </div><!-- /.nav-wrapper -->
+
+  <script src="js/mobileNavigationMenu.js"></script>
+</body>
+
+</html>
