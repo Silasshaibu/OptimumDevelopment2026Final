@@ -135,3 +135,66 @@
         updateStars(currentRating);
     });
 })();
+
+/* Marquee control for partner logos */
+(function () {
+    // Default marquee state - set to false to stop animation
+    var marquee = false;
+
+    // Function to check if marquee should be active based on screen size
+    function shouldMarqueeBeActive() {
+        return window.innerWidth <= 986;
+    }
+
+    // Function to start marquee animation
+    function startMarquee() {
+        if (shouldMarqueeBeActive()) {
+            var rows = document.querySelectorAll('.partners-section__row');
+            rows.forEach(function(row) {
+                row.classList.add('marquee-active');
+            });
+        }
+    }
+
+    // Function to stop marquee animation
+    function stopMarquee() {
+        var rows = document.querySelectorAll('.partners-section__row');
+        rows.forEach(function(row) {
+            row.classList.remove('marquee-active');
+        });
+    }
+
+    // Function to update marquee state
+    function updateMarquee() {
+        if (marquee && shouldMarqueeBeActive()) {
+            startMarquee();
+        } else {
+            stopMarquee();
+        }
+    }
+
+    // Initial check on page load
+    updateMarquee();
+
+    // Update on window resize
+    window.addEventListener('resize', updateMarquee);
+
+    // Expose functions globally for external control
+    window.marqueeControl = {
+        start: function() {
+            marquee = true;
+            updateMarquee();
+        },
+        stop: function() {
+            marquee = false;
+            updateMarquee();
+        },
+        toggle: function() {
+            marquee = !marquee;
+            updateMarquee();
+        },
+        isActive: function() {
+            return marquee;
+        }
+    };
+})();

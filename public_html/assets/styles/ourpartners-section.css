@@ -18,6 +18,8 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 40px;
+    margin-bottom: 120px;
+    overflow: hidden;
 }
 
 .partners-section__header {
@@ -60,6 +62,7 @@ body {
     gap: 60px;
     width: fit-content;
     max-width: 100%;
+
 }
 
 .partner-logo {
@@ -72,55 +75,55 @@ body {
 }
 
 .partner-logo--amex {
-    background-image: url('assets/ourPartners-logo/AmericanExpress.png');
+    background-image: url('../ourPartners-logo/AmericanExpress.png');
 }
 
 .partner-logo--apple {
-    background-image: url('assets/ourPartners-logo/ApplePay.png');
+    background-image: url('../ourPartners-logo/ApplePay.png');
 }
 
 .partner-logo--verifone {
-    background-image: url('assets/ourPartners-logo/Verifone.png');
+    background-image: url('../ourPartners-logo/Verifone.png');
 }
 
 .partner-logo--authorize {
-    background-image: url('assets/ourPartners-logo/AuthorizeNet.png');
+    background-image: url('../ourPartners-logo/AuthorizeNet.png');
 }
 
 .partner-logo--clover {
-    background-image: url('assets/ourPartners-logo/Clover.png');
+    background-image: url('../ourPartners-logo/Clover.png');
 }
 
 .partner-logo--discover {
-    background-image: url('assets/ourPartners-logo/Discover.png');
+    background-image: url('../ourPartners-logo/Discover.png');
 }
 
 .partner-logo--firstdata {
-    background-image: url('assets/ourPartners-logo/FirstData.png');
+    background-image: url('../ourPartners-logo/FirstData.png');
 }
 
 .partner-logo--mastercard {
-    background-image: url('assets/ourPartners-logo/MasterCard.png');
+    background-image: url('../ourPartners-logo/MasterCard.png');
 }
 
 .partner-logo--octopos {
-    background-image: url('assets/ourPartners-logo/Octopos.png');
+    background-image: url('../ourPartners-logo/Octopos.png');
 }
 
 .partner-logo--paypal {
-    background-image: url('assets/ourPartners-logo/PayPal.png');
+    background-image: url('../ourPartners-logo/PayPal.png');
 }
 
 .partner-logo--rok {
-    background-image: url('assets/ourPartners-logo/RokFinancial.png');
+    background-image: url('../ourPartners-logo/RokFinancial.png');
 }
 
 .partner-logo--tsys {
-    background-image: url('assets/ourPartners-logo/TSYS.png');
+    background-image: url('../ourPartners-logo/TSYS.png');
 }
 
 .partner-logo--union {
-    background-image: url('assets/ourPartners-logo/Union.png');
+    background-image: url('../ourPartners-logo/Union.png');
 }
 
 @media (max-width: 968px) {
@@ -134,10 +137,55 @@ body {
         font-size: 48px;
     }
 
+    .partners-section__body {
+        height: 150px;
+        overflow: hidden;
+        position: relative;
+    }
+
     .partners-section__row {
-        flex-wrap: wrap;
         justify-content: center;
         gap: 32px;
+        /* overflow: hidden; */
+    }
+
+    .partners-section__row:first-child {
+        position: absolute;
+        top: 0;
+    }
+
+    .partners-section__row:nth-child(2) {
+        position: absolute;
+        bottom: 0;
+    }
+
+    /* Marquee animation - only active when marquee-active class is present */
+    .partners-section__row.marquee-active {
+        animation: marquee 20s linear infinite;
+    }
+
+    .partners-section__row.marquee-active:nth-child(2) {
+        animation: marquee-reverse 25s linear infinite;
+    }
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes marquee-reverse {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
     }
 }
 
@@ -145,6 +193,7 @@ body {
     .partners-section {
         padding: 0 24px;
         gap: 28px;
+        margin-bottom: 40px;
     }
 
     .partners-section__title,
@@ -155,16 +204,18 @@ body {
 
     .partners-section__body {
         gap: 20px;
+        height: 68px;
+        /*24px + 20px + 24px*/
     }
 
     .partners-section__row {
         justify-content: center;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         gap: 20px;
     }
 
     .partner-logo {
-        width: 88px;
-        height: 38px;
+        width: 54px;
+        height: 24px;
     }
 }
