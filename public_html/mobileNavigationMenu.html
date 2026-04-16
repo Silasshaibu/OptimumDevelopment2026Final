@@ -5,6 +5,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mobile Navigation Menu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/styles/mobileNavigationMenu.css">
 </head>
 
@@ -38,14 +41,12 @@
       </div>
 
       <!-- Logo -->
-      <div class="header-logo">
-        <img
-          src="src/imports/MobileNavigationProcessingSolutionsDropDownOpenNestedChild/805b11dba87562ac5cdb2822a7000569612fb0c7.png"
-          alt="Optimum Payment Solutions" />
-      </div>
+      <a href="#" class="header-logo">
+        <img src="assets/ourPartners-logo/OptimumPayments.png" alt="Optimum Payment Solutions" />
+      </a>
 
       <!-- Store button -->
-      <button class="header-store">Store</button>
+      <a href="#" class="header-store">Store</a>
     </div>
 
     <!-- Menu panel (hidden until hamburger clicked) -->
@@ -54,12 +55,12 @@
 
         <!-- Home -->
         <div class="menu-row" data-id="home">
-          <button><span>Home</span></button>
+          <a href="#" class="menu-link"><span>Home</span></a>
         </div>
 
         <!-- Promo -->
         <div class="menu-row" data-id="promo">
-          <button><span>Promo</span></button>
+          <a href="#" class="menu-link"><span>Promo</span></a>
         </div>
 
         <!-- Processing Solutions -->
@@ -67,9 +68,9 @@
           <button>
             <span>Processing Solutions</span>
             <span class="chevron">
-              <svg fill="none" viewBox="0 0 8.5 14.5">
-                <path d="M1.25 13.25L7.25 7.25L1.25 1.25" stroke="#0E0E0E" stroke-linecap="round"
-                  stroke-linejoin="round" stroke-width="2.5" />
+              <svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.25 1.25L7.25 7.25L13.25 1.25" stroke="#0E0E0E" stroke-opacity="0.7" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </span>
           </button>
@@ -83,9 +84,9 @@
           <button>
             <span>Digital Services</span>
             <span class="chevron">
-              <svg fill="none" viewBox="0 0 8.5 14.5">
-                <path d="M1.25 13.25L7.25 7.25L1.25 1.25" stroke="#0E0E0E" stroke-linecap="round"
-                  stroke-linejoin="round" stroke-width="2.5" />
+              <svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.25 1.25L7.25 7.25L13.25 1.25" stroke="#0E0E0E" stroke-opacity="0.7" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </span>
           </button>
@@ -94,7 +95,7 @@
           <div class="digital-inner">
             <div class="digital-card">
               <div class="digital-card-img">
-                <img src="src/imports/Group1707480139/1f7725b9754cdd8cf9df1e49f09b32e707239075.png"
+                <img src="assets/DigitalServices-DropDown/WebsiteDesign--DigitalService--Dropdown.png"
                   alt="Website Design" />
               </div>
               <p class="digital-card-title">Website Design</p>
@@ -106,7 +107,8 @@
             </div>
             <div class="digital-card">
               <div class="digital-card-img">
-                <img src="src/imports/Group1707480139/c362ef191fdc8baa021748fe3b880d1e51c3a375.png" alt="3D Printing" />
+                <img src="assets/DigitalServices-DropDown/3D-Printing--DigitalService--Dropdown.png"
+                  alt="3D Printing" />
               </div>
               <p class="digital-card-title">3D Printing</p>
               <p class="digital-card-desc">1-stop shopping for all your 3d-printed needs</p>
@@ -117,7 +119,7 @@
             </div>
             <div class="digital-card">
               <div class="digital-card-img">
-                <img src="src/imports/Group1707480139/eb5dd15bb41251fff1ffa0131cb667ad784ff421.png" alt="Branding" />
+                <img src="assets/DigitalServices-DropDown/Branding--DigitalService--Dropdown.png" alt="Branding" />
               </div>
               <p class="digital-card-title">Branding</p>
               <p class="digital-card-desc">We can handle all form of your branding needs</p>
@@ -134,9 +136,9 @@
           <button>
             <span>Business Financing</span>
             <span class="chevron">
-              <svg fill="none" viewBox="0 0 8.5 14.5">
-                <path d="M1.25 13.25L7.25 7.25L1.25 1.25" stroke="#0E0E0E" stroke-linecap="round"
-                  stroke-linejoin="round" stroke-width="2.5" />
+              <svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.25 1.25L7.25 7.25L13.25 1.25" stroke="#0E0E0E" stroke-opacity="0.7" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </span>
           </button>
@@ -144,7 +146,7 @@
         <div class="submenu" id="sub-financing">
           <div class="financing-inner">
             <div class="financing-img">
-              <img src="src/imports/Group1707480135/ccc71c74f10b64596d0557572bab660b83cb8548.png" alt="ROK Financial" />
+              <img src="assets/ourPartners-logo/RokFinancial.png" alt="ROK Financial" />
             </div>
             <p class="financing-title">Get Funding Today</p>
             <p class="financing-desc">Premium designs at your finger tips</p>
@@ -162,9 +164,9 @@
           <button>
             <span>About Us</span>
             <span class="chevron">
-              <svg fill="none" viewBox="0 0 8.5 14.5">
-                <path d="M1.25 13.25L7.25 7.25L1.25 1.25" stroke="#0E0E0E" stroke-linecap="round"
-                  stroke-linejoin="round" stroke-width="2.5" />
+              <svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.25 1.25L7.25 7.25L13.25 1.25" stroke="#0E0E0E" stroke-opacity="0.7" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </span>
           </button>
@@ -191,36 +193,17 @@
       <div class="nav-footer">
         <div class="social-row">
           <!-- Facebook -->
-          <div class="social-icon">
-            <svg width="12" height="12" fill="none" viewBox="0 0 24 24">
-              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="#121212"
-                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </div>
+          <a href="#" class="social-icon">
+            <img src="assets/footer-icons/facebook-cta-icon.svg" alt="Facebook">
+          </a>
           <!-- TikTok -->
-          <div class="social-icon">
-            <svg width="12" height="12" fill="none" viewBox="0 0 30 30">
-              <path
-                d="M20.37 11.2798C19.6711 11.1303 19.0381 10.7614 18.5635 10.2269C18.0888 9.69249 17.7973 9.0204 17.7314 8.30866V8H15.3202V17.5691C15.3187 17.9928 15.1845 18.4053 14.9365 18.7487C14.6885 19.0922 14.339 19.3493 13.9374 19.4839C13.5357 19.6185 13.1019 19.6239 12.697 19.4993C12.2921 19.3746 11.9364 19.1263 11.68 18.7891C11.4195 18.4463 11.2751 18.0294 11.2675 17.5989C11.2599 17.1684 11.3897 16.7467 11.638 16.395C11.8862 16.0432 12.2401 15.7797 12.6482 15.6426C13.0563 15.5055 13.4975 15.502 13.9078 15.6325V13.1828C12.9929 13.0563 12.0614 13.219 11.2435 13.648C10.4256 14.0771 9.76226 14.751 9.34626 15.5756C8.93026 16.4002 8.78241 17.3342 8.92338 18.2469C9.06435 19.1597 9.48709 20.0056 10.1325 20.6662C10.748 21.296 11.5371 21.728 12.3992 21.9073C13.2614 22.0865 14.1573 22.0047 14.9728 21.6725C15.7883 21.3402 16.4862 20.7724 16.9775 20.0417C17.4689 19.311 17.7313 18.4504 17.7314 17.5698V12.6803C18.7058 13.3769 19.8742 13.7505 21.0721 13.7483V11.3526C20.8361 11.3529 20.6009 11.3285 20.37 11.2798Z"
-                fill="#121212" />
-            </svg>
-          </div>
+          <a href="#" class="social-icon">
+            <img src="assets/footer-icons/tiktok-cta-icon.svg" alt="TikTok">
+          </a>
           <!-- Email/Message -->
-          <div class="social-icon">
-            <svg width="14" height="14" fill="none" viewBox="0 0 14 14">
-              <path
-                d="M12.8333 6.12435V9.04102C12.8333 11.0827 11.6666 11.9577 9.91663 11.9577H4.08329C2.33329 11.9577 1.16663 11.0827 1.16663 9.04102V4.95768C1.16663 2.91602 2.33329 2.04102 4.08329 2.04102H8.16663"
-                stroke="#121212" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
-                stroke-width="1.5" />
-              <path d="M4.08335 5.25L5.90919 6.70833C6.51002 7.18667 7.49585 7.18667 8.09669 6.70833L8.78502 6.16"
-                stroke="#121212" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
-                stroke-width="1.5" />
-              <path
-                d="M11.375 4.66667C12.1804 4.66667 12.8333 4.01375 12.8333 3.20833C12.8333 2.40292 12.1804 1.75 11.375 1.75C10.5696 1.75 9.91665 2.40292 9.91665 3.20833C9.91665 4.01375 10.5696 4.66667 11.375 4.66667Z"
-                stroke="#121212" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
-                stroke-width="1.5" />
-            </svg>
-          </div>
+          <a href="#" class="social-icon">
+            <img src="assets/footer-icons/mail-cta-icon.svg" alt="Email">
+          </a>
         </div>
         <p class="copyright">© Copyright 2026 Optimum Payments LLC All Rights Reserved</p>
       </div>

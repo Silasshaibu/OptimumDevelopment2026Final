@@ -8,6 +8,63 @@ const processingSubItems = [
     "Retail / Liquor / Smoke Shops",
 ];
 
+function getProductsForCategory(index) {
+    const categories = [
+        // Full Service Fine Dining - at least 4
+        [
+            { img: "assets/hhd-products/hhd-clover-flex.png", name: "Clover Flex", desc: "Flexible POS for fine dining" },
+            { img: "assets/hhd-products/hhd-valor-vp-550.png", name: "Valor VP550", desc: "Advanced payment processing" },
+            { img: "assets/hhd-products/hhd-clover-go-plus.png", name: "Clover Go Plus", desc: "Portable POS solution" },
+            { img: "assets/hhd-products/hhd-valor-vl-100.png", name: "Valor VL100", desc: "Reliable payment terminal" }
+        ],
+        // QSR and Food Trucks - at least 3
+        [
+            { img: "assets/hhd-products/hhd-valor-vp-800.png", name: "Valor VP800", desc: "High-volume processing" },
+            { img: "assets/hhd-products/hhd-clover-flex.png", name: "Clover Flex", desc: "Quick service POS" },
+            { img: "assets/hhd-products/hhd-valor-vl-110.png", name: "Valor VL110", desc: "Compact terminal" }
+        ],
+        // Bars / Night Clubs / High Volume - at least 3
+        [
+            { img: "assets/hhd-products/hhd-valor-vp-550.png", name: "Valor VP550", desc: "High-volume payments" },
+            { img: "assets/hhd-products/hhd-clover-go-plus.png", name: "Clover Go Plus", desc: "Mobile payments" },
+            { img: "assets/hhd-products/hhd-valor-vp-800.png", name: "Valor VP800", desc: "Robust processing" }
+        ],
+        // Retail / Liquor / Smoke Shops - at least 3
+        [
+            { img: "assets/hhd-products/hhd-valor-vl-100.png", name: "Valor VL100", desc: "Retail payments" },
+            { img: "assets/hhd-products/hhd-clover-flex.png", name: "Clover Flex", desc: "Flexible retail POS" },
+            { img: "assets/hhd-products/hhd-valor-vl-110.png", name: "Valor VL110", desc: "Countertop terminal" }
+        ],
+        // Repeat for the duplicates
+        [
+            { img: "assets/hhd-products/hhd-valor-vp-800.png", name: "Valor VP800", desc: "High-volume processing" },
+            { img: "assets/hhd-products/hhd-clover-flex.png", name: "Clover Flex", desc: "Quick service POS" },
+            { img: "assets/hhd-products/hhd-valor-vl-110.png", name: "Valor VL110", desc: "Compact terminal" }
+        ],
+        [
+            { img: "assets/hhd-products/hhd-valor-vp-550.png", name: "Valor VP550", desc: "High-volume payments" },
+            { img: "assets/hhd-products/hhd-clover-go-plus.png", name: "Clover Go Plus", desc: "Mobile payments" },
+            { img: "assets/hhd-products/hhd-valor-vp-800.png", name: "Valor VP800", desc: "Robust processing" }
+        ],
+        [
+            { img: "assets/hhd-products/hhd-valor-vl-100.png", name: "Valor VL100", desc: "Retail payments" },
+            { img: "assets/hhd-products/hhd-clover-flex.png", name: "Clover Flex", desc: "Flexible retail POS" },
+            { img: "assets/hhd-products/hhd-valor-vl-110.png", name: "Valor VL110", desc: "Countertop terminal" }
+        ]
+    ];
+    return categories[index].map(product => `
+        <a href="#" class="proc-product-link">
+            <div class="proc-product">
+                <div class="proc-product-img">
+                    <img src="${product.img}" alt="${product.name}"/>
+                </div>
+                <p class="proc-product-name">${product.name}</p>
+                <p class="proc-product-desc">${product.desc}</p>
+            </div>
+        </a>
+    `).join('');
+}
+
 // Build processing submenu HTML
 const subProcessing = document.getElementById('sub-processing');
 processingSubItems.forEach((label, i) => {
@@ -22,25 +79,11 @@ processingSubItems.forEach((label, i) => {
           </svg>
         </button>
       </div>
-      ${i === 0 ? `
-      <div class="proc-products" id="proc-products-0">
+      <div class="proc-products" id="proc-products-${i}">
         <div class="proc-products-inner">
-          <div class="proc-product">
-            <div class="proc-product-img">
-              <img src="src/imports/MobileNavigationProcessingSolutionsDropDownOpenNestedChild/7c9293d69701c3f00a1d66d4123af12448235a3d.png" alt="Union POS"/>
-            </div>
-            <p class="proc-product-name">Union POS</p>
-            <p class="proc-product-desc">Manage order, sales, and payments in one place</p>
-          </div>
-          <div class="proc-product">
-            <div class="proc-product-img">
-              <img src="src/imports/MobileNavigationProcessingSolutionsDropDownOpenNestedChild/69a4ecc1519c8a77c7b258f7faaf753e1b936e60.png" alt="Clover"/>
-            </div>
-            <p class="proc-product-name">Clover</p>
-            <p class="proc-product-desc">Do what you do better with the world's smartest POS system</p>
-          </div>
+          ${getProductsForCategory(i)}
         </div>
-      </div>` : ''}
+      </div>
     `;
     subProcessing.appendChild(wrapper);
 });
@@ -48,7 +91,7 @@ processingSubItems.forEach((label, i) => {
 // State
 let menuOpen = false;
 let expandedMenu = null;
-let expandedProcItem = 0; // index, -1 = none
+let expandedProcItem = -1; // index, -1 = none
 
 const hamburgerBtn = document.getElementById('hamburger-btn');
 const iconHamburger = document.getElementById('icon-hamburger');
@@ -90,9 +133,8 @@ hamburgerBtn.addEventListener('click', () => {
         iconHamburger.style.display = 'none';
         iconClose.style.display = 'block';
         menuPanel.classList.add('open');
-        // default: open processing submenu with first sub-item
+        // default: open processing submenu
         openSubmenu('processing');
-        setProcItem(0);
     } else {
         iconHamburger.style.display = 'block';
         iconClose.style.display = 'none';
@@ -112,7 +154,6 @@ menuRows.forEach(row => {
         } else {
             closeAllSubmenus();
             openSubmenu(id);
-            if (id === 'processing') setProcItem(0);
         }
     });
 });
@@ -121,24 +162,34 @@ menuRows.forEach(row => {
 function setProcItem(index) {
     expandedProcItem = index;
     const headers = subProcessing.querySelectorAll('.proc-item-header');
-    const productsEl = document.getElementById('proc-products-0');
     headers.forEach((h, i) => {
         const plusV = h.querySelector('.plus-v');
+        const productsEl = document.getElementById(`proc-products-${i}`);
         if (i === index) {
-            if (plusV) plusV.style.display = 'none'; // show minus (collapse icon)
+            if (plusV) plusV.style.opacity = '0'; // hide vertical line to make minus
+            if (productsEl) productsEl.classList.add('open');
         } else {
-            if (plusV) plusV.style.display = '';
+            if (plusV) plusV.style.opacity = '1';
+            if (productsEl) productsEl.classList.remove('open');
         }
     });
-    if (productsEl) {
-        productsEl.classList.toggle('open', index === 0);
+
+    // Reset scroll positions when changing/closing nested items
+    const cardWrapper = document.querySelector('.proc-products-inner');
+    if (cardWrapper) {
+        cardWrapper.scrollLeft = 0; // Reset horizontal slide position of card wrapper
+    }
+
+    // Reset vertical scroll position of any nested scrollable content
+    const submenu = document.getElementById('sub-processing');
+    if (submenu) {
+        submenu.scrollTop = 0; // Reset vertical scroll of the submenu container
     }
 }
 
 subProcessing.addEventListener('click', (e) => {
-    const btn = e.target.closest('.proc-toggle-btn');
-    if (!btn) return;
-    const header = btn.closest('.proc-item-header');
+    const header = e.target.closest('.proc-item-header');
+    if (!header) return;
     const idx = parseInt(header.dataset.procIndex, 10);
     setProcItem(expandedProcItem === idx ? -1 : idx);
 });
