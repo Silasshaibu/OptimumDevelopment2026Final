@@ -16,6 +16,7 @@ body {
     width: 100%;
     background: #FFFFFF;
     min-height: 583px;
+    display: none;
 }
 
 /* =========================================================

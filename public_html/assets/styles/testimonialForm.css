@@ -5,16 +5,12 @@
 }
 
 body {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background: #f6f6f6;
-    font-family: 'Urbanist', sans-serif;
 }
 
 .testimonial-form-shell {
     display: inline-flex;
+    display: flex;
     padding: 40px;
     align-items: stretch;
     gap: 40px;
@@ -22,6 +18,8 @@ body {
     background: #FFF;
     width: 100%;
     max-width: 1320px;
+    margin: 0 auto;
+    margin-bottom: 120px;
 }
 
 .testimonial-form-card {
@@ -273,13 +271,10 @@ body {
 }
 
 @media (max-width: 1440px) {
-    body {
-        padding: 40px;
-        align-items: flex-start;
-    }
-
     .testimonial-form-shell {
-        width: 100%;
+        width: 1320px;
+        max-width: 95%;
+        overflow: hidden;
     }
 }
 
@@ -309,18 +304,20 @@ body {
         font-size: 18px;
         line-height: 28px;
     }
+
+    .testimonial-form-image {
+        top: 0;
+    }
 }
 
 @media (max-width: 430px) {
-    body {
-        padding: 24px;
-    }
-
     .testimonial-form-shell {
         padding: 24px;
         gap: 24px;
-        border-radius: 24px;
+        border-radius: 40px;
         flex-direction: column;
+        margin-bottom: 40px;
+        width: 382px;
     }
 
     .testimonial-form-card {
@@ -333,6 +330,7 @@ body {
         width: 100%;
         height: 100%;
         object-position: center top;
+        top: 0;
     }
 
     .testimonial-form-content,
@@ -403,6 +401,7 @@ body {
     .testimonial-form-privacy label {
         font-size: 14px;
         line-height: 22px;
+        transform: translateY(3px);
     }
 
     .testimonial-form-submit {
