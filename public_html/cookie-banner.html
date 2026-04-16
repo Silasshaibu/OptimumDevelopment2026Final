@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie &amp; Privacy Settings</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/cookie-banner.css">
+</head>
+
+<body>
+
+    <div class="cookie-outer">
+        <div class="cookie-container">
+            <div class="cookie-content">
+                <div class="cookie-header">
+                    <div class="cookie-title">Your Privacy Matters to Optimum Payments</div>
+                    <div class="cookie-desc">We use cookies to enhance your experience with our payment processing and
+                        merchant services platform. Choose which cookies you’d like to allow:</div>
+                </div>
+                <div class="cookie-options">
+                    <div class="cookie-card">
+                        <div class="cookie-card-top">
+                            <label class="cookie-checkbox cookie-checkbox--checked cookie-checkbox--disabled">
+                                <input type="checkbox" checked disabled>
+                                <span class="cookie-checkmark">
+                                    <svg width="12" height="10" viewBox="0 0 12 10" fill="none" aria-hidden="true">
+                                        <path d="M1 5L4.5 8.5L11 1.5" stroke="#FFFFFF" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                            </label>
+                            <span class="cookie-card-name">Essential Cookies</span>
+                        </div>
+                        <p class="cookie-card-desc">Required for payment processing, security, fraud<br />prevention,
+                            and basic site functionality. Cannot be<br />disabled.</p>
+                    </div>
+                    <div class="cookie-card">
+                        <div class="cookie-card-top">
+                            <label class="cookie-checkbox">
+                                <input type="checkbox" id="cookieAnalytics">
+                                <span class="cookie-checkmark">
+                                    <svg width="12" height="10" viewBox="0 0 12 10" fill="none" aria-hidden="true">
+                                        <path d="M1 5L4.5 8.5L11 1.5" stroke="#FFFFFF" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                            </label>
+                            <span class="cookie-card-name">Analytics Cookies</span>
+                        </div>
+                        <p class="cookie-card-desc">Help us understand how visitors use our site
+                            (Google<br />Analytics). Used to improve performance and user<br />experience.</p>
+                    </div>
+                    <div class="cookie-card">
+                        <div class="cookie-card-top">
+                            <label class="cookie-checkbox">
+                                <input type="checkbox" id="cookieMarketing">
+                                <span class="cookie-checkmark">
+                                    <svg width="12" height="10" viewBox="0 0 12 10" fill="none" aria-hidden="true">
+                                        <path d="M1 5L4.5 8.5L11 1.5" stroke="#FFFFFF" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                            </label>
+                            <span class="cookie-card-name">Marketing Cookies</span>
+                        </div>
+                        <p class="cookie-card-desc">Track Visits across websites for personalized content<br />and
+                            promotions (Facebook Pixel, Google Ads).</p>
+                    </div>
+                </div>
+                <div class="cookie-actions">
+                    <button class="cookie-btn cookie-btn--accept" id="cookieAcceptAll">Accept All</button>
+                    <button class="cookie-btn cookie-btn--save" id="cookieSavePrefs">Save My Preferences</button>
+                    <button class="cookie-btn cookie-btn--essential" id="cookieEssentialOnly">Essential Only</button>
+                </div>
+                <div class="cookie-footer">
+                    <div class="cookie-footer-line"></div>
+                    <div class="cookie-footer-text">Read Our Full Privacy Policy | Manage Cookie Settings</div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            (function () {
+                var acceptBtn = document.getElementById('cookieAcceptAll');
+                var saveBtn = document.getElementById('cookieSavePrefs');
+                var essentialBtn = document.getElementById('cookieEssentialOnly');
+                var analytics = document.getElementById('cookieAnalytics');
+                var marketing = document.getElementById('cookieMarketing');
+                var banner = document.querySelector('.cookie-outer');
+
+                function updateCheckmarks() {
+                    document.querySelectorAll('.cookie-checkbox').forEach(function (label) {
+                        var input = label.querySelector('input');
+                        if (input.checked) {
+                            label.classList.add('cookie-checkbox--checked');
+                        } else {
+                            label.classList.remove('cookie-checkbox--checked');
+                        }
+                    });
+                }
+
+                acceptBtn.addEventListener('click', function () {
+                    analytics.checked = true;
+                    marketing.checked = true;
+                    updateCheckmarks();
+                    banner.style.display = 'none';
+                });
+
+                essentialBtn.addEventListener('click', function () {
+                    analytics.checked = false;
+                    marketing.checked = false;
+                    updateCheckmarks();
+                    banner.style.display = 'none';
+                });
+
+                saveBtn.addEventListener('click', function () {
+                    updateCheckmarks();
+                    banner.style.display = 'none';
+                });
+
+                // make checkboxes clickable
+                document.querySelectorAll('.cookie-checkbox:not(.cookie-checkbox--disabled)').forEach(function (label) {
+                    label.addEventListener('click', function () {
+                        var input = label.querySelector('input');
+                        input.checked = !input.checked;
+                        updateCheckmarks();
+                    });
+                });
+            })();
+        </script>
+
+</body>
+
+</html>

@@ -108,7 +108,7 @@ body {
 .megamenu-right {
     flex: 1;
     background: #FFFFFF;
-    padding: 40px 50px;
+    padding: 40px 0 40px 50px;
     position: relative;
     min-width: 0;
     overflow: hidden;
@@ -119,6 +119,7 @@ body {
     height: 100%;
     overflow-y: auto;
     overflow-x: hidden;
+    padding-right: 50px;
 }
 
 /* Custom scrollbar */
@@ -151,17 +152,18 @@ body {
     z-index: 2;
     opacity: 0;
     transition: opacity 0.2s ease;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
 }
 
 .megamenu-right::before {
     top: 0;
-    /* background: linear-gradient(to bottom, white, transparent); */
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.123), transparent);
+    background: linear-gradient(to bottom, white, transparent);
 }
 
 .megamenu-right::after {
     bottom: 0;
-    background: linear-gradient(to top, rgba(255, 255, 255, 0.123), transparent);
+    background: linear-gradient(to top, white, transparent);
 }
 
 .megamenu-right.fade-top::before,

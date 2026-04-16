@@ -1,0 +1,284 @@
+/* Cookie Banner Styles */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Urbanist, sans-serif;
+}
+
+.cookie-outer {
+    width: 100%;
+    min-height: 530px;
+    height: auto;
+    position: relative;
+    background: #121A2D;
+    padding: 60px 0 30px 0px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.cookie-container {
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+}
+
+.cookie-content {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 53px;
+    margin: 0 auto;
+}
+
+.cookie-header {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.cookie-title {
+    align-self: stretch;
+    color: white;
+    font-size: 30px;
+    font-family: Urbanist;
+    font-weight: 600;
+    word-wrap: break-word;
+}
+
+.cookie-desc {
+    align-self: stretch;
+    color: rgba(255, 255, 255, 0.70);
+    font-size: 18px;
+    font-family: Urbanist;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.cookie-options {
+    align-self: stretch;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 24px;
+}
+
+.cookie-card {
+    max-width: 384px;
+    height: 126px;
+    padding: 20px;
+    background: #252D40;
+    border-radius: 15px;
+    outline: 1px #3B4356 solid;
+    outline-offset: -1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.cookie-card-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cookie-checkbox {
+    width: 18px;
+    height: 18px;
+    background: white;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cookie-checkbox input {
+    display: none;
+}
+
+.cookie-checkmark {
+    display: none;
+}
+
+.cookie-checkbox--checked .cookie-checkmark {
+    display: block;
+}
+
+.cookie-checkbox--disabled {
+    background: #73767F;
+    cursor: not-allowed;
+}
+
+.cookie-card-name {
+    color: white;
+    font-size: 18px;
+    font-family: Urbanist;
+    font-weight: 600;
+    word-wrap: break-word;
+}
+
+.cookie-card-desc {
+    width: 344px;
+    color: rgba(255, 255, 255, 0.70);
+    font-size: 14px;
+    font-family: Urbanist;
+    font-weight: 400;
+    line-height: 18px;
+    word-wrap: break-word;
+}
+
+.cookie-actions {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.cookie-btn {
+    padding: 15px 25px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    display: flex;
+    color: white;
+    font-size: 16px;
+    font-family: Urbanist;
+    font-weight: 600;
+    line-height: 20px;
+    word-wrap: break-word;
+    border: none;
+    cursor: pointer;
+}
+
+.cookie-btn--accept {
+    background: #399CDB;
+}
+
+.cookie-btn--save {
+    background: #252D40;
+    outline: 1px #3B4356 solid;
+    outline-offset: -1px;
+}
+
+.cookie-btn--essential {
+    background: #121A2D;
+    outline: 1px #3B4356 solid;
+    outline-offset: -1px;
+    color: rgba(255, 255, 255, 0.70);
+}
+
+.cookie-footer {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 25px;
+}
+
+.cookie-footer-line {
+    align-self: stretch;
+    height: 1px;
+    background: #3B4356;
+    border-radius: 15px;
+}
+
+.cookie-footer-text {
+    align-self: stretch;
+    text-align: center;
+    color: #399CDB;
+    font-size: 18px;
+    font-family: Urbanist;
+    font-weight: 500;
+    word-wrap: break-word;
+}
+
+/* Responsive Design */
+
+@media (max-width: 1200px) {
+    .cookie-container {
+        width: 100%;
+        max-width: 1200px;
+        padding: 0 20px;
+        align-items: center;
+    }
+
+    .cookie-options {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .cookie-card {
+        width: calc(50% - 10px);
+        min-width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cookie-outer {
+        padding: 40px 0;
+    }
+
+    .cookie-container {
+        gap: 30px;
+        padding: 0 10px;
+    }
+
+    .cookie-content {
+        gap: 40px;
+    }
+
+    .cookie-options {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .cookie-card {
+        width: 100%;
+        max-width: 384px;
+    }
+
+    .cookie-actions {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .cookie-btn {
+        flex: 1;
+        min-width: 200px;
+    }
+
+    .cookie-title {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .cookie-desc {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .cookie-footer-text {
+        font-size: 16px;
+    }
+}

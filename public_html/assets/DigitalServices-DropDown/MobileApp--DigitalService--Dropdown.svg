@@ -1,0 +1,46 @@
+<svg width="252" height="182" viewBox="0 0 252 182" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="252" height="182" rx="12" fill="#E8D9E8"/>
+
+  <!-- Decorative circles -->
+  <circle cx="210" cy="38" r="28" fill="#D4B8D4" opacity="0.5"/>
+  <circle cx="36" cy="148" r="20" fill="#D4B8D4" opacity="0.4"/>
+
+  <!-- Phone body -->
+  <rect x="90" y="18" width="72" height="130" rx="14" fill="#C4A8C4" stroke="#9070A0" stroke-width="2"/>
+
+  <!-- Phone screen area -->
+  <rect x="97" y="30" width="58" height="100" rx="6" fill="#F5EEF5"/>
+
+  <!-- Status bar -->
+  <rect x="97" y="30" width="58" height="14" rx="4" fill="#9B78A0"/>
+  <!-- Camera notch -->
+  <circle cx="126" cy="37" r="3.5" fill="#7A5080"/>
+
+  <!-- App icon grid - row 1 -->
+  <rect x="104" y="52" width="15" height="15" rx="4" fill="#B47ABE"/>
+  <rect x="123" y="52" width="15" height="15" rx="4" fill="#9070A0"/>
+  <rect x="142" y="52" width="12" height="15" rx="4" fill="#B47ABE"/>
+
+  <!-- App icon grid - row 2 -->
+  <rect x="104" y="73" width="15" height="15" rx="4" fill="#9070A0"/>
+  <rect x="123" y="73" width="15" height="15" rx="4" fill="#B47ABE"/>
+  <rect x="142" y="73" width="12" height="15" rx="4" fill="#9070A0"/>
+
+  <!-- Content placeholder lines -->
+  <rect x="104" y="96" width="49" height="6" rx="3" fill="#C4A8C4"/>
+  <rect x="104" y="108" width="37" height="6" rx="3" fill="#C4A8C4" opacity="0.6"/>
+
+  <!-- Home bar -->
+  <rect x="114" y="138" width="24" height="4" rx="2" fill="#9070A0"/>
+
+  <!-- Code angle brackets left side -->
+  <path d="M48 78 L32 91 L48 104" stroke="#B898BA" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.7"/>
+  <!-- Code angle brackets right side -->
+  <path d="M56 68 L68 105" stroke="#B898BA" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- Small floating dots (decorative) -->
+  <circle cx="192" cy="110" r="5" fill="#C4A8C4" opacity="0.6"/>
+  <circle cx="202" cy="130" r="3" fill="#B898BA" opacity="0.5"/>
+  <circle cx="186" cy="148" r="4" fill="#D4B8D4" opacity="0.6"/>
+</svg>

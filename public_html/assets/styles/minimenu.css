@@ -1,0 +1,383 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Urbanist', sans-serif;
+}
+
+/* =========================================================
+   OUTER WRAPPER
+   ========================================================= */
+.minimenu-outer {
+    width: 100%;
+    overflow: hidden;
+    max-height: 538px;
+}
+
+/* =========================================================
+   INNER CONTAINER
+   Max-width 1440px — matches Figma frame.
+   ========================================================= */
+.minimenu {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 40px 0 50px;
+}
+
+/* =========================================================
+   LEARN MORE LINK
+   Figma: x=1214, y=40 — right-aligned in top area.
+   ========================================================= */
+.minimenu-topbar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 120px;
+    margin-bottom: 38px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 1200px !important;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.minimenu-learn-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #399CDB;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.minimenu-learn-more:hover {
+    opacity: 0.75;
+}
+
+/* =========================================================
+   SLIDER LAYOUT
+   Arrows flank the clipping track wrapper.
+   Padding matches Figma's 120px card inset from edge:
+     60px outer padding + 40px arrow + 20px gap = 120px.
+   ========================================================= */
+.minimenu-slider {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    gap: 0px;
+    /* padding: 0 60px; */
+    padding: 0px;
+    width: 1200px;
+    position: relative;
+    margin: auto;
+}
+
+/* Clips the sliding track */
+.minimenu-track-outer {
+    flex: 1;
+    overflow: hidden;
+    padding: 0px 0;
+    /* vertical breathing room for card shadows */
+}
+
+.minimenu-track {
+    display: flex;
+    gap: 24px;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+
+/* =========================================================
+   CARD
+   Figma: 282 × 346px  — width set dynamically by JS.
+   ========================================================= */
+.minimenu-card {
+    flex-shrink: 0;
+    min-width: 0;
+}
+
+.minimenu-card-inner {
+    background: #FFFFFF;
+    background: #f6f6f6;
+    border-radius: 24px;
+    padding: 15px;
+    height: 346px;
+    display: flex;
+    flex-direction: column;
+    /* box-shadow: 0 2px 14px rgba(0, 0, 0, 0.07); */
+}
+
+/* ---- Image area ---- */
+/* Figma: 252 × 182px inside 15px card padding */
+.minimenu-card-img {
+    width: 100%;
+    height: 182px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.minimenu-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Placeholder background colors per service type */
+.minimenu-card-img--webdesign {
+    background: #D6EAF8;
+}
+
+.minimenu-card-img--3dprinting {
+    background: #C9E4F0;
+}
+
+.minimenu-card-img--branding {
+    background: #EDE9E4;
+}
+
+.minimenu-card-img--socialmedia {
+    background: #D9DEE8;
+}
+
+.minimenu-card-img--seo {
+    background: #D5EBD8;
+}
+
+.minimenu-card-img--mobile {
+    background: #E8D9E8;
+}
+
+/* ---- Card body ---- */
+/* Figma gap between image bottom and text: 15px (197 - 182 = 15) */
+.minimenu-card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+
+.minimenu-card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 12px;
+}
+
+.minimenu-card-name {
+    color: #0E0E0E;
+    font-size: 18px;
+    font-family: Urbanist;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+
+.minimenu-card-desc {
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: #454745;
+    font-size: 14px;
+    font-family: Urbanist;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+/* ---- Buttons ---- */
+/* Figma: 121 × 38px each, 10px gap (131 - 121 = 10) */
+.minimenu-card-btns {
+    display: flex;
+    gap: 10px;
+}
+
+.minimenu-btn {
+    flex: 1;
+    height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.minimenu-btn--primary {
+    background: #399CDB;
+    color: #FFFFFF;
+    border: 1.5px solid #399CDB;
+}
+
+.minimenu-btn--primary:hover {
+    background: #1d85c8;
+    border-color: #1d85c8;
+}
+
+.minimenu-btn--outline {
+    background: #FFFFFF;
+    color: #399CDB;
+    border: 1.5px solid #399CDB;
+}
+
+.minimenu-btn--outline:hover {
+    background: #EBF5FB;
+}
+
+/* =========================================================
+   NAVIGATION ARROWS
+   Figma: 40 × 40px circles.
+   Left: outlined gray circle.
+   Right: filled #399CDB circle.
+   ========================================================= */
+.minimenu-arrow {
+    position: absolute;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+    z-index: 1;
+}
+
+.minimenu-arrow--prev {
+    background: transparent;
+    box-shadow: none;
+    left: -60px;
+
+}
+
+.minimenu-arrow--prev:hover {
+    box-shadow: none;
+}
+
+.minimenu-arrow--next {
+    background: transparent;
+    right: -60px;
+}
+
+.minimenu-arrow--next:hover {
+    background: transparent;
+}
+
+.minimenu-arrow--disabled {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+/* =========================================================
+   PAGINATION DOTS
+   Figma: group width=46px, height=12px — 3 dots × 12px + 2 × 5px gap = 46px.
+   ========================================================= */
+.minimenu-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin: auto;
+    margin-top: 40px;
+    width: 1200px;
+}
+
+.minimenu-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    background: #D0D0D0;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.minimenu-dot.active {
+    background: #399CDB;
+    transform: scale(1.15);
+}
+
+/* =========================================================
+   RESPONSIVE — 1440px
+   ========================================================= */
+@media (max-width: 1440px) {
+
+    .minimenu-topbar,
+    .minimenu-slider {
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-left: 0px;
+        padding-right: 0px;
+        width: 1200px !important;
+    }
+}
+
+/* =========================================================
+   RESPONSIVE — 968px
+   JS switches to 2 visible cards.
+   ========================================================= */
+@media (max-width: 968px) {
+
+    .minimenu-topbar,
+    .minimenu-slider {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .minimenu-slider {
+        gap: 16px;
+    }
+
+    .minimenu-card-inner {
+        height: auto;
+    }
+}
+
+/* =========================================================
+   RESPONSIVE — 430px
+   JS switches to 1 visible card.
+   ========================================================= */
+@media (max-width: 430px) {
+
+    .minimenu-topbar,
+    .minimenu-slider {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .minimenu-slider {
+        gap: 12px;
+    }
+
+    .minimenu-arrow {
+        width: 32px;
+        height: 32px;
+    }
+
+    .minimenu-card-inner {
+        height: auto;
+    }
+
+    .minimenu-btn {
+        font-size: 12px;
+    }
+}

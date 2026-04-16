@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Urbanist', sans-serif;
+}
+
+/* =========================================================
+   OUTER SECTION
+   Figma frame: 1440 × 583 — white background
+   ========================================================= */
+.sr-outer {
+    width: 100%;
+    background: #FFFFFF;
+    min-height: 583px;
+}
+
+/* =========================================================
+   INNER CONTAINER
+   1200px content @ centre  — padding 40px 120px 105px
+   (40 top + 60 bar + 15 gap + 17 meta + 10 gap + 336 results = 478  →  583 − 478 = 105 bottom)
+   ========================================================= */
+.sr-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 40px 120px 105px;
+}
+
+/* =========================================================
+   SEARCH BAR
+   Figma: 1200 × 60  —  input (flex-1) + close button (60 × 60)
+   ========================================================= */
+.sr-bar {
+    display: flex;
+    align-items: stretch;
+    height: 60px;
+    background: #F4F4F4;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.sr-input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    border: 1px solid #e0e0e0;
+    background: transparent;
+    padding: 0 20px 0 25px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 400;
+    color: #3C3C3C;
+    outline: none;
+    /* remove native "x" in search inputs */
+    -webkit-appearance: none;
+}
+
+.sr-input::placeholder {
+    color: #AEAEAE;
+    font-weight: 400;
+}
+
+.sr-input::-webkit-search-cancel-button,
+.sr-input::-webkit-search-decoration {
+    -webkit-appearance: none;
+    display: none;
+}
+
+/* Close / X button */
+.sr-close {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    background: #3C3C3C;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease;
+}
+
+.sr-close:hover {
+    background: #555555;
+}
+
+/* =========================================================
+   RESULTS META TEXT
+   Figma: "Found 10 results for 5 products" — small gray
+   Position: 15px below search bar, 25px left indent
+   ========================================================= */
+.sr-meta {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #9E9E9E;
+    line-height: 1.3;
+}
+
+/* =========================================================
+   RESULTS OUTER WRAPPER
+   1190px results list  +  10px custom scrollbar  =  1200px
+   ========================================================= */
+.sr-results-outer {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+}
+
+/* =========================================================
+   RESULTS LIST
+   Viewport height: 336px (4 rows × 84px)
+   Native scrollbar hidden — replaced by custom scrollbar
+   ========================================================= */
+.sr-results {
+    flex: 1;
+    min-width: 0;
+    height: 336px;
+    overflow-y: scroll;
+    /* hide native scrollbar */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE / Edge legacy */
+}
+
+.sr-results::-webkit-scrollbar {
+    display: none;
+    /* Chrome / Safari */
+}
+
+/* =========================================================
+   RESULT ROW
+   Figma: height 84px, 25px side padding, image gap
+   Alternating rows: white (#FFF) / light gray (#F8F8F8)
+   ========================================================= */
+.sr-row {
+    display: flex;
+    align-items: center;
+    height: 84px;
+    background: #FFFFFF;
+    padding: 0 25px;
+    gap: 20px;
+}
+
+.sr-row--alt {
+    background: #F8F8F8;
+}
+
+/* ---- Product image wrapper  (60 × 60) ---- */
+.sr-img-wrap {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    background: #F0EBE0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.sr-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* ---- Product info column ---- */
+.sr-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Product name */
+.sr-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1A1A1A;
+    line-height: 1.375;
+}
+
+/* =========================================================
+   ACTION BADGES
+   Figma: height 24px, border-radius 12px (pill), 12px text
+   — "Buy Now"    : green  bg #DCFCE7 / text #15803D
+   — "Learn More" : peach  bg #FEF0E9 / text #E8702A
+   ========================================================= */
+.sr-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    height: 24px;
+    padding: 0 10px;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    line-height: 1;
+    width: max-content;
+    transition: filter 0.15s ease;
+}
+
+.sr-badge:hover {
+    filter: brightness(0.95);
+}
+
+/* Buy Now */
+.sr-badge--buy {
+    background: #DCFCE7;
+    color: #15803D;
+}
+
+/* Learn More */
+.sr-badge--learn {
+    background: #FEF0E9;
+    color: #E8702A;
+}
+
+/* =========================================================
+   CUSTOM SCROLLBAR
+   Figma: 10px wide | track 312px | thumb proportional
+   Up / down chevron arrows at each end
+   ========================================================= */
+.sr-scrollbar {
+    width: 10px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 336px;
+    /* matches .sr-results viewport */
+}
+
+/* Arrow buttons */
+.sr-sb-arrow {
+    width: 10px;
+    height: 12px;
+    flex-shrink: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    opacity: 0.65;
+    transition: opacity 0.15s ease;
+}
+
+.sr-sb-arrow:hover {
+    opacity: 1;
+}
+
+.sr-sb-arrow:disabled {
+    opacity: 0.18;
+    cursor: default;
+}
+
+/* Track */
+.sr-sb-track {
+    flex: 1;
+    width: 10px;
+    background: #E2E2E2;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+/* Thumb */
+.sr-sb-thumb {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10px;
+    min-height: 24px;
+    background: #3C3C3C;
+    border-radius: 5px;
+    cursor: grab;
+    transition: background 0.15s ease;
+}
+
+.sr-sb-thumb:active {
+    cursor: grabbing;
+    background: #555555;
+}
