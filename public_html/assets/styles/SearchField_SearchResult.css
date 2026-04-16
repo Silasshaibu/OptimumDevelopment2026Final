@@ -19,14 +19,15 @@ body {
 }
 
 /* =========================================================
-   INNER CONTAINER
-   1200px content @ centre  — padding 40px 120px 105px
-   (40 top + 60 bar + 15 gap + 17 meta + 10 gap + 336 results = 478  →  583 − 478 = 105 bottom)
+    INNER CONTAINER
    ========================================================= */
 .sr-container {
-    max-width: 1440px;
+    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
-    padding: 40px 120px 105px;
+    /* padding: 0 20px; */
+    padding: 0px;
+    box-sizing: border-box;
 }
 
 /* =========================================================
