@@ -108,7 +108,8 @@ body {
 
 .billboard-handheld {
     position: relative;
-    background-image: url(../public_html/assets/billboard-hhd/Image-with-gradientSphere.png);
+    background-image: url(../billboard-hhd/Image-with-gradientSphere.png);
+    margin-bottom: 120px;
 }
 
 @media (max-width: 1440px) {
