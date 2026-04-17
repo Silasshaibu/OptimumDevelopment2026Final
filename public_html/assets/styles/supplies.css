@@ -14,17 +14,17 @@ body {
     display: flex;
     width: 100%;
     max-width: 1200px;
-    padding: 0 120px;
     margin: 0 auto;
     flex-direction: column;
     align-items: flex-start;
     row-gap: 40px;
+    margin-bottom: 120px;
 }
 
 .sup-nav {
     position: absolute;
     top: 53px;
-    right: 120px;
+    right: 0px;
     display: inline-flex;
     align-items: center;
     gap: 10px;
@@ -43,6 +43,7 @@ body {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    text-align: left;
 }
 
 .sup-block--head .sup-subtitle {
@@ -53,19 +54,20 @@ body {
     font-weight: 400;
     line-height: 34px;
     margin-top: 16px;
+    text-align: left;
 }
 
 .sup-block--body {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 24px;
     width: 100%;
+    overflow: hidden;
 }
 
 .sup-card {
     display: flex;
-    width: 282px;
-    height: 346px;
+    aspect-ratio: 282 / 346;
     padding: 30px 18px;
     flex-direction: column;
     align-items: flex-start;
@@ -76,7 +78,7 @@ body {
 }
 
 .sup-card__img-wrap {
-    height: 218px;
+    height: fit-content;
     align-self: stretch;
     aspect-ratio: 123 / 109;
     background-color: transparent;
@@ -86,35 +88,36 @@ body {
 }
 
 .sup-card__img-wrap--barcode {
-    background-image: url('assets/sup-products/sup-clover-barcode-scanner.png');
+    background-image: url('../sup-products/sup-clover-barcode-scanner.png');
 }
 
 .sup-card__img-wrap--ribbon {
-    background-image: url('assets/sup-products/sup-ink-ribbon-star-micronics.png');
+    background-image: url('../sup-products/sup-ink-ribbon-star-micronics.png');
+    aspect-ratio: 162 / 144;
 }
 
 .sup-card__img-wrap--printer {
-    background-image: url('assets/sup-products/sup-star-micronics-printer.png');
+    background-image: url('../sup-products/sup-star-micronics-printer.png');
 }
 
 .sup-card__img-wrap--z8-paper {
-    background-image: url('assets/sup-products/sup-dejavoo-z8-paper.png');
+    background-image: url('../sup-products/sup-dejavoo-z8-paper.png');
 }
 
 .sup-card__img-wrap--sp700-paper {
-    background-image: url('assets/sup-products/sup-star-micronics-sp700-paper.png');
+    background-image: url('../sup-products/sup-star-micronics-sp700-paper.png');
 }
 
 .sup-card__img-wrap--flex-paper {
-    background-image: url('assets/sup-products/sup-clover-flex-paper.png');
+    background-image: url('../sup-products/sup-clover-flex-paper.png');
 }
 
 .sup-card__img-wrap--cash-drawer {
-    background-image: url('assets/sup-products/sup-clover-cash-drawer.png');
+    background-image: url('../sup-products/sup-clover-cash-drawer.png');
 }
 
 .sup-card__img-wrap--station-paper {
-    background-image: url('assets/sup-products/sup-clover-station-paper.png');
+    background-image: url('../sup-products/sup-clover-station-paper.png');
 }
 
 .sup-card__info {
@@ -150,7 +153,7 @@ body {
     overflow: hidden;
 }
 
-.sup-block--foot {
+.tst-block__footer {
     display: flex;
     width: 100%;
     justify-content: flex-end;
@@ -158,68 +161,104 @@ body {
     gap: 10px;
 }
 
-.sup-view-all {
+.tst-view-all-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
     color: #399CDB;
     text-align: center;
+    font-family: Urbanist;
     font-size: 18px;
     font-weight: 600;
     line-height: normal;
+    border: 0;
+    padding: 0;
+    background: none;
 }
 
-.sup-view-all__icon {
+.tst-view-all-btn svg {
     width: 6px;
     height: 10px;
     flex-shrink: 0;
+    stroke-width: 1.5px;
+    stroke: #399CDB;
 }
 
-@media (max-width: 1300px) {
-    .sup-block {
-        padding: 0 40px;
-    }
-
-    .sup-nav {
-        right: 40px;
-    }
+.tst-view-all-btn[aria-expanded="true"] svg {
+    transform: translateY(3px);
 }
+
+
 
 @media (max-width: 968px) {
     .sup-block {
-        padding: 0 24px;
         row-gap: 32px;
-    }
-
-    .sup-nav {
-        right: 24px;
-    }
-
-    .sup-block--head .sup-title {
-        font-size: 48px;
-    }
-
-    .sup-block--head .sup-subtitle {
-        font-size: 20px;
-        line-height: 30px;
+        padding: 0 24px;
+        /* max-width: 920px !important; */
+        /*calc 968 - (2*24)*/
     }
 
     .sup-block--body {
-        grid-template-columns: repeat(3, 1fr);
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 20px;
+        width: 100%;
     }
 
     .sup-card {
         width: 100%;
     }
+
+    .sup-nav {
+        right: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sup-block--body {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .sup-card {
+        aspect-ratio: 185 / 230;
+        width: 100%;
+        height: auto;
+        padding: 18px 14px;
+        gap: 12px;
+        border-radius: 18px;
+    }
+
+    .sup-card__img-wrap {
+        height: 140px;
+        height: fit-content;
+    }
+
+    .sup-card__title {
+        font-size: 16px;
+    }
+
+    .sup-card__desc {
+        font-size: 13px;
+        -webkit-line-clamp: 2;
+    }
 }
 
 @media (max-width: 430px) {
     .sup-block {
-        padding: 0 24px;
+        padding: 0 0px;
         row-gap: 28px;
+        max-width: 430px;
+        width: 100%;
+        overflow: hidden;
+        display: block;
     }
 
     .sup-nav {
-        position: static;
-        order: 3;
+        position: absolute;
+        bottom: 0;
+        left: 0;
         align-self: flex-start;
     }
 
@@ -231,27 +270,34 @@ body {
     .sup-block--head .sup-title {
         font-size: 36px;
         line-height: 1.12;
+        text-align: center;
+        display: block;
     }
+
 
     .sup-block--head .sup-subtitle {
         font-size: 16px;
         line-height: 24px;
         margin-top: 12px;
+        text-align: center;
+        display: block;
     }
+
 
     .sup-block--head .sup-subtitle br {
         display: none;
     }
 
     .sup-block--body {
+        display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 16px;
     }
 
     .sup-card {
+        aspect-ratio: 185 / 230;
         width: 100%;
         height: auto;
-        min-height: 250px;
         padding: 18px 14px;
         gap: 12px;
         border-radius: 18px;
@@ -270,12 +316,8 @@ body {
         -webkit-line-clamp: 2;
     }
 
-    .sup-block--foot {
-        justify-content: flex-start;
-        gap: 8px;
-    }
-
-    .sup-view-all {
-        font-size: 16px;
+    .tst-block__footer {
+        width: 100%;
+        justify-content: flex-end;
     }
 }

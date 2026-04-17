@@ -1,9 +1,16 @@
 (function () {
     var maxVisibleCharacters = 149;
     var collapsedCharacterCount = 146;
-    var extraCards = document.querySelectorAll('.tst-card--hidden');
+    var allCards = document.querySelectorAll('.tst-card');
+    var maxVisibleCards = 6;
+    var extraCards = Array.from(allCards).slice(maxVisibleCards);
     var viewAllButton = document.querySelector('.tst-view-all-btn');
     var reviewToggles = [];
+
+    // Hide extra cards initially
+    extraCards.forEach(function (card) {
+        card.classList.add('tst-card--hidden');
+    });
 
     function createCollapsedText(text) {
         return text.slice(0, collapsedCharacterCount).trimEnd() + '...';
