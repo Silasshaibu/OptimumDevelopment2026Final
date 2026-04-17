@@ -7,10 +7,9 @@
 body {
     font-family: 'Urbanist', sans-serif;
     background: #f6f6f6;
-    padding: 80px;
 }
 
-.billboard {
+.billboard-handheld {
     width: 100%;
     max-width: 1320px;
     min-height: 568px;
@@ -21,7 +20,7 @@ body {
     margin: 0 auto;
 }
 
-.billboard__eyebrow {
+.billboard-handheld__eyebrow {
     color: #399CDB;
     font-family: 'Urbanist', sans-serif;
     font-size: 24px;
@@ -31,11 +30,11 @@ body {
     margin-bottom: 10px;
 }
 
-.billboard__title {
+.billboard-handheld__title {
     margin-bottom: 15px;
 }
 
-.billboard__title-prefix {
+.billboard-handheld__title-prefix {
     color: #0E0E0E;
     font-family: Urbanist;
     font-size: 48px;
@@ -44,7 +43,7 @@ body {
     line-height: normal;
 }
 
-.billboard__title-accent {
+.billboard-handheld__title-accent {
     color: #399CDB;
     font-family: Urbanist;
     font-size: 48px;
@@ -53,7 +52,7 @@ body {
     line-height: normal;
 }
 
-.billboard__description {
+.billboard-handheld__description {
     margin-bottom: 40px;
     color: #454745;
     font-family: Urbanist;
@@ -65,7 +64,7 @@ body {
     /* 141.667% */
 }
 
-.billboard__cta {
+.billboard-handheld__cta {
     display: inline-flex;
     justify-content: center;
     min-width: 86px;
@@ -99,7 +98,7 @@ body {
     z-index: 2;
 }
 
-.billboard__image {
+.billboard-handheld__image {
     position: relative;
     z-index: 1;
     display: block;
@@ -107,17 +106,13 @@ body {
     height: auto;
 }
 
-.billboard {
+.billboard-handheld {
     position: relative;
     background-image: url(../public_html/assets/billboard-hhd/Image-with-gradientSphere.png);
 }
 
 @media (max-width: 1440px) {
-    body {
-        padding: 40px;
-    }
-
-    .billboard {
+    .billboard-handheld {
         padding-left: 50%;
     }
 
@@ -129,20 +124,16 @@ body {
 }
 
 @media (max-width: 968px) {
-    body {
-        padding: 24px;
-    }
-
-    .billboard {
+    .billboard-handheld {
         padding-left: 45%;
     }
 
-    .billboard__title-prefix,
-    .billboard__title-accent {
+    .billboard-handheld__title-prefix,
+    .billboard-handheld__title-accent {
         font-size: 40px;
     }
 
-    .billboard__description {
+    .billboard-handheld__description {
         font-size: 20px;
         line-height: 30px;
     }
@@ -154,11 +145,7 @@ body {
 }
 
 @media (max-width: 430px) {
-    body {
-        padding: 24px;
-    }
-
-    .billboard {
+    .billboard-handheld {
         min-height: 0;
         border-radius: 32px;
         padding: 28px 24px 32px;
@@ -177,28 +164,28 @@ body {
         align-self: center;
     }
 
-    .billboard__eyebrow {
+    .billboard-handheld__eyebrow {
         font-size: 16px;
         margin-bottom: 8px;
     }
 
-    .billboard__title {
+    .billboard-handheld__title {
         margin-bottom: 12px;
     }
 
-    .billboard__title-prefix,
-    .billboard__title-accent {
+    .billboard-handheld__title-prefix,
+    .billboard-handheld__title-accent {
         font-size: 32px;
         line-height: 1.12;
     }
 
-    .billboard__description {
+    .billboard-handheld__description {
         font-size: 16px;
         line-height: 24px;
         margin-bottom: 24px;
     }
 
-    .billboard__cta {
+    .billboard-handheld__cta {
         width: 100%;
         max-width: 180px;
         height: 44px;
