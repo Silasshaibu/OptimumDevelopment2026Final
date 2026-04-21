@@ -2,14 +2,11 @@
     var carousel = document.querySelector('.tsp-carousel');
     var track = document.querySelector('.tsp-block--body');
     var cards = Array.prototype.slice.call(document.querySelectorAll('.tsp-card'));
-    var previousButton = document.querySelector('.tsp-nav__btn--prev');
-    var nextButton = document.querySelector('.tsp-nav__btn--next');
-    var nav = document.querySelector('.tsp-nav');
-    var viewToggle = document.querySelector('.tsp-view-all');
+    var viewToggle = document.querySelector('.tst-view-all-btn');
     var currentIndex = 0;
     var isGridView = false;
 
-    if (!carousel || !track || cards.length === 0 || !previousButton || !nextButton || !nav || !viewToggle) {
+    if (!carousel || !track || cards.length === 0 || !viewToggle) {
         return;
     }
 
@@ -25,11 +22,18 @@
         return Math.max(cards.length - getVisibleCards(), 0);
     }
 
-    function updateButtons() {
-        var maxIndex = getMaxIndex();
-        previousButton.disabled = isGridView || currentIndex <= 0;
-        nextButton.disabled = isGridView || currentIndex >= maxIndex;
-        nav.hidden = isGridView;
+    function updateIndicators() {
+        var footSvgs = document.querySelectorAll('.tsp-block--foot .tsp-nav svg');
+        if (footSvgs.length === 2) {
+            if (isGridView) {
+                footSvgs[0].style.fill = '#BABABA';
+                footSvgs[1].style.fill = '#BABABA';
+            } else {
+                var maxIndex = getMaxIndex();
+                footSvgs[0].style.fill = currentIndex > 0 ? '#399CDB' : '#BABABA';
+                footSvgs[1].style.fill = currentIndex < maxIndex ? '#399CDB' : '#BABABA';
+            }
+        }
     }
 
     function renderCarousel() {
@@ -47,28 +51,8 @@
             track.style.transform = 'translateX(' + (currentIndex * step * -1) + 'px)';
         }
 
-        updateButtons();
+        updateIndicators();
     }
-
-    previousButton.addEventListener('click', function () {
-        if (currentIndex <= 0 || isGridView) {
-            return;
-        }
-
-        currentIndex -= 1;
-        renderCarousel();
-    });
-
-    nextButton.addEventListener('click', function () {
-        var maxIndex = getMaxIndex();
-
-        if (currentIndex >= maxIndex || isGridView) {
-            return;
-        }
-
-        currentIndex += 1;
-        renderCarousel();
-    });
 
     viewToggle.addEventListener('click', function () {
         isGridView = !isGridView;
@@ -76,6 +60,30 @@
         viewToggle.querySelector('span').textContent = isGridView ? 'View Less' : 'View All';
         renderCarousel();
     });
+
+    var footPrev = document.querySelector('.tsp-block--foot .tsp-nav svg:first-child');
+    var footNext = document.querySelector('.tsp-block--foot .tsp-nav svg:last-child');
+
+    if (footPrev) {
+        footPrev.addEventListener('click', function () {
+            if (currentIndex <= 0 || isGridView) {
+                return;
+            }
+            currentIndex -= 1;
+            renderCarousel();
+        });
+    }
+
+    if (footNext) {
+        footNext.addEventListener('click', function () {
+            var maxIndex = getMaxIndex();
+            if (currentIndex >= maxIndex || isGridView) {
+                return;
+            }
+            currentIndex += 1;
+            renderCarousel();
+        });
+    }
 
     window.addEventListener('resize', renderCarousel);
     renderCarousel();

@@ -14,10 +14,22 @@
 
 <body>
     <div class="home-hero">
-        <div class="carouselSlideProgressBarContainer">
-            <div class="carouselSlideProgressBar"></div>
-            <div class="carouselSlideProgressBarInactive"></div>
-            <div class="carouselSlideProgressBarInactive"></div>
+        <div class="carouselControlsContainer">
+            <div class="carouselSlideProgressBarContainer">
+                <div class="carouselSlideProgressBar"></div>
+                <div class="carouselSlideProgressBarInactive"></div>
+                <div class="carouselSlideProgressBarInactive"></div>
+            </div>
+            <button class="play-pause-btn" type="button" aria-label="Pause carousel" aria-pressed="false">
+                <svg class="pause-icon" viewBox="0 0 24 24" fill="white" width="12" height="12" style="display: block;"
+                    aria-hidden="true">
+                    <path d="M6 4h4v16H6zm8 0h4v16h-4z"></path>
+                </svg>
+                <svg class="play-icon" style="display:none" viewBox="0 0 24 24" fill="white" width="12" height="12"
+                    aria-hidden="true">
+                    <path d="M8 5v14l11-7z"></path>
+                </svg>
+            </button>
         </div>
         <div class="hero-info-left">
             <div class="hero-copy">
@@ -43,6 +55,24 @@
             </div>
         </div>
     </div>
+
+    <script>
+        const playPauseButton = document.querySelector('.play-pause-btn');
+        const pauseIcon = document.querySelector('.pause-icon');
+        const playIcon = document.querySelector('.play-icon');
+
+        if (playPauseButton && pauseIcon && playIcon) {
+            playPauseButton.addEventListener('click', () => {
+                const isPaused = playPauseButton.getAttribute('aria-pressed') === 'true';
+                const nextPausedState = !isPaused;
+
+                playPauseButton.setAttribute('aria-pressed', String(nextPausedState));
+                playPauseButton.setAttribute('aria-label', nextPausedState ? 'Play carousel' : 'Pause carousel');
+                pauseIcon.style.display = nextPausedState ? 'none' : 'block';
+                playIcon.style.display = nextPausedState ? 'block' : 'none';
+            });
+        }
+    </script>
 </body>
 
 </html>
