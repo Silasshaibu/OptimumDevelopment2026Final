@@ -1,0 +1,158 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===========================
+   MEGA MENU CONTAINER
+=========================== */
+.swipesimple-mega-menu {
+  display: none;
+  position: absolute;
+  max-width: 900px;
+  bottom: 20%;
+  left: 500px;
+  margin: 0 auto;
+  padding: 24px;
+  border: 1px solid #e6e6e6;
+  background: #ffffff;
+  border-radius: 12px;
+}
+
+.swipesimple-mega-menu.open {
+  display: block;
+}
+
+.swipesimple-mega-menu__close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: black;
+  color: #fff;
+  border: none;
+  font-size: 1.375rem;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+/* ===========================
+   MEGA MENU GRID
+=========================== */
+.swipesimple-mega-menu__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.swipesimple-mega-menu__item {
+  display: flex;
+  gap: 14px;
+  padding: 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.25s ease;
+}
+
+.swipesimple-mega-menu__item:hover {
+  background: #f3f8f8;
+}
+
+.swipesimple-mega-menu__icon {
+  width: 36px;
+  height: 36px;
+  background: #2b7cff;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.swipesimple-mega-menu__label {
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.swipesimple-mega-menu__slug {
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+/* ===========================
+   SECTIONS GRID
+=========================== */
+.swipesimple-sections {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.swipesimple-section {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.swipesimple-section:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+}
+
+.swipesimple-card-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.swipesimple-section h2 {
+  margin: 20px 20px 8px;
+  font-size: 1.25rem;
+}
+
+.swipesimple-section p {
+  margin: 0 20px 26px;
+  font-size: 0.875rem;
+  opacity: 0.85;
+}
+
+.noteDefault.grid.neutral.swipesimple {
+  padding: 5%;
+  padding-bottom: 15rem;
+}
+
+.swipesimple-sections {
+  display: grid;
+  position: relative;
+}
+
+
+/* ===========================
+   PULSE
+=========================== */
+.swipesimple-section.pulse {
+  animation: pulseGlow 1.4s ease-out;
+}
+
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 0 0 rgba(43,124,255,0.45); }
+  70% { box-shadow: 0 0 0 18px rgba(43,124,255,0); }
+  100% { box-shadow: none; }
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 1024px) {
+  .swipesimple-mega-menu__grid,
+  .swipesimple-sections {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .swipesimple-mega-menu__grid,
+  .swipesimple-sections {
+    grid-template-columns: 1fr;
+  }
+}

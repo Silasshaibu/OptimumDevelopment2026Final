@@ -1,0 +1,279 @@
+
+/* =====================
+   BUTTON
+===================== */
+#unionMegaMenuToggle {
+  padding: 10px 16px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  color:white;
+  background-color: transparent;
+  align-items: center;
+  gap: 10px;
+}
+
+#unionMegaMenuToggle svg{
+  color:#fff;
+}
+
+#unionMegaMenuToggle:hover{
+  background-color: #33f ;
+  color:#fff;
+}
+
+#unionMegaMenuToggle:hover svg{
+  /* color:var(--unionPrimary, #33f); */
+}
+
+/* button icon toggle */
+.unionMegaMenu-icon.arrow-long-right {
+  display: none;
+}
+
+#unionMegaMenuToggle[aria-expanded="true"] .arrow-right {
+  display: none;
+}
+
+#unionMegaMenuToggle[aria-expanded="true"] .arrow-long-right {
+  display: inline-flex;
+}
+
+/* =====================
+   MEGA MENU
+===================== */
+.union-mega-menu {
+  display: none;
+  position: relative;
+  position: absolute;
+  margin-top: 12px;
+  bottom:0;
+  left:35%;
+  /* max-width:100%; */
+  width: 800px;
+  background: #0f0b2d;
+  color: white;
+  padding: 20px;
+  border-radius: 6px;
+  min-height:50vh;
+  height: 300px;
+  transform: translateY(72px);
+}
+
+.union-mega-menu.open {
+  display: flex;
+}
+
+/* Close button */
+.union-mega-menu__close {
+  position: absolute;
+  top: -25px;
+  right: -22px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px transparent #0f0b2d85;
+  border: none;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  justify-content: center;
+  outline:6px solid #33f;
+  outline:6px solid #0f0b2d; 
+}
+
+.union-mega-menu__close svg {
+  color: black;
+}
+
+/* Scrollbar for Chrome, Edge, Safari */
+.union-mega-menu::-webkit-scrollbar {
+  width: 12px; /* width of vertical scrollbar */
+  height: 12px; /* height of horizontal scrollbar */
+}
+
+.union-mega-menu::-webkit-scrollbar-track {
+  background: #f0f0f0; /* track color */
+  border-radius: 10px;
+}
+
+.union-mega-menu::-webkit-scrollbar-thumb {
+  background: #4a90e2; /* thumb color */
+  border-radius: 10px;
+  border: 3px solid #f0f0f0; /* adds padding effect */
+}
+
+
+
+/* Scrollbar for Firefox */
+.union-mega-menu {
+  scrollbar-width: thin; /* auto, thin, none */
+  scrollbar-color: #4a90e2 #4a91e269; /* thumb color track color */
+}
+
+/* Columns */
+.union-mega-menu__left {
+  width: 35%;
+  border-right: 1px solid rgba(255,255,255,0.15);
+  padding-right: 1rem;
+}
+
+.union-mega-menu__right {
+  width: 65%;
+  padding-left: 20px;
+  overflow-y: auto; /*changes to scroll when necessary*/
+}
+
+/* Parent items */
+.union-mega-menu__nav-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  background: none;
+  border: none;
+  color: #fff;
+  padding: 0.8rem;
+  cursor: pointer;
+  text-align: left;
+}
+
+button.union-mega-menuHeroBtn{
+  /* width:400px; */
+  /* height:3rem; */
+
+}
+
+.union-mega-menu__nav-item:hover  {
+  background: rgba(255,255,255,0.06);
+}
+
+.union-mega-menu__nav-item.active {
+  background: rgba(255,255,255,0.12);
+}
+
+.union-mega-menu__nav-text {
+  max-width: 85%;
+}
+
+.union-mega-menu__nav-title {
+  font-weight: bold;
+}
+
+.union-mega-menu__nav-slug {
+  font-size: 0.8rem;
+  opacity: 0.75;
+  margin-top: 4px;
+}
+
+.union-mega-menu__caret {
+  margin-left: 10px;
+}
+
+/* Children */
+.union-mega-menu__children {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 220px);
+  gap: 12px;
+}
+
+li.union-mega-menu__child-item div{
+  font-size:0.9em;
+}
+
+.union-mega-menu__child-item {
+  background: rgba(255,255,255,0.05);
+  padding: 12px;
+  border-radius: 4px;
+}
+
+button:hover svg{    
+    color:#fff;
+}
+
+
+button.union-mega-menu__close:hover{       
+    background-color: #0f0b2d;
+}
+.union-mega-menu__child-item:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+.union-mega-menu__child-item a {
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+
+/* Icons */
+.icon.unionMegaMenu {
+  width: 24px;
+  height: 24px;
+}
+
+.icon.unionMegaMenu.arrow-right{
+    transform: translateY(1px);
+
+}
+
+.unionMegaMenu-icon.arrow-long-right{
+  transform: translateY(-2px);
+}
+
+@keyframes unionPulse {
+  0% { box-shadow: 0 0 0 0 rgba(51, 51, 255, 0.8); }
+  70% { box-shadow: 0 0 0 12px rgba(51, 51, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(51, 51, 255, 0); }
+}
+
+.union-pulse {
+  animation: unionPulse 1.4s ease-out;
+}
+
+
+
+@media(max-width: 1024px){
+    
+}
+
+
+@media(max-width: 768px){
+  .union-mega-menu{
+    left:-5%;
+    top:43%;
+    padding-left:.75rem;
+    width: 110%;
+    z-index:2;
+    }
+
+    .union-mega-menu__left{
+      width:50%;
+      padding-right:.5rem;
+    }
+
+    .union-mega-menu__right{
+      padding-left: .5rem;      
+    }
+
+    .union-mega-menu__close{
+      right:26px;
+    }
+
+    .union-mega-menu__children{
+      grid-template-columns: repeat(1, 1fr);
+      font-size: .875rem;
+    }
+
+    #unionMegaMenuToggle{
+      background-color: #33f;
+    }
+}
+
+
+@media(max-width: 550px){
+
+}

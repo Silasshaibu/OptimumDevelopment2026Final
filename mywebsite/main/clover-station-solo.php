@@ -1,0 +1,404 @@
+
+    <!-- Hero -->
+    <div class="carousel-window">
+        <div class="carousel-wrapper">            
+            
+            <div class="slide">
+                  <div class="textInfo-wrapper">
+                    <p class="label-h1">TABLE SERVICE</p>
+                        <!--Label can be empty and the height wil still be maintined ALSO you can include the height as well-->
+                    </p>
+                    <h1 class="heading title display">CLOVER STATION SOLO</h1>
+                    <p class="display subtitle">
+                        Supports your operations and management and gives you more time to focus on the reason you’re in business.</p>
+                         <div class="image-wrapper">
+                    <img src="<?= $base_url ?>/assets/images/products/Clover_Hardware_Solo.webp" alt="" width="300px">
+                </div>
+                    <div class="cta-container-hero">
+                        <button class="btn-secondary">BUY NOW</button>
+                    </div>   
+                </div>               
+            </div>                         
+        </div>
+    </div>
+
+    <style>
+      /*Show desktop image only on desktop*/
+        @media(min-width:768px){
+          .slide{
+          background:url(<?= $base_url ?>/assets/images/hero/desktopHero_CloverSolo_1.webp);
+          
+        }
+      }      
+    </style>
+
+
+
+    <!-- section -->
+    <section class="noteDefault grid neutral">
+      <!-- 1- Full Blocks-->
+      <div class="heading">
+        <h2 class="content-title">Gives you more Time To Focus</h2>
+      </div>
+
+      <!-- 2 Half Blocks-->
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title dark no-display">Auto-Rotate Drying</h3>
+          <p class="textInfo">
+           Accept payments and run your business with a flexible point-of-sale system that works as hard as you do.  
+          </p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.webp"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- section-->
+    <section class="noteDefault grid white">
+      <div class="heading">
+        <h2 class="content-title">
+          The right tools for the job
+        </h2>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title white has-display">Room for you to work</h3>
+          <p class="textInfo">
+            The 14” high-definition touch screen makes your work fast and easy, from inventory and employee management to payments and reporting.
+          </p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.webp"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title white has-display">Ready out of the box</h3>
+          <p class="textInfo">
+            Comes with a cash drawer and receipt printer — all you need to get to work.
+          </p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.webp"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title white has-display">Keep your team in the loop</h3>
+          <p class="textInfo">
+            Sync communication between your staff and back of house to enhance the way your business runs.
+          </p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.webp"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+
+      
+    </section>
+
+    <!-- section-->
+    <section class="noteDefault grid dark">
+      <div class="heading">
+        <h2 class="content-title">
+          One station to run your shop
+        </h2>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title dark has-display">Able to grow with you</h3>
+          <p class="textInfo">
+            Station Solo works seamlessly with every other Clover device, letting you build a system that scales as your business grows.
+          </p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.webp"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title dark has-display">Payments are easy</h3>
+          <p class="textInfo">
+            Take swipe or dip payments from all major credit cards.
+          </p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.webp"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title dark has-display">
+            Speed, power, reliability
+          </h3>
+          <p class="textInfo">
+            Station Solo packs plenty of processing power to help you run your business more effectively and efficiently.
+          </p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.webp"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- section-->
+    <section class="noteDefault grid white">
+      <div class="heading">
+        <h2 class="content-title">Clover helps you grow</h2>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title white has-display">
+           Get your money faster
+          </h3>
+          <p class="textInfo">
+            Clover Rapid Deposit lets you transfer funds quickly to your bank account.
+          </p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.webp"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title white has-display">
+            Turn future sales into cash today
+          </h3>
+          <p class="textInfo">
+            Turn future credit card sales into working capital, with clear and easy payback terms that give you the flexibility to grow your business.
+          </p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.webp"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title white has-display">
+            Gift cards are a win-win
+          </h3>
+          <p class="textInfo">
+            Drive immediate sales and get new customers with digital and physical gift cards.
+          </p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.webp"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- section-->
+    <section class="noteDefault grid white">
+      <div class="heading">
+        <h2 class="content-title">Run your business from anywhere</h2>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title white has-display">
+           Put your data to work for you
+          </h3>
+          <p class="textInfo">
+            Tracking and reporting is the lifeblood of your business. How was business today? This day last week, or last year? Discover the patterns and trends driving your sales.
+          </p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.webp"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title white has-display">
+            Manage your staff with ease
+          </h3>
+          <p class="textInfo">
+            Find out which employees are your best sellers, track schedules and hours, and set system permission levels to stay on top of your biggest assets.
+          </p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.webp"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title white has-display">
+            Job done, get paid
+          </h3>
+          <p class="textInfo">
+            When you’re away from your counter, customers can still pay you with options like Clover Virtual Terminal, invoicing, and recurring payments.
+          </p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.webp"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- section-->
+    <section class="noteDefault grid dark">
+      <div class="heading">
+        <h2 class="content-title">Product Details</h2>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title dark has-display">Payments</h3>
+          <p class="textInfo">
+            Accepts chip and swipe payments
+          </p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.webp"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title dark has-display">Screen</h3>
+          <p class="textInfo">14″ high-definition display, tiltable</p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.webp"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title dark has-display">Receipts printer</h3>
+          <p class="textInfo">High-speed thermal dot receipt printer</p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.webp"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title dark has-display">Security</h3>
+          <p class="textInfo">Clover Security end-to-end encryption</p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.webp"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+
+    
+    <link rel="stylesheet" href="<?= $base_url ?>/assets/css/style-guide.css" /> 
+    <link rel="stylesheet" href="<?= $base_url ?>/assets/css/singular-hero-style.css">
+    <link rel="stylesheet" href="<?= $base_url ?>/assets/css/singular.css">

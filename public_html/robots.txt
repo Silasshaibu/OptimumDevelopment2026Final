@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /_system/
+Allow: /
+
+Sitemap: http://localhost/public_html/sitemap.xml

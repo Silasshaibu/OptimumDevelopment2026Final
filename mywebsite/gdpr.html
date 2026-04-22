@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDPR HTML CSS JS CHECK</title>
+</head>
+<body>
+        
+   
+
+    <!-- Add this at the end of your <body> GDPR Multi-Choice Cookie Banner -->
+    <div id="gdpr-banner" style="position: fixed; bottom: 0; left: 0; right: 0; background: #222; color: #fff; padding: 20px; text-align: center; z-index: 9999; display: none; font-family: sans-serif;">
+        <p>We use cookies to improve your experience. You can choose which cookies to allow:</p>
+        <div style="margin: 10px 0;">
+            <label><input type="checkbox" id="cookie-essential" checked disabled> Essential</label>
+            <label style="margin-left:10px;"><input type="checkbox" id="cookie-analytics"> Analytics</label>
+            <label style="margin-left:10px;"><input type="checkbox" id="cookie-marketing"> Marketing</label>
+        </div>
+        <button id="accept-selected" style="padding: 8px 15px; background: #4CAF50; border: none; color: white; cursor: pointer;">Save Preferences</button>
+        <a href="/privacy-policy" style="color: #4CAF50; margin-left: 15px;">Privacy Policy</a>
+    </div>
+
+ 
+    <!-- JS Script Consent Management & Script Loading -->
+    <script>
+    // Check if consent already given
+    function checkConsent() {
+        let consent = JSON.parse(localStorage.getItem('gdprConsent') || '{}');
+        if(!consent.accepted) {
+            document.getElementById('gdpr-banner').style.display = 'block';
+        } else {
+            loadScripts(consent);
+        }
+    }
+
+    // Save consent when user clicks "Save Preferences"
+    document.getElementById('accept-selected').addEventListener('click', function() {
+        let consent = {
+            accepted: true,
+            essential: true, // always true
+            analytics: document.getElementById('cookie-analytics').checked,
+            marketing: document.getElementById('cookie-marketing').checked
+        };
+        localStorage.setItem('gdprConsent', JSON.stringify(consent));
+        document.getElementById('gdpr-banner').style.display = 'none';
+        loadScripts(consent);
+        // Optional: send to server
+        sendConsentToServer(consent);
+    });
+
+    // Load scripts based on consent
+    function loadScripts(consent) {
+        if(consent.analytics) {
+            // Example: Google Analytics
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-XXXXX-Y', 'auto'); // replace with your GA ID
+            ga('send', 'pageview');
+        }
+
+        if(consent.marketing) {
+            // Example: Facebook Pixel
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', 'YOUR_PIXEL_ID');
+            fbq('track', 'PageView');
+        }
+    }
+
+    // Optional: send consent to server
+    function sendConsentToServer(consent) {
+        fetch('/consent.php', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(consent)
+        });
+    }
+
+    // Run on page load
+    window.addEventListener('load', checkConsent);
+    </script>
+
+ </body>
+    </html>

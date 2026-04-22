@@ -1,0 +1,302 @@
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.icon.desktop-SearchIcon{
+    display: inline !important;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color:#333;
+}
+
+li.Logo-Action a{
+    display: grid;
+    cursor: default;
+}
+
+a.logo-link{
+    cursor: default;
+}
+
+
+#searchSectionMain{
+    cursor: pointer;
+}
+
+.one.mainMenu > li a:hover{
+text-decoration:none;
+}
+
+
+.mini-service-card a{
+    color:var(--blue-400);
+}
+
+/* ==========================
+   Variables
+========================== */
+:root {
+    --nav-height: 60px;
+    --text-color: #1A1A1A;
+    --bg-light: #f3f3f3;
+    --active-border: var(--blue-700);
+}
+
+/* ==========================
+   Navbar Layout
+========================== */
+.navbar.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--nav-height);
+    padding: 0 2rem;
+    background-color: var(--bg-light);
+}
+
+/* ==========================
+   Sections
+========================== */
+.mobile-Section {
+    display: none;
+}
+
+.LogoSection-with-MoreMobileTemporalButtons {
+    display: flex;
+    align-items: center;
+}
+
+.searchAndstore-NavSection {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ==========================
+   Main Menu
+========================== */
+.one {
+    display: flex;
+    gap: 24px;
+}
+
+.one > li {
+    padding: 18px 0;
+    /* background-color: red; */
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--text-color);
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+    transition: border-bottom 0.25s ease;
+}
+
+.one > li.active {
+    border-bottom: 3px solid var(--active-border);
+}
+
+
+/* ==========================
+   Icons
+========================== */
+.icon {
+    /* display: inline-block; */
+    width: 16px;
+    height: 16px;
+    transform: translateY(3px);
+}
+
+/* ==========================
+   Search
+========================== */
+.searchFieldBoxAndResults {
+    position: absolute;
+    top: var(--nav-height);
+    right: 0;
+    width: 100%;
+    background-color: #efefef;
+    padding: 1rem 2rem;
+    display: none;
+    z-index:2;
+}
+
+.searchFieldBoxAndResults {
+    display: none;
+}
+
+.searchFieldBoxAndResults.active {
+    display: grid;
+}
+
+.searchFieldInput {
+    padding: 0.5rem;
+    /* border-radius: 6px 0 0 6px; */
+    border: 1px solid #ccc;
+    border-right:none;
+    margin-top:0rem !important;
+}
+
+.searchButton.Main {
+    padding: 0.5rem 1rem;
+    border-radius: 6px  0px 0px 6px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+.close-searchButton.Main{
+    border-radius: 0px  6px 6px 0px;
+    background-color: #333;
+    /* background-color: #fff; */
+}
+
+/* ==========================
+   Buttons
+========================== */
+button {
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-primary {
+    padding: 0.5rem 1rem;
+}
+
+.btn-primary-sm {
+    padding: 0.4rem 0.75rem;
+}
+
+.nav-hover-zone {  
+  position: sticky;
+  top: 0;
+  z-index: 1500;   /* above page content, below mobile menu */
+  background: #fff;
+}
+
+.BigDropDown-Tray,
+.MiniDropDown-Tray {
+  position: absolute;  /* scrolls normally */
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index:2; /*so that the drop down can be up*/
+}
+
+
+.main-menu.mobileDropDown {
+  position: fixed;          /* overlay on mobile */
+  top: calc(max(0px, var(--banner-carousel) - var(--scrollY, 0px)) + var(--nav-height)); 
+  left: 0;
+  width: 100%;
+  height: calc(100vh - max(0px, var(--banner-carousel) - var(--scrollY, 0px)) - var(--nav-height));          
+  background: #fff;
+  z-index: 1;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.main-menu.mobileDropDown.active {
+  transform: translateX(0);
+}
+
+.main-menu.mobileDropDown > ul {
+  height: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* MOBILE MENU CONTAINER */
+.mobileDropDown {
+  position: fixed;
+  inset: 0; 
+  height: 100dvh;
+  background-color: red;
+  width: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  background: #fff;
+  z-index: 9999;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+/* OPEN STATE */
+.mobileDropDown.open {
+  transform: translateX(0);
+}
+
+body.menu-open {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
+
+/* ==========================
+   Responsive
+========================== */
+@media (max-width: 1024px) {
+    .about-us,
+    .contact-us,
+    .one {
+        display: none;
+    }
+
+     .searchFieldBoxAndResults{
+        padding:1rem .5rem;
+    }
+
+    .mobile-Section {
+        display: flex;
+        gap:5px;
+    }
+
+    .navbar.header {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 0rem 1rem;
+        overflow: hidden;
+    }
+
+    .LogoSection-with-MoreMobileTemporalButtons {
+        justify-content: center;
+    }
+
+    .searchAndstore-NavSection {
+        justify-content: flex-end;
+    }
+
+    .mobile-Section .icon {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+
+@media (max-width: 768px) {
+   .searchButton.Main{
+    display: none;
+   }
+
+   .searchFieldInput{
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+   }
+
+   .mobileMenu-service-card.singular.about-us-description {
+    width:80vw;
+   }
+}
+
+

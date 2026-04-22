@@ -1,0 +1,27 @@
+
+<header class="hero-section narrow">
+    <h1 class="hero-title narrow">About Us</h1>
+  </header>
+
+
+
+    <section class="about-section">
+        <!-- <h1 class="about-title">About Us</h1> -->
+
+        <div class="about-content">
+            <p>
+                Optimum Payment Solutions is a premium provider of electronic transaction
+                processing and ATM Placement. We are here to help your business accept credit
+                cards in the most secure, efficient and economical way possible.
+            </p>
+
+            <p>
+                Optimum Payments was founded by Paul Ventimiglia and has over 16 years of
+                merchant processing experience with a support team of a combined 100+ years of
+                experience. Optimum Payments will remain committed to providing the best
+                possible payments experience for merchants and customers.
+            </p>
+        </div>
+        
+    </section>
+    <link rel="stylesheet" href="<?= $base_url ?>/assets/css/about.css">

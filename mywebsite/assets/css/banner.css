@@ -1,0 +1,197 @@
+
+    /* ===============================
+   BANNER CAROUSEL ONLY
+=============================== */
+:root{
+    --bannerHeight:50px;
+    --caret-radius:50px;
+
+    --banner-carousel:80px;
+}
+    .banner-btn{
+        width:var(--caret-radius);
+        height: var(--caret-radius);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .banner-btn:hover{
+        background-color: rgba(255, 255, 255, 0.363);
+        /* color: #333   ; */
+    }
+
+    a.anchor-cta-promo{
+      color: darkgreen !important;
+        text-decoration: underline !important;
+        text-decoration-color: darkgreen !important;
+    }
+   
+   
+.banner-carousel {
+  position: relative;
+  width: 100%;
+  max-height: var(--banner-carousel);
+  height: var(--banner-carousel);
+  overflow: hidden;
+}
+
+.banner-wrapper {
+  display: flex;
+  height: 100%;
+  transition: transform 0.45s ease-in-out;
+}
+
+.banner-slide {
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #efefef;
+  background-image: url(../images/promo/Meeting_Banner_LAT_MF.webp);
+  background-size: cover;
+  background-position: center;
+}
+
+.banner-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.banner-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.banner-advert {
+  min-height: var(--bannerHeight);
+  margin-bottom: 0.5rem;
+}
+
+p.banner-message{
+  padding:1rem;
+  text-align: center;
+  font-size:1rem;
+}
+
+span.bannerDirectionalArrow-CTA{
+    display: inline-block;
+}
+
+/* Buttons */
+.banner-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.banner-prev { left: 12px; }
+.banner-next { right: 12px; }
+
+ .banner-advert{
+    display: none;
+    /* display: block; */
+    /* max-height: 80px; */
+    min-height: 80px;
+ }
+
+ .banner-media{
+    display: flex;
+    min-height: 80px;
+    justify-content: center;
+
+ }
+
+ /* ===============================
+   BANNER FADE STATES
+=============================== */
+/* ===============================
+   BANNER CUBIC-BEZIER FADE
+=============================== */
+
+.banner-wrapper {
+  transition:
+    transform 0.45s ease-in-out,
+    /* opacity 0.6s cubic-bezier(0.4, 0.0, 0.2, 1); */
+    opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+
+  will-change: transform, opacity;
+}
+
+.banner-wrapper.is-fading {
+  opacity: 0;
+}
+
+.banner-slide.promo {
+    background: #ccc;
+}
+
+.banner-slide.merchant-apply-form {
+    background: orange;
+}
+  
+.mobile-break{
+    display:none;
+}
+
+
+@media(max-width:768px){
+    .banner-advert{
+        display: flex;
+        max-height: 30px;
+    }
+
+     .banner-btn.banner-prev{
+      display: none; /*Marketing strategy to allow them not hesitate*/
+    }
+
+    .banner-next{
+      right:0px;
+    }    
+
+    p.banner-message{
+      padding:1rem;
+      text-align: left;
+    }
+
+    span.bannerDirectionalArrow-CTA{
+    display: none;
+    }
+
+    .mobile-break{
+     display:none;
+    }
+
+     p.banner-message{
+      text-align: center;
+    }
+}
+
+@media(max-width:550px){
+    .mobile-break{
+        display:block;
+    }
+
+    .banner-container{
+      justify-content: flex-start;
+    }
+
+     p.banner-message{
+      text-align: left;
+    }   
+}
+
+@media(max-width:430px){
+    .mobile-break{
+        display:none;
+    }
+}
+

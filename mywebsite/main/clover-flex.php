@@ -1,0 +1,400 @@
+
+    <!-- Hero -->
+    <div class="carousel-window">
+        <div class="carousel-wrapper">            
+            <div class="slide">
+                  <div class="textInfo-wrapper">
+                    <p class="label-h1">HAND-HELD POS</p>
+                     
+                    <h1 class="heading title display">CLOVER FLEX</h1>
+                    <p class="display subtitle">Accepting any type of payments is a snap—from in-person swipe, chip, and tap, to online payments.</p>
+                      <div class="image-wrapper">
+                      <img src="<?= $base_url ?>/assets/images/products/Clover_Hardware_Flex__1_.png" alt="" width="300px">
+                      </div>
+                      <div class="cta-container-hero">
+                          <button class="btn-secondary">BUY NOW</button>
+                      </div>   
+                  </div>
+               
+            </div> 
+        </div>
+    </div>
+
+    <style>
+      /*Show desktop image only on desktop*/
+        @media(min-width:768px){
+          .slide{
+          background:url(<?= $base_url ?>/assets/images/hero/desktopHero_Clover-flex_1.jpg);
+          
+        }
+      }      
+    </style>
+
+
+    <!-- section -->
+    <section class="noteDefault grid neutral">
+      <!-- 1- Full Blocks-->
+      <div class="heading">
+        <h2 class="content-title">Flex: the handheld POS system</h2>
+      </div>
+
+      <!-- 2 Half Blocks-->
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title dark no-display">Auto-Rotate Drying</h3>
+          <p class="textInfo">
+            Serve customers better—at the counter, in line, at the table or in the field—with the Clover Flex handheld POS system. This all-in-one device provides built-in capabilities to accept payments, conduct business, and track sales, all from the palm of your hand.
+          </p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.png"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- section-->
+    <section class="noteDefault grid white">
+      <div class="heading">
+        <h2 class="content-title">
+          Run your business from a mobile POS
+        </h2>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title white has-display">All you need, all in one</h3>
+          <p class="textInfo">
+            A portable POS machine with a nearly 6” touchscreen, built-in printer, camera and barcode scanner for tableside ordering, inventory, and payments.
+          </p>
+        </div>   
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.png"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title white has-display">Receipts with options</h3>
+          <p class="textInfo">
+            Customers can get a printed receipt with the built-in printer or you
+            can send receipts by email or text.
+          </p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.png"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title white has-display">More payments types from more places</h3>
+          <p class="textInfo">
+            Take swipe, dip, tap, and contactless payments wherever you do business.
+          </p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.png"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title white has-display">Works well with others or alone</h3>
+          <p class="textInfo">
+            The 100% mobile handheld POS to run your whole business or pair with other Clover devices to create a complete location solution.
+          </p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.png"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- section-->
+    <section class="noteDefault grid dark">
+      <div class="heading">
+        <h2 class="content-title">
+          Speed. Power. Flex‑ibility.
+
+        </h2>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title dark has-display">Ready right out of the box</h3>
+          <p class="textInfo">
+            Start taking orders right away with a handheld credit card machine requiring minimal setup and training.
+          </p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.png"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title dark has-display">You can rely on the cloud</h3>
+          <p class="textInfo">
+            Your business travels with you everywhere. All your data, all your info, always at your fingertips.
+          </p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.png"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title dark has-display">
+            Customize to fit your needs
+          </h3>
+          <p class="textInfo">
+            Flex is a POS handheld device with the same power as our larger devices to configure your business the way you need to run it.
+          </p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.png"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- section-->
+    <section class="noteDefault grid white">
+      <div class="heading">
+        <h2 class="content-title">What you need to build customer loyalty</h2>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title white has-display">
+            Customers to loyal fans
+          </h3>
+          <p class="textInfo">
+            Create a fun, effective loyalty program in minutes, absolutely free with no strings attached.
+          </p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.png"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title white has-display">
+            Rapid Deposit
+          </h3>
+          <p class="textInfo">
+            Get your money in minutes when you need it, day and night, weekends and holidays.
+          </p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.png"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title white has-display">
+            Clover Capital
+          </h3>
+          <p class="textInfo">
+            Turn future credit card sales into working capital for a fast, easy way to access the funds you need.
+          </p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.png"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- section-->
+    <section class="noteDefault grid dark">
+      <div class="heading">
+        <h2 class="content-title">Product Details</h2>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title dark has-display">Payments</h3>
+          <p class="textInfo">
+            Accepts chip, swipe, and contactless payments including Apple Pay®, Google Pay® and Samsung Pay®
+          </p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.png"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title dark has-display">Screen</h3>
+          <p class="textInfo">Nearly 6” LCD color touch screen</p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.png"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title dark has-display">Receipts</h3>
+          <p class="textInfo">Built-in thermal dot printer and can email or text digital receipt</p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.png"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title dark has-display">Security</h3>
+          <p class="textInfo">Clover Security end-to-end encryption</p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.png"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title dark has-display">Camera & Scanner</h3>
+          <p class="textInfo">1D/2D barcode scanner/camera</p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.png"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+
+       <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title dark has-display">Connectivity</h3>
+          <p class="textInfo">WiFi, LTE</p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.png"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title dark has-display">Battery Life</h3>
+          <p class="textInfo">At least 8 hours of use for a typical SMB</p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.png"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+
+    
+    <link rel="stylesheet" href="<?= $base_url ?>/assets/css/style-guide.css" /> 
+    <link rel="stylesheet" href="<?= $base_url ?>/assets/css/singular-hero-style.css">
+    <link rel="stylesheet" href="<?= $base_url ?>/assets/css/singular.css">

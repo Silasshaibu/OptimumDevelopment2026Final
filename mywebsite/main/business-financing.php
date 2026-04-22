@@ -1,0 +1,120 @@
+
+
+  <section class="default-section hero-rok-financial">
+    <div class="Intro-Both-Logos"> 
+      <img src="<?= $base_url ?>/assets/images/rokBusinessFinancing/Rok-X-Optimum.webp"  alt="RokFinancial_And_OptimumPaymentsLogo" width="280px" height="fit-content">
+      <p class="subtitle soft"> Speak With A Business Financial Advisor Today!</p>      
+    </div>
+    <div class="TextInfo-Rok-BizFin"> 
+      <div>
+        <h1 class="Headtitle">Small Business Loan</h1>
+        <p class="subtitle strong">Online Application</p>
+        <ul class="RokCustomBullets">
+          <li>Same Day Funding</li>
+          <li>$10,000 - $5 Million</li>
+          <li>6 Months to 10 Years Terms</li>
+          
+        </ul>
+        <img class="googelTrustReviewRok" src="<?= $base_url ?>/assets/images/rokBusinessFinancing/trustpilot.webp" width="210px"  height="fit-content" alt="Googel-TrustPilot-Reviews">
+        
+       
+        <button style="min-width:200px;" class="btn-primary" onclick="window.open('https://go.mypartner.io/business-financing/?ref=0014x00000KOZXNAA5', '_blank')">APPLY NOW</button>
+        <img class="rok-official" src="<?= $base_url ?>/assets/images/rokBusinessFinancing/man-img.webp" width="280px" height="fit-content" alt="Rok-Officials">
+      </div>
+
+      
+      
+    </div>
+  </section>
+
+  <section class="default-section features">
+    <div class="singleUnit-feature">
+      <img src="<?= $base_url ?>/assets/images/rokBusinessFinancing/simple-application.webp" width="150px" height="150px">
+      <h3>
+        Simple Application
+      </h3>
+      <p>Our simple <strong>15 second</strong> online application can get you matched with offers in Minutes</p>
+    </div>    
+
+    <div class="singleUnit-feature">
+      <img src="<?= $base_url ?>/assets/images/rokBusinessFinancing/no-minimum-fico.webp" width="150px" height="150px">
+      <h3>
+        No Minimum FICO
+      </h3>
+      <p><strong>Bad Credit?</strong> No Problem! Most of our top financing options have no minimum FICO.</p>
+    </div>
+
+    <div class="singleUnit-feature">
+      <img src="<?= $base_url ?>/assets/images/rokBusinessFinancing/larger-amount.webp" width="150px" height="150px">
+      <h3>
+        Larger Amounts
+      </h3>
+      <p>Get matched with the best financing options with the <strong>Highest Offer $</strong> Funding Amount.</p>
+    </div>
+
+    <div class="singleUnit-feature">
+      <img src="<?= $base_url ?>/assets/images/rokBusinessFinancing/same-day-funding.webp" width="150px" height="150px">
+      <h3>
+        Same Day Funding
+      </h3>
+      <p>Our <strong>Fintech Speed</strong> can get you in and out of Underwriting in just a few hours, and same day funding!</p>
+    </div>
+  </section>
+
+
+  <!-- Qualification Section -->
+  <section class="default-section qualify-section">
+    <div class="qualify-header">
+      <h2 class="qualify-title">
+        What do you <br class="breakQualifyTitle"> need to Qualify?
+      </h2>
+    </div>
+
+    <div class="qualify-body">
+      <div class="qualify-item">
+        <h3 class="qualify-item-title">3+ Months in Business</h3>
+        <p class="qualify-item-text">
+          You can qualify for our top financing options with as little as 3+ months in business.
+        </p>
+      </div>
+
+      <div class="qualify-item">
+        <h3 class="qualify-item-title">$5K+ Monthly Gross Sales</h3>
+        <p class="qualify-item-text">
+          Minimum revenue to qualify is $5K per month or $60K annually.
+        </p>
+      </div>
+
+      <div class="qualify-item">
+        <h3 class="qualify-item-title">No Minimum FICO</h3>
+        <p class="qualify-item-text">
+          We have financing options for all credit profiles—no minimum FICO score required.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Questions Section -->
+  <section class="default-section questions-section">
+    <div class="questions-container">
+      <div>
+        <h2 class="questions-title">Have Questions?</h2>
+        <h3 class="questions-subtitle">
+          Speak With A Business Financing Advisor Today!
+        </h3>
+
+        <p class="questions-text">
+          Our financing advisors will help you find the best options with great terms and the lowest interest.
+          We’ll guide you from application to repayment!
+        </p>
+
+        <button style="min-width:200px;" class="btn-primary">Speak With An Advisor</button>
+      </div>
+
+      <div class="graphical-section">
+        <img src="<?= $base_url ?>/assets/images/rokBusinessFinancing/have-questions-img.webp" width="100%" alt="">
+      </div>
+    </div>
+  </section>
+
+  <link rel="stylesheet" href="<?= $base_url ?>/assets/css/business-financing.css">

@@ -1,0 +1,86 @@
+
+        .screen-action-interface {   
+            position: fixed;       /* Fix it relative to the viewport */
+            bottom: 2rem;          /* Distance from the bottom */
+            right: 2rem;           /* Distance from the right */
+            display: grid;
+            place-items: center;
+            gap: 1rem;  
+            z-index: 99;         /* Ensure it’s above other content */
+        }
+
+        .screen-action-interface {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease;
+        }
+
+        .screen-action-interface.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-to-top{
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            color: #333;
+            background-color: #fff;
+            font-style: normal;
+            display: grid;
+            place-content: center;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.10), 0 4px 6px -4px rgba(0, 0, 0, 0.10);  
+        }
+
+        .scroll-to-top:hover{
+            /* background-color: var(--color-primary); */
+            color:#fff;
+
+        }
+        svg.icon.slim-long-up-arrow{
+            width: 24px;
+            height: 24px;
+            /* transform: translateY(10px); */
+        }
+
+        .facebook-messenger{
+            width: 64px;
+            height: 64px;
+            border-radius: 9999px;
+            background: #0084FF;
+            display: grid;
+            padding:.2rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.10), 0 4px 6px -4px rgba(0, 0, 0, 0.10);
+        }
+
+        .facebook-messenger img{
+            transform: translateY(2px);
+        }
+
+        @media (max-width:1024px){
+
+        }
+
+        @media (max-width:768px){
+           .screen-action-interface {  
+                bottom: 1rem;          
+                right: 1rem;  
+                gap:.75rem;
+            } 
+
+            .scroll-to-top {
+                width: 48px;
+                height:48px;                
+            }
+
+            svg.icon.slim-long-up-arrow{
+                transform: translate(-4px, 0px);
+
+            }
+
+             .facebook-messenger{
+                width: 52px;
+                height: 52px;
+            }
+            
+        }

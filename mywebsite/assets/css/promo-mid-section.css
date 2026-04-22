@@ -1,0 +1,119 @@
+        .cards-grid {
+            width: 100%;
+            display:grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap:1rem;
+            min-height:686px;   
+            padding:10%;
+            padding-top:140px;
+        }
+
+        .card {
+            /* background-color: white; */
+            padding:2rem;
+            row-gap:0.75rem;
+            display: flex;
+            align-items: baseline;
+            flex-direction: column;
+            min-height: 335px;
+            position:relative;
+        }
+
+        /* MeshgradientBackground */
+        .card {
+            background: radial-gradient(circle at 30% 30%, #ffe4d9, transparent 50%),
+                        radial-gradient(circle at 70% 70%, #d9f0ff, transparent 60%),
+                        #ffffff;
+
+            background: radial-gradient(circle at 30% 30%, #ffe4d9, transparent 30%),
+                        radial-gradient(circle at 70% 70%, #d9f0ff, transparent 60%),
+                        #ffffff;                        
+        }
+
+        .cards-grid > .card:last-child {
+            grid-column: 1 / -1;
+        }
+
+        .card-title {
+            max-width: 363px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 31.2px;
+            color: var(--color-grey-20, #333333);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-description {
+            max-width: 232px;
+            font-size: 0.75rem;
+            font-weight: 400;
+            line-height: 18px;
+            color: var(--color-grey-20, #333333);
+            margin: 0;
+        }
+
+        .card img{
+            height: 100%;
+            width: fit-content;
+            position: absolute;
+            bottom:0;
+            right:0;
+            transform: translate(4rem, 3rem) scale(.65);
+        }
+        
+        .card img.retail-CloverSetImage{
+            transform: translate(6.5rem, 3rem) scale(.6);
+        }
+
+        .card img.mobileBusiness-HandHeldPOS-sets{
+                transform: translate(-3rem, 2rem) scale(.95);
+        }
+
+
+        @media(max-width:1024px){
+            .cards-grid {
+                padding:8%;
+                padding-top:2rem;
+                padding-bottom:2rem;
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        @media(max-width:768px){
+            .cards-grid {
+                grid-template-columns: repeat(1, 1fr);
+                padding:5%;                
+            }
+
+            .card-description {
+            max-width: 232px;
+            font-size: .8rem;
+            }
+        }
+
+        @media(max-width:550px){
+            .cards-grid {
+                padding:2rem;
+                padding-bottom: 4rem;
+                padding-top:3rem;
+            }
+
+             .card img{
+                height: 80%;          
+                transform: translate(0rem, 0rem) scale(.6);
+            }
+           
+            .card img.retail-CloverSetImage{
+                transform: translate(6.5rem, 3rem) scale(.5)
+            }
+
+            .card img.mobileBusiness-UnionImage{
+                transform: translate(4rem, 3.5rem) scale(.5);
+            }
+
+            .card img.mobileBusiness-HandHeldPOS-sets{
+                transform: translate(2rem, 3rem) scale(.6);
+            }
+        }

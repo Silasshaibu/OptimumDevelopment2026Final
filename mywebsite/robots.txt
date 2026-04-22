@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /_system_full_admin_review/
+Allow: /
+
+Sitemap: http://localhost/mywebsite/sitemap.xml

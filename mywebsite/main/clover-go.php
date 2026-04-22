@@ -1,0 +1,341 @@
+
+    <!-- Hero -->
+     <div class="carousel-window">
+        <div class="carousel-wrapper">            
+            <div class="slide">
+                  <div class="textInfo-wrapper">
+                    <p class="label-h1">HAND-HELD POS</p>
+                        <!--Label can be empty and the height wil still be maintined ALSO you can include the height as well-->
+                   
+                    <h1 class="heading title display">CLOVER GO</h1>
+                    <p class="display subtitle">
+                        The Go app and portable credit card reader are easy to use and give you the power of a full POS anywhere you have Wi-Fi or cellular connection.
+                    </h1>
+                         <div class="image-wrapper">
+                    <img src="<?= $base_url ?>/assets/images/hero/mobileHero-Clover-Go.webp" alt="" width="300px" fetchpriority="high">
+                    </div>
+                    <div class="cta-container-hero">
+                        <button class="btn-secondary">BUY NOW</button>
+                    </div>   
+                </div>
+               
+            </div>
+            
+            
+            
+        </div>
+    </div>
+
+    <style>
+      /*Show desktop image only on desktop*/
+        @media(min-width:768px){
+          .slide{
+          background:url(<?= $base_url ?>/assets/images/hero/desktopHero_Clover-go_1.webp);
+          
+        }
+      }      
+    </style>
+
+    <!-- section -->
+    <section class="noteDefault grid neutral">
+      <!-- 1- Full Blocks-->
+      <div class="heading">
+        <h2 class="content-title">Clover Go: the mobile POS system in your pocket</h2>
+      </div>
+
+      <!-- 2 Half Blocks-->
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title dark no-display">Auto-Rotate Drying</h3>
+          <p class="textInfo">
+            Take your business to your customers, whether at the local farmer’s market or a client’s job site. The Go app and portable credit card reader are easy to use and give you the power of a full POS anywhere you have Wi-Fi or cellular connection.
+          </p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.webp"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- section-->
+    <section class="noteDefault grid white">
+      <div class="heading">
+        <h2 class="content-title">
+          Take payments on the go
+        </h2>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title white has-display">Take card payments in person and save</h3>
+          <p class="textInfo">
+            Pair the Go app with the credit card reader for your phone and accept swipe, dip, or contactless payments that have lower fees.
+          </p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.webp"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title white has-display">Easy for everyone to use</h3>
+          <p class="textInfo">
+            The Clover Go app is easy to download and intuitive to use so you can start processing sales right away.
+          </p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.webp"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title white has-display">Works with iOS and Android</h3>
+          <p class="textInfo">
+            The app works on all the major operating systems so, no matter what type of phone you use, Clover Go works for you.
+          </p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.webp"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+
+      
+    </section>
+
+    <!-- section-->
+    <section class="noteDefault grid dark">
+      <div class="heading">
+        <h2 class="content-title">
+          A powerful platform to manage your business
+        </h2>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title dark has-display">Sync with other Clover devices</h3>
+          <p class="textInfo">
+           Stay on top of your business from anywhere, with everything synced to the Clover Dashboard.
+          </p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.webp"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title dark has-display">Configure to suit your needs</h3>
+          <p class="textInfo">
+            Set discount, tip, and tax rates relevant to your business directly through the POS dashboard on your phone.
+          </p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.webp"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title dark has-display">
+            A bird’s eye view of all your transactions
+          </h3>
+          <p class="textInfo">
+            See your entire transaction history, including open, pending, and completed transactions whether they’re generated from your mobile card reader or from another Clover device.
+          </p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.webp"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- section-->
+    <section class="noteDefault grid white">
+      <div class="heading">
+        <h2 class="content-title">A powerful tool for small businesses</h2>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title white has-display">
+            Your personal inventory manager
+          </h3>
+          <p class="textInfo">
+            Assign categories, labels, modifiers and variants to keep your inventory current and organized.
+          </p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.webp"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title white has-display">
+            Track your numbers from anywhere
+          </h3>
+          <p class="textInfo">
+            Log in 24/7 from any computer or mobile device to track your sales, best sellers, and what's most important to your business.
+
+          </p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.webp"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title white has-display">
+            Keep tabs on your team's performance
+          </h3>
+          <p class="textInfo">
+            Run reports to see how your employees are performing, manage schedules and timesheets, and set permission levels to keep track of your greatest assets.
+
+          </p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.webp"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- section-->
+    <section class="noteDefault grid dark">
+      <div class="heading">
+        <h2 class="content-title">Product Details</h2>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title dark has-display">Payments</h3>
+          <p class="textInfo">
+            Accepts chip, swipe, and contactless payments including Apple Pay®, Google Pay® and Samsung Pay® 
+          </p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.webp"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title dark has-display">Screen</h3>
+          <p class="textInfo">8" LCD color touch screen</p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.webp"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title dark has-display">Connectivity</h3>
+          <p class="textInfo">Wi-Fi, ethernet, and LTE connectivity</p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.webp"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title dark has-display">Cash Drawer</h3>
+          <p class="textInfo">Optional add-on</p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.webp"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+
+    
+    <link rel="stylesheet" href="<?= $base_url ?>/assets/css/style-guide.css" /> 
+    <link rel="stylesheet" href="<?= $base_url ?>/assets/css/singular-hero-style.css">
+    <link rel="stylesheet" href="<?= $base_url ?>/assets/css/singular.css">

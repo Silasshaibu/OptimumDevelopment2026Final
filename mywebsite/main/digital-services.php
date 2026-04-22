@@ -1,0 +1,218 @@
+
+    <div class="carousel-window">
+        <div class="carousel-wrapper">
+            <div class="slide">
+                  <div class="textInfo-wrapper">
+                    <p class="label-h1">JUST FOR THE NEW YOU</p>
+                        <!--Label can be empty and the height wil still be maintined ALSO you can include the height as well-->
+                    </p>
+                    <h1 class="heading title display">DIGITAL SERVICES</h1>
+                    <p class="display subtitle">Brilliant Ideas made to order.</h1>
+                         <div class="image-wrapper">
+                    <img src="<?= $base_url ?>/assets/images/hero/clover-mini.webp" alt="" width="300px" fetchpriority="high">
+                </div>
+                    <div class="cta-container-hero">
+                        <button class="btn-secondary">VIEW PRICING OPTIONS</button>
+                    </div>   
+                </div>               
+            </div>           
+        </div>
+    </div>
+
+    <style>
+      /*Show desktop image only on desktop*/
+        @media(min-width:768px){
+          .slide{
+          background:url(<?= $base_url ?>/assets/images/hero/desktopHero_ValorVP550_1.webp);
+          
+        }
+      }      
+    </style>
+
+    <!-- section -->
+    <section class="noteDefault grid neutral">
+      <!-- 1- Full Blocks-->
+      <div class="heading">
+        <h2 class="content-title">Pay-At-The-Table Made Simple</h2>
+      </div>
+
+      <!-- 2 Half Blocks-->
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title dark no-display">Auto-Rotate Drying</h3>
+          <p class="textInfo">
+            A full point-of-sale system in one sleek little package. Mini can fit
+            into any space but packs plenty of POS power to run your business,
+            end to end. Use it just for payments or to run your whole business
+            from inventory to payroll.
+          </p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.webp"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- section-->
+    <section class="noteDefault grid white">
+      <div class="heading">
+        <h2 class="content-title">
+          A complete point of sale that's better than ever
+        </h2>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title white has-display">Larger touch screen</h3>
+          <p class="textInfo">
+            The upsized 8" touch screen has plenty of room to confirm orders,
+            complete payments, and manage everything to run your business.
+          </p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.webp"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title white has-display">Receipts with options</h3>
+          <p class="textInfo">
+            Customers can get a printed receipt with the built-in printer or you
+            can send receipts by email or text.
+          </p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.webp"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title white has-display">Payments are easier</h3>
+          <p class="textInfo">
+            Customers can dip or tap payments front and center with a
+            conveniently located card slot and contactless reader.
+          </p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.webp"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title white has-display">Receipts with options</h3>
+          <p class="textInfo">
+            Customers can get a printed receipt with the built-in printer or you
+            can send receipts by email or text.
+          </p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.webp"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- section-->
+    <section class="noteDefault grid dark">
+      <div class="heading">
+        <h2 class="content-title">
+          Full-featured tools built for small business
+        </h2>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title dark has-display">Inventory at your fingertips</h3>
+          <p class="textInfo">
+            Keep your inventory organized and accessible with categories,
+            labels, modifiers and variants that you control.
+          </p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.webp"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title dark has-display">Sales info in real time</h3>
+          <p class="textInfo">
+            Monitor transactions as they happen with info like hourly sales and
+            top-selling items or refund and discount volume.
+          </p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.webp"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="body-with-context flex">
+        <div class="side text">
+          <h3 class="sub-title dark has-display">
+            Take payments away from the counter
+          </h3>
+          <p class="textInfo">
+            Accept card-not-present payments with Virtual Terminal or request
+            payment by invoice, and set up recurring payments for repeat
+            business.
+          </p>
+        </div>
+
+        <div class="side image">
+          <img
+            src="<?= $base_url ?>/assets/images/products/clover-mini.webp"
+            alt="product-image"
+            width="100%"
+            height="fit-content"  loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+
+    
+    <link rel="stylesheet" href="<?= $base_url ?>/assets/css/singular-hero-style.css">
+    <link rel="stylesheet" href="<?= $base_url ?>/assets/css/singular.css">
