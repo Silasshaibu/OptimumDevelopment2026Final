@@ -21,6 +21,7 @@
 <?php include __DIR__ . '/../partials/footer.php'; ?>
 
 <!-- Core JS -->
+<script src="<?= $base_url ?>/assets/js/homeHero.js" defer></script>
 <script src="<?= $base_url ?>/assets/js/topInfoBar.js" defer></script>
 <script src="<?= $base_url ?>/assets/js/topNavigationBar.js" defer></script>
 <script src="<?= $base_url ?>/assets/js/megamenu.js" defer></script>

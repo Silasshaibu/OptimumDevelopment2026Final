@@ -1,0 +1,97 @@
+﻿    <!--HomeHero Section-->
+    <div class="home-hero" role="region" aria-label="Home hero carousel">
+        <div class="home-hero-slide home-hero-slide--1 is-active" data-slide-index="0" aria-hidden="false">
+            <div class="hero-info-left">
+                <div class="hero-copy">
+                    <p class="hero-eyebrow">Optimum Payments</p>
+                    <p class="hero-section-title"><span class="hero-title">Accelerate Your</span><br><span
+                            class="hero-title hero-title--highlight">Merchant Application</span></p>
+                </div>
+                <div class="hero-content">
+                    <p class="hero-description">
+                        Access the capital you need to grow with transparent terms and quick approval
+                    </p>
+                    <div class="hero-actions">
+                        <button class="hero-btn hero-btn--primary" type="button">
+                            <span class="hero-btn__label">Apply Now</span>
+                        </button>
+                        <button class="hero-btn hero-btn--secondary" type="button">
+                            <span class="hero-btn__label">Learn More</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="home-hero-slide home-hero-slide--2" data-slide-index="1" aria-hidden="true">
+            <div class="hero-info-left">
+                <div class="hero-copy">
+                    <p class="hero-eyebrow">Optimum Payments</p>
+                    <p class="hero-section-title"><span class="hero-title">Built for High-Volume</span><br><span
+                            class="hero-title hero-title--highlight">Merchants</span></p>
+                </div>
+                <div class="hero-content">
+                    <p class="hero-description">
+                        Custom limits and dedicated support for businesses processing over $100k monthly.
+                    </p>
+                    <div class="hero-actions">
+                        <button class="hero-btn hero-btn--primary" type="button">
+                            <span class="hero-btn__label">Apply Now</span>
+                        </button>
+                        <button class="hero-btn hero-btn--secondary" type="button">
+                            <span class="hero-btn__label">Learn More</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="home-hero-slide home-hero-slide--3" data-slide-index="2" aria-hidden="true">
+            <div class="hero-info-left">
+                <div class="hero-copy">
+                    <p class="hero-eyebrow">Optimum Payments</p>
+                    <p class="hero-section-title"><span class="hero-title">Fast Approvals,</span><br><span
+                            class="hero-title hero-title--highlight">Same-Day Funding</span></p>
+                </div>
+                <div class="hero-content">
+                    <p class="hero-description">
+                        Get a decision within 24 hours. No hidden fees, no long contracts.
+                    </p>
+                    <div class="hero-actions">
+                        <button class="hero-btn hero-btn--primary" type="button">
+                            <span class="hero-btn__label">Check Eligibility</span>
+                        </button>
+                        <button class="hero-btn hero-btn--secondary" type="button">
+                            <span class="hero-btn__label">See How It Works</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="carouselControlsContainer">
+            <div class="carouselDotsContainer" role="tablist" aria-label="Carousel slide controls">
+                <button class="carousel-dot is-active" type="button" role="tab" aria-label="Go to slide 1"
+                    aria-current="true" data-slide-index="0">
+                    <span class="carousel-dot__fill"></span>
+                </button>
+                <button class="carousel-dot" type="button" role="tab" aria-label="Go to slide 2" aria-current="false"
+                    data-slide-index="1">
+                    <span class="carousel-dot__fill"></span>
+                </button>
+                <button class="carousel-dot" type="button" role="tab" aria-label="Go to slide 3" aria-current="false"
+                    data-slide-index="2">
+                    <span class="carousel-dot__fill"></span>
+                </button>
+            </div>
+            <button class="play-pause-btn" type="button" aria-label="Pause carousel" aria-pressed="false">
+                <svg class="pause-icon" viewBox="0 0 24 24" fill="white" width="12" height="12" aria-hidden="true">
+                    <path d="M6 4h4v16H6zm8 0h4v16h-4z"></path>
+                </svg>
+                <svg class="play-icon" viewBox="0 0 24 24" fill="white" width="12" height="12" aria-hidden="true">
+                    <path d="M8 5v14l11-7z"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+

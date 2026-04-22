@@ -1,0 +1,98 @@
+﻿
+    <!-- Top Advert Bar -->
+    <div class="top-info-bar">
+        <div class="inner"">
+
+            <button class=" top-info-bar__arrow-left" aria-label="Arrow Left">
+            <img src="<?= $base_url ?>/assets/TopInfoBarSection-Icons/arrow-circle-left.svg" alt="Arrow Left"
+                class="top-info-bar__arrow-left-icon">
+            </button>
+            <a href="#" class="top-info-bar__text">
+                <span class="top-info-bar__main-text">Want to eliminate up to 100% of your processing fees? →</span>
+                <span class="top-info-bar__cta-text">Click Here!</span>
+            </a>
+            <button class="top-info-bar__arrow-right" aria-label="Arrow Right">
+                <img src="<?= $base_url ?>/assets/TopInfoBarSection-Icons/arrow-circle-right.svg" alt="Arrow Right"
+                    class="top-info-bar__arrow-icon">
+            </button>
+        </div>
+    </div>
+
+    <!-- Top Info Bar -->
+    <div class="topinfobar-outer">
+        <div class="topinfobar-one">
+            <div class="reachUs">
+                <span class="reachUs__item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path
+                            d="M14.6473 12.2197C14.6473 12.4597 14.594 12.7063 14.4806 12.9463C14.3673 13.1863 14.2207 13.413 14.0273 13.6263C13.7007 13.9863 13.3407 14.2463 12.934 14.413C12.534 14.5797 12.1007 14.6663 11.634 14.6663C10.954 14.6663 10.2273 14.5063 9.46065 14.1797C8.69398 13.853 7.92732 13.413 7.16732 12.8597C6.40065 12.2997 5.67398 11.6797 4.98065 10.993C4.29398 10.2997 3.67398 9.57301 3.12065 8.81301C2.57398 8.05301 2.13398 7.29301 1.81398 6.53967C1.49398 5.77967 1.33398 5.05301 1.33398 4.35967C1.33398 3.90634 1.41398 3.47301 1.57398 3.07301C1.73398 2.66634 1.98732 2.29301 2.34065 1.95967C2.76732 1.53967 3.23398 1.33301 3.72732 1.33301C3.91398 1.33301 4.10065 1.37301 4.26732 1.45301C4.44065 1.53301 4.59398 1.65301 4.71398 1.82634L6.26065 4.00634C6.38065 4.17301 6.46732 4.32634 6.52732 4.47301C6.58732 4.61301 6.62065 4.75301 6.62065 4.87967C6.62065 5.03967 6.57398 5.19967 6.48065 5.35301C6.39398 5.50634 6.26732 5.66634 6.10732 5.82634L5.60065 6.35301C5.52732 6.42634 5.49398 6.51301 5.49398 6.61967C5.49398 6.67301 5.50065 6.71967 5.51398 6.77301C5.53398 6.82634 5.55398 6.86634 5.56732 6.90634C5.68732 7.12634 5.89398 7.41301 6.18732 7.75967C6.48732 8.10634 6.80732 8.45967 7.15398 8.81301C7.51398 9.16634 7.86065 9.49301 8.21398 9.79301C8.56065 10.0863 8.84732 10.2863 9.07398 10.4063C9.10732 10.4197 9.14732 10.4397 9.19398 10.4597C9.24732 10.4797 9.30065 10.4863 9.36065 10.4863C9.47398 10.4863 9.56065 10.4463 9.63398 10.373L10.1407 9.87301C10.3073 9.70634 10.4673 9.57967 10.6207 9.49967C10.774 9.40634 10.9273 9.35967 11.094 9.35967C11.2207 9.35967 11.354 9.38634 11.5007 9.44634C11.6473 9.50634 11.8007 9.59301 11.9673 9.70634L14.174 11.273C14.3473 11.393 14.4673 11.533 14.5406 11.6997C14.6073 11.8663 14.6473 12.033 14.6473 12.2197Z"
+                            stroke="#399CDB" stroke-miterlimit="10" />
+                        <path
+                            d="M12.3333 6.00033C12.3333 5.60033 12.02 4.98699 11.5533 4.48699C11.1267 4.02699 10.56 3.66699 10 3.66699"
+                            stroke="#399CDB" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M14.6667 5.99967C14.6667 3.41967 12.58 1.33301 10 1.33301" stroke="#399CDB"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <a href="tel:+19876543210">+1 987 654
+                        3210</a>
+                </span>
+                <span class="reachUs__divider"></span>
+                <span class="reachUs__item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path
+                            d="M14.6673 6.99967V10.333C14.6673 12.6663 13.334 13.6663 11.334 13.6663H4.66732C2.66732 13.6663 1.33398 12.6663 1.33398 10.333V5.66634C1.33398 3.33301 2.66732 2.33301 4.66732 2.33301H9.33398"
+                            stroke="#399CDB" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M4.66602 6L6.75269 7.66667C7.43935 8.21333 8.56602 8.21333 9.25269 7.66667L10.0393 7.04"
+                            stroke="#399CDB" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M13.0007 5.33333C13.9211 5.33333 14.6673 4.58714 14.6673 3.66667C14.6673 2.74619 13.9211 2 13.0007 2C12.0802 2 11.334 2.74619 11.334 3.66667C11.334 4.58714 12.0802 5.33333 13.0007 5.33333Z"
+                            stroke="#399CDB" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <a href="mailto:info@optimum-payments.com">info@optimum-payments.com</a>
+                </span>
+                <span class="reachUs__divider"></span>
+                <span class="reachUs__item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path
+                            d="M7.99992 8.95346C9.14867 8.95346 10.0799 8.02221 10.0799 6.87346C10.0799 5.7247 9.14867 4.79346 7.99992 4.79346C6.85117 4.79346 5.91992 5.7247 5.91992 6.87346C5.91992 8.02221 6.85117 8.95346 7.99992 8.95346Z"
+                            stroke="#399CDB" />
+                        <path
+                            d="M2.41379 5.66016C3.72712 -0.113169 12.2805 -0.106502 13.5871 5.66683C14.3538 9.0535 12.2471 11.9202 10.4005 13.6935C9.06046 14.9868 6.94046 14.9868 5.59379 13.6935C3.75379 11.9202 1.64712 9.04683 2.41379 5.66016Z"
+                            stroke="#399CDB" />
+                    </svg>
+                    <a id="location-link" href="https://www.google.com/maps/search/45+New+Eskaton+Road,+Florida"
+                        target="_blank" rel="noopener"> Illinois, Indiana, Ohio, and Florida.</a>
+                </span>
+            </div>
+            <div class="lang" onclick="toggleLangDropdown()">
+                <img src="<?= $base_url ?>/assets/CountriesFlag/united-states.svg" alt="US Flag" class="lang__flag">
+                <span class="lang__label">English</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                    class="lang__chevron">
+                    <path
+                        d="M14.9336 6.81689H9.74195H5.06695C4.26695 6.81689 3.86695 7.78356 4.43361 8.35023L8.75028 12.6669C9.44195 13.3586 10.5669 13.3586 11.2586 12.6669L12.9003 11.0252L15.5753 8.35023C16.1336 7.78356 15.7336 6.81689 14.9336 6.81689Z"
+                        fill="white" />
+                </svg>
+                <div class="lang-dropdown" id="langDropdown">
+                    <div class="lang-option"
+                        onclick="selectLang('<?= $base_url ?>/assets/CountriesFlag/united-states.svg', 'English (US)', event)">
+                        <img src="<?= $base_url ?>/assets/CountriesFlag/united-states.svg" alt="US Flag" width="24" height="16">
+                        <span>English (US)</span>
+                    </div>
+                    <div class="lang-option"
+                        onclick="selectLang('<?= $base_url ?>/assets/CountriesFlag/united-kingdom.svg', 'English (UK)', event)">
+                        <img src="<?= $base_url ?>/assets/CountriesFlag/united-kingdom.svg" alt="UK Flag" width="24" height="16">
+                        <span>English (UK)</span>
+                    </div>
+                    <div class="lang-option" onclick="selectLang('<?= $base_url ?>/assets/CountriesFlag/spain.svg', 'Español', event)">
+                        <img src="<?= $base_url ?>/assets/CountriesFlag/spain.svg" alt="Spain Flag" width="24" height="16">
+                        <span>Español</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
