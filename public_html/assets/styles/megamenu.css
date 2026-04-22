@@ -12,10 +12,17 @@ body {
    MEGA MENU OUTER WRAPPER
    ========================================================= */
 .megamenu-outer {
+    display: none;
     width: 100%;
     background: #1E2025;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
     overflow: hidden;
+}
+
+.megamenu-outer.active {
+    display: block;
+    position: absolute;
+    z-index: 1;
 }
 
 /* =========================================================

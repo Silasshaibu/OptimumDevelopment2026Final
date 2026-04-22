@@ -10,21 +10,66 @@
     const btnUp = document.getElementById('srScrollUp');
     const btnDown = document.getElementById('srScrollDown');
 
-    // Toggle search section
+    // ===== DROPDOWN TOGGLE SYSTEM =====
+    var megamenuOuter = document.querySelector('.megamenu-outer');
+    var minimenuOuter = document.querySelector('.minimenu-outer');
+    var processingLink = document.querySelector('[data-dropdown="megamenu"]');
+    var digitalLink = document.querySelector('[data-dropdown="minimenu"]');
+    var allPanels = [searchOuter, megamenuOuter, minimenuOuter];
+
+    function closeAll() {
+        allPanels.forEach(function (panel) {
+            if (panel) panel.classList.remove('active');
+        });
+    }
+
+    function togglePanel(panel, onOpen) {
+        var wasActive = panel.classList.contains('active');
+        closeAll();
+        if (!wasActive) {
+            panel.classList.add('active');
+            if (onOpen) onOpen();
+        }
+    }
+
+    // Search icon toggle
     searchIcon.addEventListener('click', function (e) {
         e.preventDefault();
-        const isVisible = searchOuter.style.display === 'block';
-        searchOuter.style.display = isVisible ? 'none' : 'block';
-        if (!isVisible) {
-            // Focus on search input when opening
-            setTimeout(() => srInput.focus(), 100);
-        }
+        togglePanel(searchOuter, function () {
+            setTimeout(function () { srInput.focus(); }, 100);
+        });
     });
 
-    // Close search section when close button is clicked
+    // Processing Solutions → MegaMenu
+    if (processingLink) {
+        processingLink.addEventListener('click', function (e) {
+            e.preventDefault();
+            togglePanel(megamenuOuter);
+        });
+    }
+
+    // Digital Services → MiniMenu
+    if (digitalLink) {
+        digitalLink.addEventListener('click', function (e) {
+            e.preventDefault();
+            togglePanel(minimenuOuter);
+        });
+    }
+
+    // Close search when close button is clicked
     srClose.addEventListener('click', function () {
-        searchOuter.style.display = 'none';
+        closeAll();
         srInput.value = '';
+    });
+
+    // Escape key closes all panels
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeAll();
+    });
+
+    // Click outside the nav section closes all panels
+    document.addEventListener('click', function (e) {
+        if (!e.target.closest('.mainNavigationSection')) closeAll();
     });
 
     /* ---------- thumb geometry ---------- */
@@ -150,7 +195,7 @@
     function startMarquee() {
         if (shouldMarqueeBeActive()) {
             var rows = document.querySelectorAll('.partners-section__row');
-            rows.forEach(function(row) {
+            rows.forEach(function (row) {
                 row.classList.add('marquee-active');
             });
         }
@@ -159,7 +204,7 @@
     // Function to stop marquee animation
     function stopMarquee() {
         var rows = document.querySelectorAll('.partners-section__row');
-        rows.forEach(function(row) {
+        rows.forEach(function (row) {
             row.classList.remove('marquee-active');
         });
     }
@@ -181,19 +226,19 @@
 
     // Expose functions globally for external control
     window.marqueeControl = {
-        start: function() {
+        start: function () {
             marquee = true;
             updateMarquee();
         },
-        stop: function() {
+        stop: function () {
             marquee = false;
             updateMarquee();
         },
-        toggle: function() {
+        toggle: function () {
             marquee = !marquee;
             updateMarquee();
         },
-        isActive: function() {
+        isActive: function () {
             return marquee;
         }
     };

@@ -12,9 +12,18 @@ body {
    OUTER WRAPPER
    ========================================================= */
 .minimenu-outer {
+    background: #f5f5f5;
+    display: none;
     width: 100%;
     overflow: hidden;
     max-height: 538px;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 8px 32px;
+}
+
+.minimenu-outer.active {
+    display: block;
+    position: absolute;
+    z-index: 1;
 }
 
 /* =========================================================

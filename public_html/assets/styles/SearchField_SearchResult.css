@@ -15,8 +15,14 @@ body {
 .sr-outer {
     width: 100%;
     background: #FFFFFF;
-    min-height: 583px;
+    /* min-height: 583px; */
     display: none;
+}
+
+.sr-outer.active {
+    display: block;
+    position: absolute;
+    z-index: 1;
 }
 
 /* =========================================================
@@ -42,6 +48,8 @@ body {
     background: #F4F4F4;
     border-radius: 8px;
     overflow: hidden;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 .sr-input {
@@ -95,7 +103,7 @@ body {
    Position: 15px below search bar, 25px left indent
    ========================================================= */
 .sr-meta {
-    margin-top: 15px;
+    margin-top: 1px;
     margin-bottom: 10px;
     padding-left: 25px;
     font-size: 13px;
@@ -112,6 +120,7 @@ body {
     display: flex;
     align-items: flex-start;
     width: 100%;
+    padding-bottom: 108px;
 }
 
 /* =========================================================

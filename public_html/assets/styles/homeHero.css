@@ -13,7 +13,6 @@ body {
     position: relative;
     margin-bottom: 120px;
     min-height: 728px;
-    background: url('assets/AccelerateMerchantApplication.jpg') lightgray 50% / cover no-repeat;
     overflow: hidden;
     margin-left: auto;
     margin-right: auto;
@@ -21,24 +20,42 @@ body {
 
 }
 
-.home-hero::before {
+
+
+.home-hero-slide {
+    position: absolute;
+    inset: 0;
+    background: lightgray 50% / cover no-repeat;
+    opacity: 0;
+    z-index: 0;
+    pointer-events: none;
+    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.home-hero-slide::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(43, 43, 43, 0.5);
-    /* semi-transparent dark overlay */
-    background: rgba(20, 20, 20, 0.5);
-    /* semi-transparent very dark overlay */
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
     z-index: 1;
     pointer-events: none;
 }
 
-.home-hero>* {
-    position: relative;
-    z-index: 2;
+.home-hero-slide--1 {
+    background-image: url('../homeHero-SlideImages/Slide1.webp');
+}
+
+.home-hero-slide--2 {
+    background-image: url('../homeHero-SlideImages/Slide2.webp');
+}
+
+.home-hero-slide--3 {
+    background-image: url('../homeHero-SlideImages/Slide3.webp');
+}
+
+.home-hero-slide.is-active {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .carouselControlsContainer {
@@ -49,9 +66,10 @@ body {
     left: 50%;
     transform: translateX(-50%);
     bottom: 40px;
+    z-index: 4;
 }
 
-.carouselSlideProgressBarContainer {
+.carouselDotsContainer {
     display: inline-flex;
     height: 10px;
     align-items: center;
@@ -82,24 +100,35 @@ body {
     color: white;
 }
 
-.carouselSlideProgressBar {
-    width: 30px;
-    height: 10px;
-    border-radius: 10px;
-    background: #FFF;
-    transition: cursor 0.2s;
+.play-icon {
+    display: none;
 }
 
-.carouselSlideProgressBarInactive {
+.carousel-dot {
+    position: relative;
     width: 10px;
     height: 10px;
     border-radius: 10px;
+    border: none;
     background: rgba(255, 255, 255, 0.40);
-    transition: cursor 0.2s;
+    overflow: hidden;
+    transition: width 0.2s ease, background 0.2s ease;
 }
 
-.carouselSlideProgressBar:hover,
-.carouselSlideProgressBarInactive:hover {
+.carousel-dot.is-active {
+    width: 30px;
+    background: rgba(255, 255, 255, 0.24);
+}
+
+.carousel-dot__fill {
+    position: absolute;
+    inset: 0;
+    background: #FFF;
+    transform-origin: left center;
+    transform: scaleX(0);
+}
+
+.carousel-dot:hover {
     cursor: pointer;
 }
 
@@ -108,6 +137,8 @@ body {
 }
 
 .hero-info-left {
+    position: relative;
+    z-index: 2;
     display: flex;
     width: 1440px;
     max-width: 1440px;
@@ -241,8 +272,11 @@ body {
     .home-hero {
         min-height: 580px;
         margin-bottom: 72px;
-        background-position: 58% center;
         width: 100%;
+    }
+
+    .home-hero-slide {
+        background-position: 58% center;
     }
 
     .hero-info-left {
@@ -303,12 +337,12 @@ body {
         gap: 8px;
     }
 
-    .carouselSlideProgressBar {
+    .carousel-dot.is-active {
         width: 24px;
         height: 6px;
     }
 
-    .carouselSlideProgressBarInactive {
+    .carousel-dot {
         width: 6px;
         height: 6px;
     }
